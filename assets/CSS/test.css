@@ -1,0 +1,70 @@
+
+/* =============================================== */
+/* 6. PAGE CONTENT (TABLE IMPROVEMENTS)
+/* =============================================== */
+/* ... (باقي ستايلات محتوى الصفحة كما هي) ... */
+.orders-table .btn-icon i {
+    color: var(--text-muted);
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+.orders-table .btn-icon:hover i.text-primary { color: var(--primary-bs-color) !important; transform: scale(1.2); }
+.orders-table .btn-icon:hover i.text-danger { color: var(--error-color) !important; transform: scale(1.2); }
+
+
+/* =============================================== */
+/* 8. RESPONSIVE STYLES
+/* =============================================== */
+@media (max-width: 991.98px) {
+    .sidebar {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        z-index: 1030;
+        transform: translateX(100%);
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+    }
+    .sidebar.show {
+        transform: translateX(0);
+    }
+    .main-wrapper {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .orders-table thead {
+        display: none;
+    }
+    .orders-table tbody, .orders-table tr, .orders-table td {
+        display: block;
+        width: 100%;
+    }
+    .orders-table tr {
+        margin-bottom: 1rem;
+        border: 1px solid var(--border-color);
+        border-radius: var(--border-radius);
+        overflow: hidden; /* To clip the td borders */
+    }
+    .orders-table td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.75rem 1rem;
+        border-bottom: 1px solid var(--border-color);
+        text-align: right;
+    }
+    .orders-table tr td:last-child {
+        border-bottom: none;
+    }
+    .orders-table td::before {
+        content: attr(data-label);
+        font-weight: 600;
+        color: var(--text-dark);
+    }
+    .orders-table td .badge {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 575.98px) {

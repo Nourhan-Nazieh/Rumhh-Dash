@@ -1,0 +1,587 @@
+/* Tax and Delivery Page Specific Styles */
+
+/* Form Styling */
+.form-label {
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.form-control, .form-select {
+    border-radius: 12px;
+    border: 2px solid #e9ecef;
+    padding: 12px 18px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    background: #f8f9fa;
+    font-family: 'Cairo', sans-serif;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.15);
+    background: white;
+}
+
+.form-control::placeholder {
+    color: #6c757d;
+    font-style: italic;
+}
+
+/* Enhanced Button Styles */
+.btn-success {
+    background: linear-gradient(135deg, #28a745, #20c997);
+    border: none;
+    border-radius: 12px;
+    padding: 12px 25px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-success:hover {
+    background: linear-gradient(135deg, #20c997, #28a745);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+}
+
+.btn-outline-danger {
+    border-color: #dc3545;
+    color: #dc3545;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-danger:hover {
+    background: #dc3545;
+    border-color: #dc3545;
+    transform: scale(1.05);
+}
+
+.btn-outline-info {
+    border-color: #17a2b8;
+    color: #17a2b8;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-info:hover {
+    background: #17a2b8;
+    border-color: #17a2b8;
+    transform: scale(1.05);
+}
+
+/* Table Enhancements */
+.table {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.table th {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    font-weight: 700;
+    color: #2c3e50;
+    border-bottom: 2px solid #dee2e6;
+    padding: 18px 15px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.table td {
+    padding: 18px 15px;
+    vertical-align: middle;
+    font-weight: 500;
+    color: #495057;
+    text-align: center;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.table-hover tbody tr:hover {
+    background: linear-gradient(135deg, #f8f9fa, #ffffff);
+    transform: scale(1.01);
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Action Buttons in Table */
+.table td .btn {
+    margin: 0 3px;
+    width: 35px;
+    height: 35px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+/* Form Section Styling */
+.dashboard-card form {
+    padding: 10px 0;
+}
+
+.dashboard-card h6 {
+    color: #6c757d;
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+/* Enhanced Card Headers */
+.dashboard-card .card-title {
+    position: relative;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.dashboard-card .card-title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #28a745, #20c997);
+    border-radius: 2px;
+}
+
+/* Icon Buttons in Headers */
+.dashboard-card .btn-outline-secondary {
+    border-radius: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    border: 2px solid #e9ecef;
+}
+
+.dashboard-card .btn-outline-secondary:hover {
+    background: #28a745;
+    border-color: #28a745;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Responsive Enhancements */
+@media (max-width: 768px) {
+    .table-responsive {
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+    
+    .table td, .table th {
+        padding: 12px 8px;
+        font-size: 13px;
+    }
+    
+    .table td .btn {
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+    }
+    
+    .form-control, .form-select {
+        padding: 10px 15px;
+        font-size: 13px;
+    }
+    
+    .dashboard-card {
+        padding: 20px 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .dashboard-card h5 {
+        font-size: 18px;
+    }
+    
+    .dashboard-card h6 {
+        font-size: 14px;
+    }
+    
+    .btn-success {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    
+    .table {
+        font-size: 12px;
+    }
+}
+
+/* Animation for Form Elements */
+.form-control, .form-select {
+    animation: slideInUp 0.5s ease-out;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Enhanced Focus States */
+.form-control:focus, .form-select:focus {
+    outline: none;
+    border-color: #28a745;
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
+
+/* Loading State for Submit Button */
+.btn-success.loading {
+    position: relative;
+    color: transparent;
+}
+
+.btn-success.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid #ffffff;
+    border-top: 2px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Success Message Styling */
+.alert-success {
+    border-radius: 12px;
+    border: none;
+    background: linear-gradient(135deg, #d4edda, #c3e6cb);
+    color: #155724;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.2);
+}
+
+/* Error Message Styling */
+.alert-danger {
+    border-radius: 12px;
+    border: none;
+    background: linear-gradient(135deg, #f8d7da, #f5c6cb);
+    color: #721c24;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(220, 53, 69, 0.2);
+}
+
+/* Enhanced Pagination */
+.pagination .page-link {
+    border-radius: 10px;
+    margin: 0 3px;
+    border: 2px solid #e9ecef;
+    color: #6c757d;
+    font-weight: 600;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+}
+
+.pagination .page-item.active .page-link {
+    background: linear-gradient(135deg, #28a745, #20c997);
+    border-color: #28a745;
+    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+}
+
+.pagination .page-link:hover {
+    background-color: #28a745;
+    border-color: #28a745;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Custom Select Styling */
+.form-select {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m1 6 7 7 7-7'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: left 0.75rem center;
+    background-size: 16px 12px;
+}
+
+/* Hover Effects for Cards */
+.dashboard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.1);
+}
+
+/* Input Group Enhancements */
+.input-group .form-control {
+    border-left: none;
+}
+
+.input-group-text {
+    background: #f8f9fa;
+    border: 2px solid #e9ecef;
+    border-left: none;
+    border-radius: 0 12px 12px 0;
+    color: #6c757d;
+}
+
+/* Table Row Animations */
+.table tbody tr {
+    animation: fadeInUp 0.5s ease-out;
+    animation-fill-mode: both;
+}
+
+.table tbody tr:nth-child(1) { animation-delay: 0.1s; }
+.table tbody tr:nth-child(2) { animation-delay: 0.2s; }
+.table tbody tr:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Section Tabs Styling */
+.section-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.section-tabs .btn-group {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.section-tabs .btn {
+    padding: 15px 30px;
+    font-weight: 700;
+    font-size: 16px;
+    border: none;
+    transition: all 0.3s ease;
+    position: relative;
+    min-width: 500px;
+
+}
+
+.section-tabs .btn i {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+.section-tabs .btn-success {
+    background: linear-gradient(135deg,#cbe6c3, #53c644);
+    color: white;
+    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4);
+}
+
+.section-tabs .btn-outline-success {
+    background: #f8f9fa;
+    color: #6c757d;
+    border: 2px solid #e9ecef;
+}
+
+.section-tabs .btn-outline-success:hover {
+    background: linear-gradient(135deg, #28a745, #8fd17b);
+    color: white;
+    border-color: #28a745;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(40, 167, 69, 0.3);
+}
+
+/* Content Section Animation */
+.content-section {
+    animation: fadeInUp 0.5s ease-out;
+}
+
+.content-section.d-none {
+    display: none !important;
+}
+
+/* Enhanced Tab Animation */
+.section-tabs .btn.active {
+    transform: scale(1.05);
+    z-index: 2;
+}
+
+.section-tabs .btn:not(.active) {
+    transform: scale(0.95);
+}
+
+/* Tax Form Specific Styling */
+#taxForm .form-control[type="number"] {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%2328a745' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M8 1v14M1 8h14'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: left 0.75rem center;
+    background-size: 16px 12px;
+    padding-right: 2.5rem;
+}
+
+/* Tax Table Enhancements */
+#taxTable th:nth-child(3),
+#taxTable td:nth-child(3) {
+    color: #28a745;
+    font-weight: 700;
+}
+
+#taxTable td:nth-child(3)::after {
+    content: '%';
+    margin-right: 2px;
+    color: #6c757d;
+    font-weight: 400;
+}
+
+/* Section Transition Effects */
+.content-section {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.5s ease;
+}
+
+.content-section.fade-out {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.content-section.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Mobile Responsive for Tabs */
+@media (max-width: 768px) {
+    .section-tabs .btn {
+        padding: 12px 20px;
+        font-size: 14px;
+        min-width: 120px;
+    }
+    
+    .section-tabs .btn i {
+        margin-right: 5px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    .section-tabs {
+        margin-bottom: 20px;
+    }
+    
+    .section-tabs .btn {
+        padding: 10px 15px;
+        font-size: 13px;
+        min-width: 100px;
+    }
+    
+    .section-tabs .btn i {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 3px;
+        font-size: 14px;
+    }
+}
+
+/* Enhanced Card Headers for Different Sections */
+.content-section .dashboard-card .card-title {
+    position: relative;
+}
+
+#shippingContent .dashboard-card .card-title::after {
+    background: linear-gradient(90deg, #007bff, #0056b3);
+}
+
+#taxContent .dashboard-card .card-title::after {
+    background: linear-gradient(90deg, #28a745, #20c997);
+}
+
+/* Success States */
+.form-control.success {
+    border-color: #28a745;
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
+
+.form-control.success:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
+
+/* Loading States for Forms */
+.btn.loading {
+    position: relative;
+    color: transparent !important;
+}
+
+.btn.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid #ffffff;
+    border-top: 2px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Tab Indicator */
+.section-tabs .btn::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: #fff;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.section-tabs .btn.active::before {
+    width: 80%;
+}
+
+/* Hover Effects for Cards in Different Sections */
+#shippingContent .dashboard-card:hover {
+    box-shadow: 0 12px 35px rgba(0, 123, 255, 0.15);
+}
+
+#taxContent .dashboard-card:hover {
+    box-shadow: 0 12px 35px rgba(40, 167, 69, 0.15);
+}
+
+/* Table Row Highlighting */
+#shippingTable tbody tr:hover {
+    background: linear-gradient(135deg, #e3f2fd, #ffffff);
+}
+
+#taxTable tbody tr:hover {
+    background: linear-gradient(135deg, #e8f5e8, #ffffff);
+}
+
+/* Form Validation States */
+.was-validated .form-control:valid {
+    border-color: #28a745;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='m2.3 6.73.94-.94 2.94 2.94L7.88 7 8 7.12 5.06 10 2.12 7.06z'/%3e%3c/svg%3e");
+}
+
+.was-validated .form-control:invalid {
+    border-color: #dc3545;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath d='m5.8 4.6 1.4 1.4M7.2 4.6l-1.4 1.4'/%3e%3c/svg%3e");
+}
+

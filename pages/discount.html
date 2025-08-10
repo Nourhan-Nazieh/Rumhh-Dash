@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>كوبونات الخصم - لوحة التحكم</title>
+    
+     <!-- /* ========== START: Stylesheets ========== */ -->
+    <link rel="icon" href="../assets/images/logo..svg" />
+    <link rel="stylesheet" href="../assets/CSS/all.min.css" />
+    <link rel="stylesheet" href="../assets/bootstrap/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap"rel="stylesheet"/>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/CSS/discount.css">
+    <link rel="stylesheet" href="../assets/CSS/style.css" />
+</head>
+<body>
+    <!-- Main Container -->
+    <div class="d-flex">
+        <!-- ================== START: SIDEBAR ================== -->
+        <aside class="sidebar">
+                <div class="logo-container">
+                <img src="../assets/images/logo.png" alt="Logo" class="logo-img" />
+                <span class="logo-text">Dashboard</span>
+                </div>
+                    
+                    <ul class="nav flex-column sidebar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link " href="../index.html">
+                                <i class="fa-solid fa-house-chimney"></i>
+                                <span>لوحة التحكم</span>
+                            </a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link " href="../pages/manag-orde.html ">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>ادارة الطلبات</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/managProducts.html">
+                                <i class="fa-solid fa-box-archive"></i>
+                                <span>ادارة المنتجات</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/managCustomer.html">
+                                <i class="fa-solid fa-users-gear"></i>
+                                <span>ادارة العملاء</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/design-stor.html">
+                                <i class="fa-solid fa-palette"></i>
+                                <span>تصميم متجرك</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="../pages/discount.html">
+                                <i class="fa-solid fa-tags"></i>
+                                <span>كوبونات الخصم</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/reports.html">
+                                <i class="fa-solid fa-chart-pie"></i>
+                                <span>تقارير واحصائيات</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/scops.html">
+                                <i class="fa-solid fa-globe"></i>
+                                <span>نطاقات ومجالات</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/ticketSup.html">
+                                <i class="fa-solid fa-headset"></i>
+                                <span>تذاكر الدعم الفني</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/Tax-add.html">
+                                <i class="fa-solid fa-truck-fast"></i>
+                                <span>الضريبة والتوصيل</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/settingPay.html">
+                                <i class="fa-solid fa-credit-card"></i>
+                                <span>اعدادات الدفع</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/settingAcc.html">
+                                <i class="fa-solid fa-gear"></i>
+                                <span>اعدادات حسابك</span>
+                            </a>
+                        </li>
+                    </ul>
+        </aside>
+      <!-- /* ========== START: Main Content ========== */ -->
+      <div class="main-content flex-grow-1">
+        <!-- /* ========== START: Navbar ========== */ -->
+            <header class="navbar-container">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid">
+                        <!-- Hamburger Menu for Mobile -->
+                        <button class="btn d-lg-none me-2" type="button" id="sidebar-toggler">
+                            <i class="fa-solid fa-bars"></i>
+                        </button>
+
+                        <!-- Profile Dropdown -->
+                        <div class="dropdown profile-dropdown ms-lg-3">
+                            <a href="#" class="d-flex align-items-center text-decoration-none text-dark" 
+                               id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="../assets/images/profile.png" 
+                                     alt="Avatar" class="profile-avatar" />
+                                <span class="me-2 d-none d-sm-block">اهلا محمود</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-start" aria-labelledby="profileDropdown">
+                                <li><a class="dropdown-item" href="#"><i class="fa-solid fa-user me-2"></i>ملفي الشخصي</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="fa-solid fa-gear me-2"></i>اعدادات</a></li>
+                                <li><hr class="dropdown-divider" /></li>
+                                <li><a class="dropdown-item text-danger" href="#"><i class="fa-solid fa-arrow-right-from-bracket me-2"></i>تسجيل الخروج</a></li>
+                            </ul>
+                        </div>
+                     <!-- Center search bar -->
+                        <div class="navbar-center">
+                            <div class="search-container">
+                                <input type="text" class="search-input" placeholder="بحث...">
+                                <button class="search-btn">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                <!-- Left side icons and logo -->
+                <div class="navbar-left">
+                    <div class="store-preview-btn">
+                        <i class="fas fa-eye"></i>
+                        معاينة المتجر
+                    </div>
+                    <a href="#" class="nav-icon position-relative">
+                      <i class="fa-solid fa-bell"></i>
+                      <span class="notification-dot"></span>
+                    </a>
+                    <div class="nav-icon crown">
+                        <i class="fas fa-crown"></i>
+                    </div>
+    
+                </div>
+
+
+
+                    </div>
+                </nav>
+            </header>
+            <br>
+         <!-- Store Selector -->
+          <div
+            class="d-flex justify-content-start justify-content-md-start align-items-center "
+          >
+            <a href="#" class="store-link active">شحن مع بوسطة </a>
+            <a href="#" class="store-link">شحن مع OTO</a>
+          </div>
+
+            <!-- ================== START: PAGE CONTENT ================== -->
+            <main class="page-content">
+                <div class="row g-4">
+                                        <!-- ================== RIGHT COLUMN: COUPONS TABLE ================== -->
+                    <div class="col-lg-7">
+                        <!-- Table Header -->
+                        <div class="table-header-section">
+                            <div class="table-tabs">
+                                <button class="tab-btn active" data-tab="all">الكل</button>
+                                <button class="tab-btn" data-tab="active">نشط</button>
+                                <button class="tab-btn" data-tab="used">مستخدم</button>
+                                <button class="tab-btn" data-tab="expired">منتهي الصلاحية</button>
+                            </div>
+                        </div>
+
+                        <!-- Coupons Table -->
+                        <div class="table-container">
+                            <div class="table-responsive">
+                                <table class="coupons-table" id="couponsTable">
+                                    <thead>
+                                        <tr>
+                                            <th>رمز التقسيمة</th>
+                                            <th>مستخدم </th>
+                                            <th> باقي</th>
+                                            <th> خصم</th>
+                                            <th>الحالة</th>
+                                            <th>الاجراء</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="couponsTableBody">
+                                        <!-- Coupon Row Template -->
+                                        <tr class="coupon-row">
+                                            <td>
+                                                <div class="coupon-code">
+                                                    <span class="code-text">RUMHCOUPON</span>
+                                                    <button class="btn-copy" title="نسخ الكود">
+                                                        <i class="fas fa-copy"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class="discount-badge">14%</span>
+                                            </td>
+                                            <td>
+                                                <span class="usage-count">21</span>
+                                            </td>
+                                            <td>
+                                                <span class="expiry-date">20%</span>
+                                            </td>
+                                            <td>
+                                                <span class="status-badge status-active">نشط</span>
+                                            </td>
+                                            <td>
+                                                <div class="action-buttons">
+                                                    <button class="btn-action btn-edit" title="تعديل">
+                                                        <i class="fas fa-edit"></i>
+                                                    </button>
+                                                    <button class="btn-action btn-delete" title="حذف">
+                                                        <i class="fas fa-trash"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="coupon-row">
+                                            <td>
+                                                <div class="coupon-code">
+                                                    <span class="code-text">RUMHCOUPON</span>
+                                                    <button class="btn-copy" title="نسخ الكود">
+                                                        <i class="fas fa-copy"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class="discount-badge">20%</span>
+                                            </td>
+                                            <td>
+                                                <span class="usage-count">21</span>
+                                            </td>
+                                            <td>
+                                                <span class="expiry-date">20%</span>
+                                            </td>
+                                            <td>
+                                                <span class="status-badge status-used">مستخدم</span>
+                                            </td>
+                                            <td>
+                                                <div class="action-buttons">
+                                                    <button class="btn-action btn-edit" title="تعديل">
+                                                        <i class="fas fa-edit"></i>
+                                                    </button>
+                                                    <button class="btn-action btn-delete" title="حذف">
+                                                        <i class="fas fa-trash"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="coupon-row">
+                                            <td>
+                                                <div class="coupon-code">
+                                                    <span class="code-text">RUMHCOUPON</span>
+                                                    <button class="btn-copy" title="نسخ الكود">
+                                                        <i class="fas fa-copy"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class="discount-badge">14%</span>
+                                            </td>
+                                            <td>
+                                                <span class="usage-count">21</span>
+                                            </td>
+                                            <td>
+                                                <span class="expiry-date">20%</span>
+                                            </td>
+                                            <td>
+                                                <span class="status-badge status-active">نشط</span>
+                                            </td>
+                                            <td>
+                                                <div class="action-buttons">
+                                                    <button class="btn-action btn-edit" title="تعديل">
+                                                        <i class="fas fa-edit"></i>
+                                                    </button>
+                                                    <button class="btn-action btn-delete" title="حذف">
+                                                        <i class="fas fa-trash"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="coupon-row">
+                                            <td>
+                                                <div class="coupon-code">
+                                                    <span class="code-text">RUMHCOUPON</span>
+                                                    <button class="btn-copy" title="نسخ الكود">
+                                                        <i class="fas fa-copy"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class="discount-badge">14%</span>
+                                            </td>
+                                            <td>
+                                                <span class="usage-count">21</span>
+                                            </td>
+                                            <td>
+                                                <span class="expiry-date">20%</span>
+                                            </td>
+                                            <td>
+                                                <span class="status-badge status-active">نشط</span>
+                                            </td>
+                                            <td>
+                                                <div class="action-buttons">
+                                                    <button class="btn-action btn-edit" title="تعديل">
+                                                        <i class="fas fa-edit"></i>
+                                                    </button>
+                                                    <button class="btn-action btn-delete" title="حذف">
+                                                        <i class="fas fa-trash"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="coupon-row">
+                                            <td>
+                                                <div class="coupon-code">
+                                                    <span class="code-text">RUMHCOUPON</span>
+                                                    <button class="btn-copy" title="نسخ الكود">
+                                                        <i class="fas fa-copy"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class="discount-badge">14%</span>
+                                            </td>
+                                            <td>
+                                                <span class="usage-count">21</span>
+                                            </td>
+                                            <td>
+                                                <span class="expiry-date">20%</span>
+                                            </td>
+                                            <td>
+                                                <span class="status-badge status-active">نشط</span>
+                                            </td>
+                                            <td>
+                                                <div class="action-buttons">
+                                                    <button class="btn-action btn-edit" title="تعديل">
+                                                        <i class="fas fa-edit"></i>
+                                                    </button>
+                                                    <button class="btn-action btn-delete" title="حذف">
+                                                        <i class="fas fa-trash"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="coupon-row">
+                                            <td>
+                                                <div class="coupon-code">
+                                                    <span class="code-text">RUMHCOUPON</span>
+                                                    <button class="btn-copy" title="نسخ الكود">
+                                                        <i class="fas fa-copy"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class="discount-badge">14%</span>
+                                            </td>
+                                            <td>
+                                                <span class="usage-count">21</span>
+                                            </td>
+                                            <td>
+                                                <span class="expiry-date">20%</span>
+                                            </td>
+                                            <td>
+                                                <span class="status-badge status-expired">منتهي الصلاحية</span>
+                                            </td>
+                                            <td>
+                                                <div class="action-buttons">
+                                                    <button class="btn-action btn-edit" title="تعديل">
+                                                        <i class="fas fa-edit"></i>
+                                                    </button>
+                                                    <button class="btn-action btn-delete" title="حذف">
+                                                        <i class="fas fa-trash"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="coupon-row">
+                                            <td>
+                                                <div class="coupon-code">
+                                                    <span class="code-text">RUMHCOUPON</span>
+                                                    <button class="btn-copy" title="نسخ الكود">
+                                                        <i class="fas fa-copy"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class="discount-badge">14%</span>
+                                            </td>
+                                            <td>
+                                                <span class="usage-count">21</span>
+                                            </td>
+                                            <td>
+                                                <span class="expiry-date">20%</span>
+                                            </td>
+                                            <td>
+                                                <span class="status-badge status-active">نشط</span>
+                                            </td>
+                                            <td>
+                                                <div class="action-buttons">
+                                                    <button class="btn-action btn-edit" title="تعديل">
+                                                        <i class="fas fa-edit"></i>
+                                                    </button>
+                                                    <button class="btn-action btn-delete" title="حذف">
+                                                        <i class="fas fa-trash"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="coupon-row">
+                                            <td>
+                                                <div class="coupon-code">
+                                                    <span class="code-text">RUMHCOUPON</span>
+                                                    <button class="btn-copy" title="نسخ الكود">
+                                                        <i class="fas fa-copy"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class="discount-badge">14%</span>
+                                            </td>
+                                            <td>
+                                                <span class="usage-count">21</span>
+                                            </td>
+                                            <td>
+                                                <span class="expiry-date">20%</span>
+                                            </td>
+                                            <td>
+                                                <span class="status-badge status-used">مستخدم</span>
+                                            </td>
+                                            <td>
+                                                <div class="action-buttons">
+                                                    <button class="btn-action btn-edit" title="تعديل">
+                                                        <i class="fas fa-edit"></i>
+                                                    </button>
+                                                    <button class="btn-action btn-delete" title="حذف">
+                                                        <i class="fas fa-trash"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- Pagination -->
+                            <div class="pagination-container">
+                                <nav class="pagination-nav">
+                                    <ul class="pagination">
+                                        <li class="page-item disabled">
+                                            <a class="page-link" href="#" aria-label="السابق">
+                                                <i class="fas fa-chevron-right"></i>
+                                            </a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item active"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#" aria-label="التالي">
+                                                <i class="fas fa-chevron-left"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- ================== LEFT COLUMN: FORM & CHART ================== -->
+                    <div class="col-lg-5">
+                        <!-- Coupon Form -->
+                        <div class="form-card">
+                            <div class="form-header">
+                                <h4 class="form-title">نسبة استخدام الكوبونات الى السوق</h4>
+                            </div>
+                            
+                            <div class="form-body">
+                                <!-- Chart Container -->
+                                <div class="chart-container">
+                                    <canvas id="couponChart"></canvas>
+                                </div>
+
+                                <!-- Form Fields -->
+                                <div class="form-section">
+                                    <div class="form-group">
+                                        <label class="form-label">قسيمة جديدة</label>
+                                        <input type="text" class="form-control" id="couponCode" placeholder="ادخل رمز القسيمة">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="form-label">رمز القسيمة</label>
+                                        <input type="text" class="form-control" id="couponName" placeholder="ادخل اسم القسيمة">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="form-label">عدد الاستخدام</label>
+                                        <input type="number" class="form-control" id="usageLimit" placeholder="ادخل عدد مرات الاستخدام">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="form-label">الخصم</label>
+                                        <div class="discount-options">
+                                            <button type="button" class="btn-discount active" data-type="percentage">
+                                                <i class="fas fa-percentage"></i> نسبة مئوية
+                                            </button>
+                                            <button type="button" class="btn-discount" data-type="fixed">
+                                                <i class="fas fa-dollar-sign"></i> مبلغ ثابت
+                                            </button>
+                                        </div>
+                                        <input type="number" class="form-control mt-2" id="discountValue" placeholder="ادخل قيمة الخصم">
+                                    </div>
+
+                                    <div class="form-actions">
+                                        <button type="button" class="btn btn-success btn-add-coupon" id="addCouponBtn">
+                                            <i class="fas fa-plus me-2"></i> اضافة القسيمة
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Edit Coupon Modal -->
+    <div class="modal fade" id="editCouponModal" tabindex="-1" aria-labelledby="editCouponModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editCouponModalLabel">تعديل الكوبون</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="editCouponForm">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label">كود الكوبون</label>
+                                    <input type="text" class="form-control" id="editCouponCode" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label">اسم الكوبون</label>
+                                    <input type="text" class="form-control" id="editCouponName" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label">قيمة الخصم</label>
+                                    <input type="number" class="form-control" id="editDiscountValue" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label">عدد مرات الاستخدام</label>
+                                    <input type="number" class="form-control" id="editUsageLimit" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label">تاريخ الانتهاء</label>
+                                    <input type="date" class="form-control" id="editExpiryDate" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label">الحالة</label>
+                                    <select class="form-control" id="editCouponStatus" required>
+                                        <option value="active">نشط</option>
+                                        <option value="used">مستخدم</option>
+                                        <option value="expired">منتهي الصلاحية</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
+                    <button type="button" class="btn btn-primary" id="saveCouponBtn">حفظ التعديلات</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Notification -->
+    <div class="notification success" id="successNotification" style="display: none;">
+        <i class="fas fa-check-circle"></i>
+        <span>تم تنفيذ العملية بنجاح!</span>
+    </div>
+
+       <!-- Chart.js -->
+     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Scripts -->
+    <script src="../assets/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../assets/JS/discount.js"></script>
+    <script src="../assets/JS/script.js"></script>
+    
+</body>
+</html>
+

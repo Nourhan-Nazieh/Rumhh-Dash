@@ -1,0 +1,267 @@
+/*
+================================================
+PRODUCTS PAGE STYLES
+- Re-uses styles from orders page for consistency
+- Adds specific styles for product table cells
+================================================
+*/
+
+/* Use a general class for card-like tables */
+.table.products-table,
+.table.orders-table-v2 {
+    border-collapse: separate; /* Crucial for border-radius on rows */
+    border-spacing: 0 1rem;   /* Vertical spacing between rows */
+    margin-top: -1rem;        /* Counteract the first row's spacing */
+}
+
+.products-table thead th,
+.orders-table-v2 thead th {
+    background-color: #e9f3ec; /* Light green from design */
+    color: var(--primary-green);
+    border: none;
+    font-size: 14px;
+    padding: 12px 20px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+/* Rounded corners for the header row */
+.products-table thead tr th:first-child,
+.orders-table-v2 thead tr th:first-child {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.products-table thead tr th:last-child,
+.orders-table-v2 thead tr th:last-child {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+/* Styling for each row to look like a card */
+.products-table tbody tr,
+.orders-table-v2 tbody tr {
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    border-radius: 8px;
+    transition: all 0.2s ease-in-out;
+}
+
+.products-table tbody tr:hover,
+.orders-table-v2 tbody tr:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.products-table tbody td,
+.orders-table-v2 tbody td {
+    padding: 15px 20px;
+    border: none;
+}
+
+/* Rounded corners for the first and last cell in each body row */
+.products-table tbody tr td:first-child,
+.orders-table-v2 tbody tr td:first-child {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.products-table tbody tr td:last-child,
+.orders-table-v2 tbody tr td:last-child {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+
+/* === Specific cell styling for Products Table === */
+
+/* Styling for the main product info cell */
+.table-product-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 0.5rem; /* 8px */
+    object-fit: cover;
+    background-color: #f8f9fa;
+}
+
+/* Styling for the price cell with original and current price */
+.price-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    white-space: nowrap;
+}
+
+.price-cell .price-original {
+    text-decoration: line-through; /* Strikethrough for original price */
+    color: var(--text-muted);
+    font-size: 0.85rem; /* 13.6px */
+}
+
+.price-cell .price-current {
+    font-weight: 700;
+    font-size: 1rem; /* 16px */
+    color: var(--text-dark);
+}
+
+/* Re-using action button styles from orders page for consistency */
+/* You should already have these, but here they are for completeness */
+.btn-icon-v2 {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+.btn-icon-edit { background-color: #e6f9f1; color: #198754; }
+.btn-icon-edit:hover { background-color: #198754; color: #fff; }
+.btn-icon-delete { background-color: #fdeeee; color: #dc3545; }
+.btn-icon-delete:hover { background-color: #dc3545; color: #fff; }
+
+
+/* Re-using pagination styles */
+/* You should already have this */
+.custom-pagination .page-item .page-link {
+    border: none;
+    border-radius: 50% !important;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+    color: var(--text-muted);
+    font-weight: 700;
+    background-color: transparent;
+}
+.custom-pagination .page-item .page-link:hover {
+    background-color: #e9ecef;
+    color: var(--text-dark);
+}
+.custom-pagination .page-item.active .page-link {
+    background-color: var(--primary-green);
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(101, 168, 116, 0.4);
+}
+
+
+/* === Responsive Adjustments for Products Table === */
+@media (max-width: 991.98px) {
+    /* Hide less critical columns on tablets to prevent crowding */
+    .products-table thead th:nth-child(4), /* فئة */
+    .products-table thead th:nth-child(5), /* طلبات */
+    .products-table tbody td:nth-child(4),
+    .products-table tbody td:nth-child(5) {
+        display: none;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .products-table thead {
+        display: none; /* Hide header on mobile */
+    }
+    .products-table tbody,
+    .products-table tr,
+    .products-table td {
+        display: block;
+        width: 100%;
+        border-radius: 0;
+    }
+    .products-table tr {
+        margin-bottom: 1rem;
+        border-radius: var(--border-radius-md);
+        box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        overflow: hidden;
+    }
+    .products-table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+        border-bottom: 1px solid #f0f0f0;
+    }
+    .products-table tr td:last-child {
+        border-bottom: none;
+    }
+    .products-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        width: calc(50% - 30px);
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: 600;
+        color: var(--text-dark);    
+        text-align: left;
+    }
+    /* Show all columns again in stacked view */
+    .products-table tbody td {
+        display: block;
+    }
+}
+
+/* ================================================ */
+/* PRODUCTS PAGE - SPECIFIC STYLES
+/* ================================================ */
+
+/* Page Actions Bar */
+.page-actions-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+.page-actions-bar .actions-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+/* Product Info Cell */
+.table-product-img {
+    width: 50px;
+    height: 50px;
+    border-radius: var(--border-radius-small);
+    object-fit: cover;
+    background-color: var(--light-gray-bg);
+    border: 1px solid var(--border-color);
+}
+
+/* Price Cell */
+.price-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    white-space: nowrap;
+}
+.price-cell .price-original {
+    text-decoration: line-through;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+.price-cell .price-current {
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--text-dark);
+}
+
+/* Responsive adjustments for this page */
+@media (max-width: 991.98px) {
+    /* Hide less critical columns on tablets */
+    .card-style-table thead th:nth-child(4), /* الفئة */
+    .card-style-table thead th:nth-child(5), /* طلبات */
+    .card-style-table tbody td:nth-child(4),
+    .card-style-table tbody td:nth-child(5) {
+        display: none;
+    }
+}
+
+@media (max-width: 767.98px) {
+    /* Show all columns again in stacked view */
+    .card-style-table tbody td:nth-child(4),
+    .card-style-table tbody td:nth-child(5) {
+        display: flex; /* Overrides the 'none' from tablet view */
+    }
+}

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>لوحة التحكم</title>
+
+    <!-- /* ========== START: Stylesheets ========== */ -->
+    <link rel="icon" href="assets/images/logo..svg" />
+    <link rel="stylesheet" href="assets/CSS/all.min.css" />
+    <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap"rel="stylesheet"/>
+    <link rel="stylesheet" href="assets/CSS/style.css" />
+  <!-- /* ========== END: Stylesheets ========== */ -->
+  </head>
+  <body>
+    <div class="d-flex">
+        <!-- ================== START: SIDEBAR ================== -->
+        <aside class="sidebar">
+        <div class="logo-container">
+          <img src="./assets/images/logo.png" alt="Logo" class="logo-img" />
+          <span class="logo-text">Dashboard</span>
+        </div>
+            
+            <ul class="nav flex-column sidebar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" href="./index.html">
+                        <i class="fa-solid fa-house-chimney"></i>
+                        <span>لوحة التحكم</span>
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="./pages/manag-orde.html ">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span>ادارة الطلبات</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="./pages/managProducts.html">
+                        <i class="fa-solid fa-box-archive"></i>
+                        <span>ادارة المنتجات</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="./pages/managCustomer.html">
+                        <i class="fa-solid fa-users-gear"></i>
+                        <span>ادارة العملاء</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="./pages/design-stor.html">
+                        <i class="fa-solid fa-palette"></i>
+                        <span>تصميم متجرك</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="./pages/discount.html">
+                        <i class="fa-solid fa-tags"></i>
+                        <span>كوبونات الخصم</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="./pages/reports.html">
+                        <i class="fa-solid fa-chart-pie"></i>
+                        <span>تقارير واحصائيات</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="./pages/scops.html">
+                        <i class="fa-solid fa-globe"></i>
+                        <span>نطاقات ومجالات</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="./pages/ticketSup.html">
+                        <i class="fa-solid fa-headset"></i>
+                        <span>تذاكر الدعم الفني</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="./pages/Tax-add.html">
+                        <i class="fa-solid fa-truck-fast"></i>
+                        <span>الضريبة والتوصيل</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="./pages/settingPay.html">
+                        <i class="fa-solid fa-credit-card"></i>
+                        <span>اعدادات الدفع</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="./pages/settingAcc.html">
+                        <i class="fa-solid fa-gear"></i>
+                        <span>اعدادات حسابك</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+        <!-- Overlay for mobile sidebar -->
+        <div class="sidebar-overlay"></div>
+      <!-- /* ========== START: Main Content ========== */ -->
+      <div class="main-content flex-grow-1 main-wrapper ">
+        <!-- /* ========== START: Navbar ========== */ -->
+            <header class="navbar-container">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid">
+                        <!-- Right side on mobile -->
+                        <div class="d-flex align-items-center">
+                            <button class="btn d-lg-none me-2" type="button" id="sidebar-toggler">
+                                <i class="fa-solid fa-bars"></i>
+                            </button>
+                            <div class="dropdown profile-dropdown">
+                            <a href="#" class="d-flex align-items-center text-decoration-none text-dark" 
+                               id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="../assets/images/profile.png" 
+                                     alt="Avatar" class="profile-avatar" />
+                                <span class="me-2 d-none d-sm-block">اهلا محمود</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-start" aria-labelledby="profileDropdown">
+                                <li><a class="dropdown-item" href="./pages/settingAcc.html"><i class="fa-solid fa-user me-2"></i>ملفي الشخصي</a></li>
+                                <li><a class="dropdown-item" href="./pages/settingAcc.html"><i class="fa-solid fa-gear me-2"></i>اعدادات</a></li>
+                                <li><hr class="dropdown-divider" /></li>
+                                <li><a class="dropdown-item text-danger" href="#"><i class="fa-solid fa-arrow-right-from-bracket me-2"></i>تسجيل الخروج</a></li>
+                            </ul>
+                            </div>
+                        </div>
+
+                        <!-- Center search bar (hidden on mobile) -->
+                        <div class="navbar-center d-none d-lg-flex">
+                            <div class="search-container">
+                                <input type="text" class="search-input" placeholder="بحث...">
+                                <button class="search-btn"><i class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+
+                        <!-- Left side -->
+                        <div class="navbar-left">
+                            <div class="store-preview-btn">
+                                <i class="fas fa-eye"></i>
+                                <span>معاينة المتجر</span>
+                            </div>
+                            <a href="#" class="nav-icon position-relative">
+                                <i class="fa-solid fa-bell"></i>
+                                <span class="notification-dot"></span>
+                            </a>
+                            <div class="nav-icon crown">
+                                <i class="fas fa-crown"></i>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+        <!-- /* ========== START: Page Content ========== */ -->
+        <main class="page-content">
+          <!-- Store Selector -->
+          <div class="d-flex justify-content-start justify-content-md-start align-items-center mb-4">
+            <a href="#" class="store-link active">شحن مع بوسطه </a>
+            <a href="#" class="store-link">  شحن مع OTO</a>
+          </div>
+
+        <!-- /* ================= START Dashboard Summary Cards Section (1) ================= */ -->
+        <div class="row g-4">
+            <!-- (1) الرسم البياني الخطي: إجمالي الطلبات -->
+            <div class="col-lg-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">اجمالي الطلبات شهريا</h5>
+                        <!-- هذا الـ div سيحتوي على الرسم البياني -->
+                        <div id="monthlyOrdersChart"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- (2) الأعمدة الفرعية -->
+            <div class="col-lg-6">
+                <div class="row g-4">
+                    <!-- (2.1) الرسم البياني الدائري: عمليات الدفع -->
+                    <div class="col-md-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">عمليات الدفع</h5>
+                                <div id="paymentMethodsChart"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- (2.2) الرسم البياني الأفقي: عمليات التوصيل -->
+                    <div class="col-md-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">عمليات التوصيل</h5>
+                                <div id="deliveryMethodsChart"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+          <!-- Small Stats Cards -->
+          <div class="row g-4 mt-1">
+            <div class="col-md-3 fade-in-up" style="animation-delay: 0.7s">
+              <!-- 1 -->
+              <div class="card stat-card">
+                <div class="card-body d-flex align-items-center">
+                  <div class="stat-icon bg-success-light">
+                    <i class="fa-solid fa-shopping-cart text-success"></i>
+                  </div>
+                  <div class="me-3">
+                    <p class="stat-title">اجمالي الطلبات</p>
+                    <p class="stat-value">3000</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 2 -->
+            <div class="col-md-3 fade-in-up" style="animation-delay: 0.7s">
+              <div class="card stat-card">
+                <div class="card-body d-flex align-items-center">
+                  <div class="stat-icon bg-warning-light">
+                    <i class="fa-solid fa-dollar-sign text-warning"></i>
+                  </div>
+                  <div class="me-3">
+                    <p class="stat-title">اجمالي الارباح</p>
+                    <p class="stat-value">
+                      15000 <span class="currency">EGP</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 3 -->
+            <div class="col-md-3 fade-in-up" style="animation-delay: 0.7s">
+              <div class="card stat-card">
+                <div class="card-body d-flex align-items-center">
+                  <div class="stat-icon bg-primary-light">
+                    <i class="fa-solid fa-store text-primary"></i>
+                  </div>
+                  <div class="me-3">
+                    <p class="stat-title">اجمالي المتاجر</p>
+                    <p class="stat-value">2</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 4 -->
+            <div class="col-md-3 fade-in-up" style="animation-delay: 0.7s">
+              <div class="card stat-card">
+                <div class="card-body d-flex align-items-center">
+                  <div class="stat-icon bg-info-light">
+                    <i class="fa-solid fa-box-open text-info"></i>
+                  </div>
+                  <div class="me-3">
+                    <p class="stat-title">اجمالي المنتجات</p>
+                    <p class="stat-value">2350</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Orders Table -->
+          <div class="card mt-4 fade-in-up" style="animation-delay: 0.8s">
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table orders-table align-middle">
+                  <thead>
+                    <tr>
+                      <th>رقم الطلب</th>
+                      <th>اسم العميل</th>
+                      <th>حالة الطلب</th>
+                      <th>سعر الطلب</th>
+                      <th>تاريخ الطلب</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>محمود شحاتة</td>
+                      <td>
+                        <span class="badge bg-status-success">مكتمل</span>
+                      </td>
+                      <td>1500 ج.م</td>
+                      <td>10-8-2024</td>
+                      <td>
+                        <a href="#" class="btn btn-sm btn-icon"
+                          ><i class="fa-solid fa-pen-to-square text-primary"></i
+                        ></a>
+                        <a href="#" class="btn btn-sm btn-icon"
+                          ><i class="fa-solid fa-trash-can text-danger"></i
+                        ></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>محمود شحاتة</td>
+                      <td><span class="badge bg-status-danger">ملغي</span></td>
+                      <td>1500 ج.م</td>
+                      <td>10-8-2024</td>
+                      <td>
+                        <a href="#" class="btn btn-sm btn-icon"
+                          ><i class="fa-solid fa-pen-to-square text-primary"></i
+                        ></a>
+                        <a href="#" class="btn btn-sm btn-icon"
+                          ><i class="fa-solid fa-trash-can text-danger"></i
+                        ></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>محمود شحاتة</td>
+                      <td><span class="badge bg-status-warning">جاري</span></td>
+                      <td>1500 ج.م</td>
+                      <td>10-8-2024</td>
+                      <td>
+                        <a href="#" class="btn btn-sm btn-icon"
+                          ><i class="fa-solid fa-pen-to-square text-primary"></i
+                        ></a>
+                        <a href="#" class="btn btn-sm btn-icon"
+                          ><i class="fa-solid fa-trash-can text-danger"></i
+                        ></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>محمود شحاتة</td>
+                      <td><span class="badge bg-status-warning">جاري</span></td>
+                      <td>1500 ج.م</td>
+                      <td>10-8-2024</td>
+                      <td>
+                        <a href="#" class="btn btn-sm btn-icon"
+                          ><i class="fa-solid fa-pen-to-square text-primary"></i
+                        ></a>
+                        <a href="#" class="btn btn-sm btn-icon"
+                          ><i class="fa-solid fa-trash-can text-danger"></i
+                        ></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td>محمود شحاتة</td>
+                      <td><span class="badge bg-status-warning">جاري</span></td>
+                      <td>1500 ج.م</td>
+                      <td>10-8-2024</td>
+                      <td>
+                        <a href="#" class="btn btn-sm btn-icon"
+                          ><i class="fa-solid fa-pen-to-square text-primary"></i
+                        ></a>
+                        <a href="#" class="btn btn-sm btn-icon"
+                          ><i class="fa-solid fa-trash-can text-danger"></i
+                        ></a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <!-- /* ========== END: Dashboard Content ========== */ -->
+        </main>
+        <!-- /* ========== END: Page Content ========== */ -->
+      </div>
+      <!-- /* ========== END: Main Content ========== */ -->
+    </div>
+
+    <!-- Scroll To Top Button -->
+    <button id="scrollToTopBtn" class="scroll-to-top" title="الرجوع للأعلى">
+      <i class="fa-brands fa-gripfire fa-fade fa-xl" style="color: #fffefa"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="./assets/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="./assets/JS/script.js"></script>
+    
+
+  </body>
+</html>

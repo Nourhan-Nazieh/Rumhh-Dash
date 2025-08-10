@@ -1,0 +1,1056 @@
+/* ================== CSS VARIABLES ================== */
+:root {
+    /* Primary Colors */
+    --primary-color: #4CAF50;
+    --primary-hover: #45a049;
+    --primary-light: rgba(76, 175, 80, 0.1);
+    --primary-dark: #2e7d32;
+    
+    /* Secondary Colors */
+    --secondary-color: #f8f9fa;
+    --secondary-dark: #e9ecef;
+    
+    /* Background Colors */
+    --bg-light: #f5f7fa;
+    --bg-white: #ffffff;
+    --bg-gray: #f8f9fa;
+    
+    /* Sidebar Colors */
+    --sidebar-bg: #2c3e50;
+    --sidebar-hover: #34495e;
+    --sidebar-active: var(--primary-color);
+    --sidebar-text: #ecf0f1;
+    --sidebar-text-muted: #bdc3c7;
+    
+    /* Text Colors */
+    --text-primary: #2c3e50;
+    --text-secondary: #7f8c8d;
+    --text-muted: #95a5a6;
+    --text-white: #ffffff;
+    
+    /* Border Colors */
+    --border-color: #e1e5e9;
+    --border-light: #f1f3f4;
+    --border-dark: #dee2e6;
+    
+    /* Status Colors */
+    --success-color: #27ae60;
+    --success-light: rgba(39, 174, 96, 0.1);
+    --error-color: #e74c3c;
+    --error-light: rgba(231, 76, 60, 0.1);
+    --warning-color: #f39c12;
+    --warning-light: rgba(243, 156, 18, 0.1);
+    --info-color: #3498db;
+    --info-light: rgba(52, 152, 219, 0.1);
+    
+    /* Chart Colors */
+    --chart-value: #4CAF50;
+    --chart-customize: #2196F3;
+    --chart-market: #FF9800;
+    
+    /* Shadows */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 8px 25px rgba(0, 0, 0, 0.15);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
+    
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+    
+    /* Border Radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-full: 50%;
+    
+    /* Spacing */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-2xl: 3rem;
+}
+
+/* ================== GLOBAL STYLES ================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-primary);
+    line-height: 1.6;
+    font-size: 14px;
+    overflow-x: hidden;
+}
+
+.d-flex {
+    display: flex !important;
+}
+
+.flex-grow-1 {
+    flex-grow: 1 !important;
+}
+
+/* =============================================== */
+/* 4. SIDEBAR */
+/* =============================================== */
+
+.sidebar {
+    width: var(--sidebar-width);
+    min-height: 100vh;
+    background-color: var(--white-bg);
+    border-left: 1px solid var(--border-color);
+    padding: 20px 0;
+    transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
+    flex-shrink: 0;
+}
+
+/* Logo Section */
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 7px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid var(--primary-color);
+    gap: 15px;
+}
+
+.logo-img {
+    max-width: 40px;
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+}
+
+.logo-text {
+    font-size: 20px;
+    font-weight: 700;
+    margin-right: 10px;
+    color: #198733;
+}
+
+/* Sidebar Navigation */
+.sidebar-nav {
+    padding: 20px 0;
+}
+
+.sidebar-nav .nav-item {
+    margin-bottom: 5px;
+    padding: 0 15px;
+}
+
+.sidebar-nav .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 25px;
+    color: rgba(91, 124, 64, 0.3);
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    white-space: nowrap;
+    position: relative;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.sidebar-nav .nav-link i {
+    font-size: 16px;
+    margin-left: 15px;
+    width: 20px;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+.sidebar-nav .nav-link span {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+/* Hover Effects */
+.sidebar-nav .nav-link:hover {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
+    color: var(--white-bg);
+    transform: translateX(-5px);
+}
+
+/* Active Link */
+.sidebar-nav .nav-link.active {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
+    color: var(--white-bg);
+    box-shadow: inset 4px 0 0 rgba(46, 255, 4, 0.9);
+    transform: translateX(-5px);
+}
+
+.sidebar-nav .nav-link:hover i,
+.sidebar-nav .nav-link.active i {
+    color: inherit;
+}
+
+/* ================== PAGE CONTENT STYLES ================== */
+.page-content {
+    padding: var(--spacing-xl);
+}
+
+/* ================== FORM CARD STYLES ================== */
+.form-card {
+    background: var(--bg-white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    height: fit-content;
+}
+
+.form-header {
+    padding: var(--spacing-lg);
+    border-bottom: 1px solid var(--border-light);
+    background: linear-gradient(135deg, var(--bg-white) 0%, var(--bg-gray) 100%);
+}
+
+.form-title {
+    margin: 0;
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.form-body {
+    padding: var(--spacing-lg);
+}
+
+/* ================== CHART STYLES ================== */
+.chart-container {
+    position: relative;
+    height: 300px;
+    margin-bottom: var(--spacing-xl);
+    padding: var(--spacing-lg);
+    background: var(--bg-gray);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-light);
+}
+
+#couponChart {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* ================== FORM SECTION STYLES ================== */
+.form-section {
+    margin-top: var(--spacing-lg);
+}
+
+.form-group {
+    margin-bottom: var(--spacing-lg);
+}
+
+.form-label {
+    display: block;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-primary);
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.form-control {
+    width: 100%;
+    padding: var(--spacing-md);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    background: var(--bg-white);
+    color: var(--text-primary);
+    font-size: 14px;
+    transition: all var(--transition-fast);
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px var(--primary-light);
+}
+
+.form-control::placeholder {
+    color: var(--text-muted);
+}
+
+/* ================== DISCOUNT OPTIONS STYLES ================== */
+.discount-options {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+}
+
+.btn-discount {
+    flex: 1;
+    padding: var(--spacing-md);
+    border: 1px solid var(--border-color);
+    background: var(--bg-white);
+    color: var(--text-secondary);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    font-size: 13px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+}
+
+.btn-discount:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    background: var(--primary-light);
+}
+
+.btn-discount.active {
+    background: var(--primary-color);
+    color: var(--text-white);
+    border-color: var(--primary-color);
+}
+
+/* ================== FORM ACTIONS STYLES ================== */
+.form-actions {
+    margin-top: var(--spacing-xl);
+}
+
+.btn-add-coupon {
+    width: 100%;
+    padding: var(--spacing-md) var(--spacing-lg);
+    background: var(--primary-color);
+    color: var(--text-white);
+    border: none;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+}
+
+.btn-add-coupon:hover {
+    background: var(--primary-hover);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-add-coupon:active {
+    transform: translateY(0);
+}
+
+/* ================== TABLE HEADER STYLES ================== */
+.table-header-section {
+    background: var(--bg-white);
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+}
+
+.table-tabs {
+    display: flex;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.tab-btn {
+    flex: 1;
+    padding: var(--spacing-lg);
+    background: var(--bg-white);
+    border: none;
+    color: var(--text-secondary);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    position: relative;
+}
+
+.tab-btn:hover {
+    background: var(--bg-gray);
+    color: var(--text-primary);
+}
+
+.tab-btn.active {
+    color: var(--primary-color);
+    background: var(--primary-light);
+}
+
+.tab-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 3px;
+    background: var(--primary-color);
+}
+
+/* ================== TABLE CONTAINER STYLES ================== */
+.table-container {
+    background: var(--bg-white);
+    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.coupons-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.coupons-table thead th {
+    background: var(--bg-gray);
+    color: var(--text-primary);
+    font-weight: 600;
+    padding: var(--spacing-lg);
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+    white-space: nowrap;
+}
+
+.coupons-table tbody td {
+    padding: var(--spacing-lg);
+    text-align: center;
+    border-bottom: 1px solid var(--border-light);
+    vertical-align: middle;
+}
+
+.coupon-row {
+    transition: all var(--transition-fast);
+}
+
+.coupon-row:hover {
+    background: var(--bg-gray);
+}
+
+/* ================== COUPON CODE STYLES ================== */
+.coupon-code {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+}
+
+.code-text {
+    font-family: 'Courier New', monospace;
+    font-weight: 600;
+    color: var(--text-primary);
+    background: var(--bg-gray);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-sm);
+    font-size: 12px;
+}
+
+.btn-copy {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    padding: var(--spacing-xs);
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-fast);
+}
+
+.btn-copy:hover {
+    color: var(--primary-color);
+    background: var(--primary-light);
+}
+
+/* ================== DISCOUNT BADGE STYLES ================== */
+.discount-badge {
+    background: var(--success-color);
+    color: var(--text-white);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    font-size: 12px;
+}
+
+/* ================== USAGE COUNT STYLES ================== */
+.usage-count {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+/* ================== EXPIRY DATE STYLES ================== */
+.expiry-date {
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+/* ================== STATUS BADGE STYLES ================== */
+.status-badge {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-sm);
+    font-weight: 500;
+    font-size: 12px;
+    text-align: center;
+    min-width: 70px;
+    display: inline-block;
+}
+
+.status-active {
+    background: var(--success-light);
+    color: var(--success-color);
+}
+
+.status-used {
+    background: var(--warning-light);
+    color: var(--warning-color);
+}
+
+.status-expired {
+    background: var(--error-light);
+    color: var(--error-color);
+}
+
+/* ================== ACTION BUTTONS STYLES ================== */
+.action-buttons {
+    display: flex;
+    gap: var(--spacing-sm);
+    justify-content: center;
+}
+
+.btn-action {
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.btn-edit {
+    background: var(--info-light);
+    color: var(--info-color);
+}
+
+.btn-edit:hover {
+    background: var(--info-color);
+    color: var(--text-white);
+    transform: translateY(-1px);
+}
+
+.btn-delete {
+    background: var(--error-light);
+    color: var(--error-color);
+}
+
+.btn-delete:hover {
+    background: var(--error-color);
+    color: var(--text-white);
+    transform: translateY(-1px);
+}
+
+/* ================== PAGINATION STYLES ================== */
+.pagination-container {
+    padding: var(--spacing-lg);
+    border-top: 1px solid var(--border-light);
+    background: var(--bg-gray);
+}
+
+.pagination-nav {
+    display: flex;
+    justify-content: center;
+}
+
+.pagination {
+    display: flex;
+    gap: var(--spacing-xs);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.page-item {
+    display: flex;
+}
+
+.page-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--border-color);
+    background: var(--bg-white);
+    color: var(--text-secondary);
+    text-decoration: none;
+    border-radius: var(--radius-md);
+    font-weight: 500;
+    transition: all var(--transition-fast);
+}
+
+.page-link:hover {
+    background: var(--primary-color);
+    color: var(--text-white);
+    border-color: var(--primary-color);
+    transform: translateY(-1px);
+}
+
+.page-item.active .page-link {
+    background: var(--primary-color);
+    color: var(--text-white);
+    border-color: var(--primary-color);
+}
+
+.page-item.disabled .page-link {
+    background: var(--bg-gray);
+    color: var(--text-muted);
+    cursor: not-allowed;
+    border-color: var(--border-light);
+}
+
+.page-item.disabled .page-link:hover {
+    transform: none;
+}
+
+/* ================== MODAL STYLES ================== */
+.modal-content {
+    border-radius: var(--radius-lg);
+    border: none;
+    box-shadow: var(--shadow-xl);
+}
+
+.modal-header {
+    background: var(--bg-gray);
+    border-bottom: 1px solid var(--border-light);
+    padding: var(--spacing-lg);
+}
+
+.modal-title {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.modal-body {
+    padding: var(--spacing-xl);
+}
+
+.modal-footer {
+    background: var(--bg-gray);
+    border-top: 1px solid var(--border-light);
+    padding: var(--spacing-lg);
+}
+
+/* ================== NOTIFICATION STYLES ================== */
+.notification {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--success-color);
+    color: var(--text-white);
+    padding: var(--spacing-md) var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-weight: 500;
+    animation: slideDown 0.3s ease;
+}
+
+.notification.success {
+    background: var(--success-color);
+}
+
+.notification.error {
+    background: var(--error-color);
+}
+
+.notification.warning {
+    background: var(--warning-color);
+}
+
+.notification.info {
+    background: var(--info-color);
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+/* ================== RESPONSIVE STYLES ================== */
+
+/* Large Screens (1200px+) */
+@media (min-width: 1200px) {
+    .sidebar {
+        width: 300px;
+    }
+    
+    /* .main-content {
+        margin-right: 300px;
+    } */
+    
+    .page-content {
+        padding: var(--spacing-2xl);
+    }
+}
+
+/* Medium Screens (992px - 1199px) */
+@media (max-width: 1199px) {
+    .sidebar {
+        width: 260px;
+    }
+/*     
+    .main-content {
+        margin-right: 260px;
+    } */
+    
+    .search-bar-container {
+        max-width: 300px;
+    }
+}
+
+/* Tablet Screens (768px - 991px) */
+@media (max-width: 991px) {
+    .sidebar {
+        transform: translateX(100%);
+        width: 280px;
+    }
+    
+    .sidebar.show {
+        transform: translateX(0);
+    }
+    
+    .main-content {
+        margin-right: 0;
+    }
+    
+    .search-bar-container {
+        max-width: 250px;
+        margin: 0 var(--spacing-md);
+    }
+    
+    .preview-btn {
+        display: none !important;
+    }
+    
+    .page-content {
+        padding: var(--spacing-lg);
+    }
+    
+    .row.g-4 > .col-lg-5,
+    .row.g-4 > .col-lg-7 {
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    .table-tabs {
+        flex-wrap: wrap;
+    }
+    
+    .tab-btn {
+        flex: 1 1 50%;
+        min-width: 120px;
+    }
+}
+
+/* Mobile Screens (576px - 767px) */
+@media (max-width: 767px) {
+    .navbar {
+        padding: var(--spacing-md);
+    }
+    
+    .search-bar-container {
+        max-width: 200px;
+        margin: 0 var(--spacing-sm);
+    }
+    
+    .search-input {
+        font-size: 14px;
+    }
+    
+    .page-content {
+        padding: var(--spacing-md);
+    }
+    
+    .form-card,
+    .table-container {
+        border-radius: var(--radius-md);
+    }
+    
+    .form-body {
+        padding: var(--spacing-md);
+    }
+    
+    .chart-container {
+        height: 250px;
+        padding: var(--spacing-md);
+    }
+    
+    .table-tabs {
+        flex-direction: column;
+    }
+    
+    .tab-btn {
+        flex: none;
+        padding: var(--spacing-md);
+    }
+    
+    .coupons-table {
+        font-size: 12px;
+    }
+    
+    .coupons-table thead th,
+    .coupons-table tbody td {
+        padding: var(--spacing-sm);
+    }
+    
+    .coupon-code {
+        flex-direction: column;
+        gap: var(--spacing-xs);
+    }
+    
+    .code-text {
+        font-size: 10px;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+        gap: var(--spacing-xs);
+    }
+    
+    .btn-action {
+        width: 28px;
+        height: 28px;
+        font-size: 10px;
+    }
+    
+    .pagination {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .page-link {
+        width: 35px;
+        height: 35px;
+        font-size: 12px;
+    }
+}
+
+/* Small Mobile Screens (less than 576px) */
+@media (max-width: 575px) {
+    .sidebar {
+        width: 100%;
+    }
+    
+    .navbar {
+        padding: var(--spacing-sm);
+    }
+    
+    .search-bar-container {
+        display: none;
+    }
+    
+    .top-nav-icons {
+        gap: var(--spacing-sm);
+    }
+    
+    .nav-icon {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .page-content {
+        padding: var(--spacing-sm);
+    }
+    
+    .form-header,
+    .form-body {
+        padding: var(--spacing-sm);
+    }
+    
+    .form-title {
+        font-size: 14px;
+    }
+    
+    .chart-container {
+        height: 200px;
+        padding: var(--spacing-sm);
+    }
+    
+    .form-group {
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .form-control {
+        padding: var(--spacing-sm);
+        font-size: 14px;
+    }
+    
+    .discount-options {
+        flex-direction: column;
+    }
+    
+    .btn-discount {
+        padding: var(--spacing-sm);
+        font-size: 12px;
+    }
+    
+    .btn-add-coupon {
+        padding: var(--spacing-sm) var(--spacing-md);
+        font-size: 13px;
+    }
+    
+    .table-responsive {
+        border-radius: var(--radius-sm);
+    }
+    
+    .coupons-table {
+        font-size: 11px;
+    }
+    
+    .coupons-table thead th,
+    .coupons-table tbody td {
+        padding: var(--spacing-xs);
+    }
+    
+    .status-badge {
+        font-size: 10px;
+        padding: 2px var(--spacing-xs);
+        min-width: 60px;
+    }
+    
+    .discount-badge {
+        font-size: 10px;
+        padding: 2px var(--spacing-xs);
+    }
+    
+    .pagination-container {
+        padding: var(--spacing-sm);
+    }
+    
+    .page-link {
+        width: 30px;
+        height: 30px;
+        font-size: 11px;
+    }
+    
+    .modal-dialog {
+        margin: var(--spacing-sm);
+    }
+    
+    .modal-body {
+        padding: var(--spacing-md);
+    }
+    
+    .notification {
+        left: var(--spacing-sm);
+        right: var(--spacing-sm);
+        transform: none;
+        font-size: 13px;
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+}
+
+/* ================== PRINT STYLES ================== */
+@media print {
+    .sidebar,
+    .navbar-container,
+    .form-card,
+    .pagination-container,
+    .action-buttons {
+        display: none !important;
+    }
+    
+    .main-content {
+        margin-right: 0 !important;
+    }
+    
+    .page-content {
+        padding: 0 !important;
+    }
+    
+    .table-container {
+        box-shadow: none !important;
+        border: 1px solid var(--border-color) !important;
+    }
+    
+    .coupons-table {
+        font-size: 12px !important;
+    }
+    
+    .coupon-row:hover {
+        background: transparent !important;
+    }
+}
+
+/* ================== ACCESSIBILITY STYLES ================== */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Focus Styles for Keyboard Navigation */
+.form-control:focus,
+.btn-discount:focus,
+.btn-add-coupon:focus,
+.tab-btn:focus,
+.btn-copy:focus,
+.btn-action:focus,
+.page-link:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+    :root {
+        --border-color: #000000;
+        --text-secondary: #000000;
+        --bg-gray: #ffffff;
+    }
+}
+
+/* Dark Mode Support (Future Enhancement) */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-light: #1a1a1a;
+        --bg-white: #2d2d2d;
+        --bg-gray: #3a3a3a;
+        --text-primary: #ffffff;
+        --text-secondary: #cccccc;
+        --text-muted: #999999;
+        --border-color: #444444;
+        --border-light: #555555;
+    }
+}
+

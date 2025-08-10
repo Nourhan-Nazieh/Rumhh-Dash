@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إضافة منتج جديد - لوحة التحكم</title>
+    
+  <!-- /* ========== START: Stylesheets ========== */ -->
+    <link rel="icon" href="../assets/images/logo..svg" />
+    <link rel="stylesheet" href="../assets/CSS/all.min.css" />
+    <link rel="stylesheet" href="../assets/bootstrap/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap"rel="stylesheet"/>
+    <link rel="stylesheet" href="../assets/CSS/Add-Item.css" /> 
+    <link rel="stylesheet" href="../assets/CSS/style.css" />
+
+</head>
+<body>
+    <!-- Main Container -->
+    <div class="d-flex">
+        <!-- ================== START: SIDEBAR ================== -->
+    <aside class="sidebar">
+            <div class="logo-container">
+            <img src="../assets/images/logo.png" alt="Logo" class="logo-img" />
+            <span class="logo-text">Dashboard</span>
+            </div>
+                
+                <ul class="nav flex-column sidebar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">
+                            <i class="fa-solid fa-house-chimney"></i>
+                            <span>لوحة التحكم</span>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="./manag-orde.html ">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span>ادارة الطلبات</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./managProducts.html">
+                            <i class="fa-solid fa-box-archive"></i>
+                            <span>ادارة المنتجات</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/managCustomer.html">
+                            <i class="fa-solid fa-users-gear"></i>
+                            <span>ادارة العملاء</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#design">
+                            <i class="fa-solid fa-palette"></i>
+                            <span>تصميم متجرك</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./discount.html">
+                            <i class="fa-solid fa-tags"></i>
+                            <span>كوبونات الخصم</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#reports">
+                            <i class="fa-solid fa-chart-pie"></i>
+                            <span>تقارير واحصائيات</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./scops.html">
+                            <i class="fa-solid fa-globe"></i>
+                            <span>نطاقات ومجالات</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./ticketSup.html">
+                            <i class="fa-solid fa-headset"></i>
+                            <span>تذاكر الدعم الفني</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#shipping">
+                            <i class="fa-solid fa-truck-fast"></i>
+                            <span>الضريبة والتوصيل</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#payment">
+                            <i class="fa-solid fa-credit-card"></i>
+                            <span>اعدادات الدفع</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                    <a class="nav-link" href="../pages/settingAcc.html">
+                            <i class="fa-solid fa-gear"></i>
+                            <span>اعدادات حسابك</span>
+                        </a>
+                    </li>
+                </ul>
+    </aside>
+      <!-- /* ========== START: Main Content ========== */ -->
+      <div class="main-content flex-grow-1">
+        <!-- /* ========== START: Navbar ========== */ -->
+            <header class="navbar-container">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid">
+                        <!-- Hamburger Menu for Mobile -->
+                        <button class="btn d-lg-none me-2" type="button" id="sidebar-toggler">
+                            <i class="fa-solid fa-bars"></i>
+                        </button>
+
+                        <!-- Profile Dropdown -->
+                        <div class="dropdown profile-dropdown ms-lg-3">
+                            <a href="#" class="d-flex align-items-center text-decoration-none text-dark" 
+                               id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="../assets/images/profile.png" 
+                                     alt="Avatar" class="profile-avatar" />
+                                <span class="me-2 d-none d-sm-block">اهلا محمود</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-start" aria-labelledby="profileDropdown">
+                                <li><a class="dropdown-item" href="#"><i class="fa-solid fa-user me-2"></i>ملفي الشخصي</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="fa-solid fa-gear me-2"></i>اعدادات</a></li>
+                                <li><hr class="dropdown-divider" /></li>
+                                <li><a class="dropdown-item text-danger" href="#"><i class="fa-solid fa-arrow-right-from-bracket me-2"></i>تسجيل الخروج</a></li>
+                            </ul>
+                        </div>
+                     <!-- Center search bar -->
+                        <div class="navbar-center">
+                            <div class="search-container">
+                                <input type="text" class="search-input" placeholder="بحث...">
+                                <button class="search-btn">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                <!-- Left side icons and logo -->
+                <div class="navbar-left">
+                    <div class="store-preview-btn">
+                        <i class="fas fa-eye"></i>
+                        معاينة المتجر
+                    </div>
+                    <a href="#" class="nav-icon position-relative">
+                      <i class="fa-solid fa-bell"></i>
+                      <span class="notification-dot"></span>
+                    </a>
+                    <div class="nav-icon crown">
+                        <i class="fas fa-crown"></i>
+                    </div>
+    
+                </div>
+
+
+
+                    </div>
+                </nav>
+            </header>
+
+            <!-- ================== START: PAGE CONTENT ================== -->
+            <main class="page-content">
+                <!-- Page Header -->
+                <div class="page-header">
+                    <div class="header-actions ">
+                        <button class="btn btn-filter ">
+                            <i class="fas fa-filter"></i> تصفية
+                        </button>
+                        <button class="btn btn-products">
+                            <i class="fas fa-th-large"></i> ادارة المنتجات
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Form Container -->
+                <div class="form-wrapper">
+
+                    <!-- Right Side - Image Upload & Product Details -->
+                    <div class="upload-section">
+                        <!-- Main Image Upload -->
+                        <div class="main-upload-area" id="mainUpload">
+                            <div class="upload-content">
+                                <i class="fas fa-cloud-upload-alt upload-icon"></i>
+                                <p class="upload-text">اضغط لاضافة صورة</p>
+                            </div>
+                        </div>
+
+                        <!-- Thumbnail Images -->
+                        <div class="thumbnail-grid">
+                            <div class="thumbnail-upload" data-index="1">
+                                <i class="fas fa-plus"></i>
+                                <input type="file" accept="image/*" style="display: none;">
+                            </div>
+                            <div class="thumbnail-upload" data-index="2">
+                                <i class="fas fa-plus"></i>
+                                <input type="file" accept="image/*" style="display: none;">
+                            </div>
+                            <div class="thumbnail-upload" data-index="3">
+                                <i class="fas fa-plus"></i>
+                                <input type="file" accept="image/*" style="display: none;">
+                            </div>
+                        </div>
+
+                        <!-- Product Details -->
+                        <div class="form-group">
+                            <label class="form-label">اسم المنتج</label>
+                            <input type="text" class="form-input" id="productName" 
+                                   placeholder="ادخل اسم المنتج" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">وصف المنتج</label>
+                            <textarea class="form-textarea" id="productDescription" 
+                                      rows="4" placeholder="ادخل وصف المنتج" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">فئة المنتج</label>
+                            <div class="select-wrapper">
+                                <select class="form-select" id="productCategory" required>
+                                    <option value="">احذية</option>
+                                    <option value="shoes">أحذية</option>
+                                    <option value="clothes">ملابس</option>
+                                    <option value="accessories">إكسسوارات</option>
+                                    <option value="electronics">إلكترونيات</option>
+                                    <option value="home">منزل وحديقة</option>
+                                </select>
+                                <i class="fas fa-chevron-down select-arrow"></i>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button class="submit-btn" id="submitBtn" disabled>
+                            <i class="fas fa-plus"></i>
+                            <span>اضافة المنتج</span>
+                        </button>
+                    </div>
+
+                                        <!-- Left Side - Form Fields -->
+                    <div class="form-section">
+                        <!-- Product Options -->
+                        <div class="form-group">
+                            <label class="form-label">اضف خيار (اختياري)</label>
+                            <div class="input-group">
+                                <input type="text" class="form-input" id="optionInput" 
+                                       placeholder="اضف الخيارات مثل (المقاس - الالوان)">
+                                <button class="btn btn-add" id="addOptionBtn">
+                                    <i class="fas fa-plus"></i> اضف
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Select Option -->
+                        <div class="form-group">
+                            <label class="form-label">اختار الخيار لإضافة القيم الخاصة به</label>
+                            <div class="select-wrapper">
+                                <select class="form-select" id="optionSelect">
+                                    <option value="">الوان</option>
+                                    <option value="colors">الألوان</option>
+                                    <option value="sizes">المقاسات</option>
+                                    <option value="materials">المواد</option>
+                                </select>
+                                <i class="fas fa-chevron-down select-arrow"></i>
+                            </div>
+                        </div>
+
+                        <!-- Option Values -->
+                        <div class="form-group">
+                            <label class="form-label">قيمة الخيارات</label>
+                            <div class="input-group">
+                                <input type="text" class="form-input" id="optionValueInput" 
+                                       placeholder="احمر - L">
+                                <button class="btn btn-add" id="addValueBtn">
+                                    <i class="fas fa-plus"></i> اضف
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Color Tags -->
+                        <div class="form-group">
+                            <label class="form-label">مجموعة الوان</label>
+                            <div class="tags-container" id="colorTags">
+                                <span class="tag">اللون <i class="fas fa-times"></i></span>
+                                <span class="tag">احمر <i class="fas fa-times"></i></span>
+                                <span class="tag">اسود <i class="fas fa-times"></i></span>
+                            </div>
+                        </div>
+
+                        <!-- Pricing -->
+                        <div class="form-group">
+                            <label class="form-label">سعر المنتج</label>
+                            <div class="price-input">
+                                <input type="number" class="form-input" id="productPrice" 
+                                       placeholder="0" min="0" step="0.01">
+                                <span class="currency">ر.س</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">سعر المنتج بعد الخصم</label>
+                            <div class="price-input">
+                                <input type="number" class="form-input" id="discountPrice" 
+                                       placeholder="0" min="0" step="0.01">
+                                <span class="currency">ر.س</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Hidden File Input for Main Image -->
+    <input type="file" id="mainFileInput" accept="image/*" style="display: none;">
+
+    <!-- Image Preview Modal -->
+    <div class="image-preview-modal" id="imageModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <h3>معاينة الصورة</h3>
+            <img id="previewImage" src="" alt="معاينة الصورة">
+            <div class="modal-actions">
+                <button class="modal-btn confirm-btn" id="confirmImage">تأكيد</button>
+                <button class="modal-btn cancel-btn" id="cancelImage">إلغاء</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Notification -->
+    <div class="notification success" id="successNotification" style="display: none;">
+        <i class="fas fa-check-circle"></i>
+        <span>تم إضافة المنتج بنجاح!</span>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../assets/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../assets/JS/addItem.js"></script>
+</body>
+</html>
+

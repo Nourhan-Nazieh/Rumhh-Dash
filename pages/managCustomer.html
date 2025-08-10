@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إدارة العملاء - لوحة التحكم</title>
+
+  <!-- /* ========== START: Stylesheets ========== */ -->
+    <link rel="icon" href="../assets/images/logo..svg" />
+    <link rel="stylesheet" href="../assets/CSS/all.min.css" />
+    <link rel="stylesheet" href="../assets/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/CSS/managCustomer.css" />
+    <link rel="stylesheet" href="../assets/CSS/style.css">
+</head>
+<body>
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">تخطي إلى المحتوى الرئيسي</a>
+
+    <!-- Main Container -->
+    <div class="d-flex" id="mainContainer">
+        <!-- ================== SIDEBAR ================== -->
+        <aside class="sidebar" id="sidebar" role="navigation" aria-label="القائمة الرئيسية">
+            <div class="logo-container">
+                <img src="../assets/images/logo.png" alt="شعار لوحة التحكم" class="logo-img" />
+                <span class="logo-text">Dashboard</span>
+            </div>
+            
+            <nav class="sidebar-nav" role="navigation">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html" aria-label="الانتقال إلى لوحة التحكم">
+                            <i class="fa-solid fa-house-chimney" aria-hidden="true"></i>
+                            <span>لوحة التحكم</span>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/manag-orde.html" aria-label="الانتقال إلى إدارة الطلبات">
+                            <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                            <span>ادارة الطلبات</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/managProducts.html" aria-label="الانتقال إلى إدارة المنتجات">
+                            <i class="fa-solid fa-box-archive" aria-hidden="true"></i>
+                            <span>ادارة المنتجات</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../pages/managCustomer.html" aria-current="page" aria-label="صفحة إدارة العملاء الحالية">
+                            <i class="fa-solid fa-users-gear" aria-hidden="true"></i>
+                            <span>ادارة العملاء</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/design-stor.html" aria-label="الانتقال إلى تصميم المتجر">
+                            <i class="fa-solid fa-palette" aria-hidden="true"></i>
+                            <span>تصميم متجرك</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/discount.html" aria-label="الانتقال إلى كوبونات الخصم">
+                            <i class="fa-solid fa-tags" aria-hidden="true"></i>
+                            <span>كوبونات الخصم</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/reports.html" aria-label="الانتقال إلى التقارير والإحصائيات">
+                            <i class="fa-solid fa-chart-pie" aria-hidden="true"></i>
+                            <span>تقارير واحصائيات</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/scops.html" aria-label="الانتقال إلى النطاقات والمجالات">
+                            <i class="fa-solid fa-globe" aria-hidden="true"></i>
+                            <span>نطاقات ومجالات</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/ticketSup.html" aria-label="الانتقال إلى تذاكر الدعم الفني">
+                            <i class="fa-solid fa-headset" aria-hidden="true"></i>
+                            <span>تذاكر الدعم الفني</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/Tax-add.html" aria-label="الانتقال إلى الضريبة والتوصيل">
+                            <i class="fa-solid fa-truck-fast" aria-hidden="true"></i>
+                            <span>الضريبة والتوصيل</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/settingPay.html" aria-label="الانتقال إلى إعدادات الدفع">
+                            <i class="fa-solid fa-credit-card" aria-hidden="true"></i>
+                            <span>اعدادات الدفع</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/settingAcc.html" aria-label="الانتقال إلى إعدادات الحساب">
+                            <i class="fa-solid fa-gear" aria-hidden="true"></i>
+                            <span>اعدادات حسابك</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Sidebar Overlay for Mobile -->
+        <div class="sidebar-overlay" id="sidebarOverlay" aria-hidden="true"></div>
+
+        <!-- ================== MAIN CONTENT ================== -->
+        <div class="main-wrapper flex-grow-1">
+            <!-- ================== NAVBAR ================== -->
+            <header class="navbar-container" role="banner">
+                <nav class="navbar navbar-expand-lg" role="navigation" aria-label="شريط التنقل العلوي">
+                    <div class="container-fluid">
+                        <!-- Mobile Controls -->
+                        <div class="d-flex align-items-center">
+                            <button class="btn d-lg-none me-2 mobile-nav-toggle" 
+                                    type="button" 
+                                    id="sidebarToggler"
+                                    aria-label="فتح/إغلاق القائمة الجانبية"
+                                    aria-expanded="false"
+                                    aria-controls="sidebar">
+                                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+                            </button>
+                            
+                            <!-- Profile Dropdown -->
+                            <div class="dropdown profile-dropdown">
+                                <a href="#" 
+                                   class="d-flex align-items-center text-decoration-none text-dark" 
+                                   id="profileDropdown" 
+                                   data-bs-toggle="dropdown" 
+                                   aria-expanded="false"
+                                   aria-label="قائمة الملف الشخصي">
+                                    <img src="../assets/images/profile.png" 
+                                         alt="صورة الملف الشخصي" 
+                                         class="profile-avatar" />
+                                    <span class="me-2 d-none d-sm-block">اهلا محمود</span>
+                                    <i class="fas fa-chevron-down ms-1 d-none d-sm-block" aria-hidden="true"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-start" aria-labelledby="profileDropdown">
+                                    <li>
+                                        <a class="dropdown-item" href="../pages/settingAcc.html">
+                                            <i class="fa-solid fa-user me-2" aria-hidden="true"></i>ملفي الشخصي
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="../pages/settingAcc.html">
+                                            <i class="fa-solid fa-gear me-2" aria-hidden="true"></i>اعدادات
+                                        </a>
+                                    </li>
+                                    <li><hr class="dropdown-divider" /></li>
+                                    <li>
+                                        <a class="dropdown-item text-danger" href="#" onclick="handleLogout()">
+                                            <i class="fa-solid fa-arrow-right-from-bracket me-2" aria-hidden="true"></i>تسجيل الخروج
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Center Search Bar -->
+                        <div class="navbar-center d-none d-lg-flex">
+                            <div class="search-container" role="search">
+                                <label for="searchInput" class="visually-hidden">البحث في العملاء</label>
+                                <input type="text" 
+                                       class="search-input" 
+                                       id="searchInput"
+                                       placeholder="بحث في العملاء..."
+                                       aria-label="البحث في العملاء">
+                                <button class="search-btn" type="button" aria-label="تنفيذ البحث">
+                                    <i class="fas fa-search" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Right Side Icons -->
+                        <div class="navbar-left">
+                            <button class="store-preview-btn" type="button" aria-label="معاينة المتجر">
+                                <i class="fas fa-eye" aria-hidden="true"></i>
+                                <span class="d-none d-md-inline">معاينة المتجر</span>
+                            </button>
+                            
+                            <button class="nav-icon position-relative" type="button" aria-label="الإشعارات">
+                                <i class="fa-solid fa-bell" aria-hidden="true"></i>
+                                <span class="notification-dot" aria-label="لديك إشعارات جديدة"></span>
+                            </button>
+                            
+                            <div class="nav-icon crown" aria-label="حساب مميز">
+                                <i class="fas fa-crown" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+
+            <!-- ================== PAGE CONTENT ================== -->
+            <main class="page-content" id="main-content" role="main">
+                <!-- Page Header with Stats -->
+                <section class="page-header" aria-labelledby="page-title">
+                    <div class="container-fluid">
+                        <div class="row g-3 mb-4">
+                            <div class="col-lg-3 col-md-6 col-12">
+                                <div class="stat-card animate-fade-in-up" style="animation-delay: 0.1s">
+                                    <div class="stat-icon" aria-hidden="true">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                    <div class="stat-info">
+                                        <h3 class="stat-number" aria-label="630 مستخدم">630</h3>
+                                        <p class="stat-label">عدد المستخدمين</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-6 col-12">
+                                <div class="stat-card animate-fade-in-up" style="animation-delay: 0.2s">
+                                    <div class="stat-icon" aria-hidden="true">
+                                        <i class="fas fa-user-check"></i>
+                                    </div>
+                                    <div class="stat-info">
+                                        <h3 class="stat-number" aria-label="130 بريد إلكتروني">130</h3>
+                                        <p class="stat-label">البريد الالكتروني</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-6 col-12">
+                                <div class="stat-card animate-fade-in-up" style="animation-delay: 0.3s">
+                                    <div class="stat-icon" aria-hidden="true">
+                                        <i class="fas fa-chart-line"></i>
+                                    </div>
+                                    <div class="stat-info">
+                                        <h3 class="stat-number" aria-label="430 خدمة">430</h3>
+                                        <p class="stat-label">خدمة</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-6 col-12">
+                                <div class="stat-card animate-fade-in-up" style="animation-delay: 0.4s">
+                                    <div class="stat-icon" aria-hidden="true">
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="stat-info">
+                                        <h3 class="stat-number" aria-label="120 مميز">120</h3>
+                                        <p class="stat-label">مميز</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="header-actions d-flex justify-content-between align-items-center flex-wrap gap-3">
+                        <button class="btn btn-filter d-flex align-items-center" 
+                                id="filterBtn"
+                                type="button"
+                                aria-label="فتح نافذة التصفية">
+                            <i class="fas fa-filter me-2" aria-hidden="true"></i>
+                            <span>تصفية</span>
+                        </button>
+                        
+                        <button class="btn btn-add-customer d-flex align-items-center" 
+                                id="addCustomerBtn"
+                                type="button"
+                                aria-label="إضافة عميل جديد">
+                            <i class="fas fa-plus me-2" aria-hidden="true"></i>
+                            <span>اضافة عميل جديد</span>
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Customers Table Section -->
+                <section class="table-section" aria-labelledby="customers-table-title">
+                    <div class="table-container animate-fade-in-up" style="animation-delay: 0.5s">
+                        <div class="table-header">
+                            <h2 class="table-title" id="customers-table-title">قائمة العملاء</h2>
+                            <div class="table-controls">
+                                <div class="entries-per-page">
+                                    <label for="entriesSelect">عرض</label>
+                                    <select id="entriesSelect" aria-label="عدد العناصر المعروضة في الصفحة">
+                                        <option value="10">10</option>
+                                        <option value="25">25</option>
+                                        <option value="50">50</option>
+                                        <option value="100">100</option>
+                                    </select>
+                                    <label>عنصر</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="table-responsive">
+                            <table class="customers-table" 
+                                   id="customersTable" 
+                                   role="table"
+                                   aria-label="جدول العملاء"
+                                   aria-describedby="customers-table-description">
+                                <caption class="visually-hidden" id="customers-table-description">
+                                    جدول يحتوي على معلومات العملاء مع إمكانية التعديل والحذف
+                                </caption>
+                                <thead>
+                                    <tr role="row">
+                                        <th scope="col" aria-label="صورة العميل">الصورة</th>
+                                        <th scope="col" aria-label="حالة العميل">الحالة</th>
+                                        <th scope="col" aria-label="اسم المستخدم">اسم المستخدم</th>
+                                        <th scope="col" aria-label="البريد الإلكتروني">البريد الالكتروني</th>
+                                        <th scope="col" aria-label="نوع الخدمة">محدود خدمة العملاء</th>
+                                        <th scope="col" aria-label="الإجراءات المتاحة">الاجراء</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="customersTableBody">
+                                    <!-- Customer rows will be dynamically generated -->
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Pagination -->
+                        <div class="pagination-container">
+                            <div class="pagination-info" role="status" aria-live="polite">
+                                <span id="paginationInfo">عرض 1 إلى 10 من 50 عنصر</span>
+                            </div>
+                            <nav aria-label="تنقل بين صفحات الجدول" role="navigation">
+                                <ul class="pagination" id="pagination">
+                                    <!-- Pagination will be dynamically generated -->
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <!-- ================== MODALS ================== -->
+    
+    <!-- Add Customer Modal -->
+    <div class="modal fade" 
+         id="addCustomerModal" 
+         tabindex="-1" 
+         aria-labelledby="addCustomerModalLabel" 
+         aria-hidden="true"
+         role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addCustomerModalLabel">اضافة عميل جديد</h5>
+                    <button type="button" 
+                            class="btn-close" 
+                            data-bs-dismiss="modal" 
+                            aria-label="إغلاق النافذة"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="addCustomerForm" novalidate>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="customerName" class="form-label">اسم العميل <span class="text-danger">*</span></label>
+                                <input type="text" 
+                                       class="form-control" 
+                                       id="customerName" 
+                                       required
+                                       aria-describedby="customerNameHelp">
+                                <div class="invalid-feedback">يرجى إدخال اسم العميل</div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="customerEmail" class="form-label">البريد الالكتروني <span class="text-danger">*</span></label>
+                                <input type="email" 
+                                       class="form-control" 
+                                       id="customerEmail" 
+                                       required
+                                       aria-describedby="customerEmailHelp">
+                                <div class="invalid-feedback">يرجى إدخال بريد إلكتروني صحيح</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="customerPhone" class="form-label">رقم الهاتف</label>
+                                <input type="tel" 
+                                       class="form-control" 
+                                       id="customerPhone"
+                                       aria-describedby="customerPhoneHelp">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="customerStatus" class="form-label">الحالة</label>
+                                <select class="form-select" id="customerStatus" aria-label="اختيار حالة العميل">
+                                    <option value="active">نشط</option>
+                                    <option value="inactive">غير نشط</option>
+                                    <option value="pending">معلق</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="customerService" class="form-label">نوع الخدمة</label>
+                            <input type="text" 
+                                   class="form-control" 
+                                   id="customerService" 
+                                   value="محدود خدمة العملاء">
+                        </div>
+                        <div class="mb-3">
+                            <label for="customerAvatar" class="form-label">صورة العميل</label>
+                            <input type="file" 
+                                   class="form-control" 
+                                   id="customerAvatar" 
+                                   accept="image/*"
+                                   aria-describedby="customerAvatarHelp">
+                            <div id="customerAvatarHelp" class="form-text">اختر صورة بصيغة JPG أو PNG</div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">الغاء</button>
+                    <button type="button" class="btn btn-primary" id="saveCustomerBtn">
+                        <span class="btn-text">حفظ العميل</span>
+                        <span class="btn-spinner d-none">
+                            <i class="fas fa-spinner fa-spin"></i>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Filter Modal -->
+    <div class="modal fade" 
+         id="filterModal" 
+         tabindex="-1" 
+         aria-labelledby="filterModalLabel" 
+         aria-hidden="true"
+         role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="filterModalLabel">تصفية العملاء</h5>
+                    <button type="button" 
+                            class="btn-close" 
+                            data-bs-dismiss="modal" 
+                            aria-label="إغلاق النافذة"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="filterForm">
+                        <div class="mb-3">
+                            <label for="filterStatus" class="form-label">الحالة</label>
+                            <select class="form-select" id="filterStatus" aria-label="تصفية حسب الحالة">
+                                <option value="">جميع الحالات</option>
+                                <option value="active">نشط</option>
+                                <option value="inactive">غير نشط</option>
+                                <option value="pending">معلق</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="filterService" class="form-label">نوع الخدمة</label>
+                            <input type="text" 
+                                   class="form-control" 
+                                   id="filterService" 
+                                   placeholder="ادخل نوع الخدمة">
+                        </div>
+                        <div class="mb-3">
+                            <label for="filterDateFrom" class="form-label">من تاريخ</label>
+                            <input type="date" class="form-control" id="filterDateFrom">
+                        </div>
+                        <div class="mb-3">
+                            <label for="filterDateTo" class="form-label">إلى تاريخ</label>
+                            <input type="date" class="form-control" id="filterDateTo">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">الغاء</button>
+                    <button type="button" class="btn btn-primary" id="applyFilterBtn">تطبيق التصفية</button>
+                    <button type="button" class="btn btn-outline-secondary" id="clearFilterBtn">مسح التصفية</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Notification Container -->
+    <div id="notificationContainer" class="notification-container" aria-live="polite" aria-atomic="true"></div>
+    <!-- Scripts -->
+        <script src="../assets/bootstrap/bootstrap.bundle.min.js"></script>
+        <script src="../assets/JS/managCustomer.js"></script>
+</body>
+</html>
+

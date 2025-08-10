@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة التحكم</title>
+    <link rel="icon" href="../assets/images/logo..svg" />
+    <!-- Bootstrap RTL CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/CSS/domains.css">
+    <link rel="stylesheet" href="../assets/CSS/style.css" />
+
+
+</head>
+<body>
+    <!-- Top Navigation Bar -->
+    <nav class="top-navbar">
+        <div class="container-fluid">
+            <div class="navbar-content">
+    <!-- Right side user info and logo -->
+                <div class="navbar-right">
+                    <div class="user-info">
+                        <div class="user-avatar">
+                            <img src="../assets/images/profile.png" alt="User Avatar">
+                        </div>
+                        <div class="user-details">
+                            <span class="user-name">أهلا محمود</span>
+                            <div class="protection-status">
+                                <i class="fas fa-shield-alt"></i>
+                                حماية المتاح
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                     <!-- Center search bar -->
+                        <div class="navbar-center">
+                            <div class="search-container">
+                                <input type="text" class="search-input" placeholder="بحث...">
+                                <button class="search-btn">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                <!-- Left side icons and logo -->
+                <div class="navbar-left">
+                    <div class="nav-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <div class="nav-icon crown">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <div class="store-preview-btn">
+                        <i class="fas fa-eye"></i>
+                        معاينة المتجر
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="main-container page-content">
+ <!-- ================== START: SIDEBAR ================== -->
+        <aside class="sidebar">
+        <div class="logo-container">
+          <img src="../assets/images/logo.png" alt="Logo" class="logo-img" />
+          <span class="logo-text">Dashboard</span>
+        </div>
+            
+            <ul class="nav flex-column sidebar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">
+                        <i class="fa-solid fa-house-chimney"></i>
+                        <span>لوحة التحكم</span>
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="./manag-orde.html ">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span>ادارة الطلبات</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="./managProducts.html">
+                        <i class="fa-solid fa-box-archive"></i>
+                        <span>ادارة المنتجات</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="../pages/managCustomer.html">
+                        <i class="fa-solid fa-users-gear"></i>
+                        <span>ادارة العملاء</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#design">
+                        <i class="fa-solid fa-palette"></i>
+                        <span>تصميم متجرك</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="./discount.html">
+                        <i class="fa-solid fa-tags"></i>
+                        <span>كوبونات الخصم</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="./reports.html">
+                        <i class="fa-solid fa-chart-pie"></i>
+                        <span>تقارير واحصائيات</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="./scops.html">
+                        <i class="fa-solid fa-globe"></i>
+                        <span>نطاقات ومجالات</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                        <a class="nav-link" href="./ticketSup.html">
+                        <i class="fa-solid fa-headset"></i>
+                        <span>تذاكر الدعم الفني</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#shipping">
+                        <i class="fa-solid fa-truck-fast"></i>
+                        <span>الضريبة والتوصيل</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#payment">
+                        <i class="fa-solid fa-credit-card"></i>
+                        <span>اعدادات الدفع</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="../pages/settingAcc.html">
+                        <i class="fa-solid fa-gear"></i>
+                        <span>اعدادات حسابك</span>
+                    </a>
+                </li>
+            </ul>
+</aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Content Header with Tabs -->
+            <div class="content-header">
+                <div class="tabs-container">
+                    <div class="tab active" data-tab="tab1">
+                        متجر وطنيا
+                    </div>
+                    <div class="tab" data-tab="tab2">
+                        <i class="fas fa-external-link-alt"></i>
+                        مواقع الكترونية
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Content -->
+            <div class="tab-content active" id="tab1">
+                <div class="content-grid">
+
+                    <!-- Right Section - Add Domain -->
+                    <div class="content-section right-section">
+                        <div class="section-card">
+                            <div class="card-header">
+                                <h3 class="card-title">اضف المجال الخاص بك</h3>
+                            </div>
+                            <div class="card-body">
+                                <form class="add-domain-form">
+                                    <div class="form-group">
+                                        <label for="yourDomain" class="form-label">اسم مجالك</label>
+                                        <input type="text" class="form-control" id="yourDomain" placeholder="rumh_store.com">
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="dns1" class="form-label">خادم الاسماء الاول (DNS)</label>
+                                        <input type="text" class="form-control" id="dns1" placeholder="Record">
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="dns2" class="form-label">خادم الاسماء الثاني (DNS)</label>
+                                        <input type="text" class="form-control" id="dns2" placeholder="Record">
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="ipAddress" class="form-label">رمز رقمي (IP Address)</label>
+                                        <input type="text" class="form-control" id="ipAddress" placeholder="192.137.091.17">
+                                    </div>
+                                    <a href="../pages/addDomain.html" class="btn btn-success">اضافة المجال</a>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Left Section - Request Domain -->
+                    <div class="content-section left-section">
+                        <div class="section-card">
+                            <div class="card-header">
+                                <h3 class="card-title">اطلب المجال الخاص بك</h3>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-description">
+                                    أن تملك بالفعل دومين، متخصص pro.store، أول تملك بالفعل دومين، أن تملك بالفعل دومين، أن تملك بالفعل دومين، أن تملك بالفعل دومين، أن تملك بالفعل دومين، أن تملك بالفعل دومين الخاص (api-pro.store).
+                                </p>
+                                
+                                <form class="domain-form">
+                                    <div class="form-group">
+                                        <label for="domainName" class="form-label">اسم مجالك</label>
+                                        <input type="text" class="form-control" id="domainName" placeholder="rumh_store.com">
+                                    </div>
+                                    
+                                    <div class="form-note">
+                                        لا تستخدم https:// أو http:// في بداية النسق الصحيح
+                                        domain.tld, domain.tld - domain.tld, subdomain.domain.tld
+                                    </div>
+                                    
+                                    <div class="form-note-bottom">
+                                        إذا كان لديك أي استفسار لا تتردد في التواصل معنا من فريق الدعم
+                                    </div>
+                                    <a href="../pages/addDomain.html" class="btn btn-success">اضافة المجال</a>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="tab-content" id="tab2">
+                <div class="content-placeholder">
+                    <h3>مواقع الكترونية</h3>
+                    <p>محتوى هذا القسم سيتم إضافته لاحقاً</p>
+                </div>
+            </div>
+        </main>
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="../assets/JS/domains.js"></script>
+</body>
+</html>
+
+
+

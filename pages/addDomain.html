@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>نطاق ودومين</title>
+
+    <!-- /* ========== START: Stylesheets ========== */ -->
+    <link rel="icon" href="../assets/images/logo..svg" />
+    <link rel="stylesheet" href="../assets/CSS/all.min.css" />
+    <link rel="stylesheet" href="../assets/bootstrap/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap"rel="stylesheet"/>
+    <link rel="stylesheet" href="../assets/CSS/addDomain.css" />
+    <link rel="stylesheet" href="../assets/CSS/style.css" />
+  <!-- /* ========== END: Stylesheets ========== */ -->
+  </head>
+  <body>
+    <div class="d-flex">
+        <!-- ================== START: SIDEBAR ================== -->
+    <aside class="sidebar">
+            <div class="logo-container">
+            <img src="../assets/images/logo.png" alt="Logo" class="logo-img" />
+            <span class="logo-text">Dashboard</span>
+            </div>
+                
+                <ul class="nav flex-column sidebar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">
+                            <i class="fa-solid fa-house-chimney"></i>
+                            <span>لوحة التحكم</span>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="./manag-orde.html ">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span>ادارة الطلبات</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./managProducts.html">
+                            <i class="fa-solid fa-box-archive"></i>
+                            <span>ادارة المنتجات</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/managCustomer.html">
+                            <i class="fa-solid fa-users-gear"></i>
+                            <span>ادارة العملاء</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#design">
+                            <i class="fa-solid fa-palette"></i>
+                            <span>تصميم متجرك</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./discount.html">
+                            <i class="fa-solid fa-tags"></i>
+                            <span>كوبونات الخصم</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#reports">
+                            <i class="fa-solid fa-chart-pie"></i>
+                            <span>تقارير واحصائيات</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./scops.html">
+                            <i class="fa-solid fa-globe"></i>
+                            <span>نطاقات ومجالات</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./ticketSup.html">
+                            <i class="fa-solid fa-headset"></i>
+                            <span>تذاكر الدعم الفني</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#shipping">
+                            <i class="fa-solid fa-truck-fast"></i>
+                            <span>الضريبة والتوصيل</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#payment">
+                            <i class="fa-solid fa-credit-card"></i>
+                            <span>اعدادات الدفع</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                    <a class="nav-link" href="../pages/settingAcc.html">
+                            <i class="fa-solid fa-gear"></i>
+                            <span>اعدادات حسابك</span>
+                        </a>
+                    </li>
+                </ul>
+    </aside>
+      <!-- /* ========== START: Main Content ========== */ -->
+      <div class="main-content flex-grow-1">
+        <!-- /* ========== START: Navbar ========== */ -->
+            <header class="navbar-container">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid">
+                        <!-- Hamburger Menu for Mobile -->
+                        <button class="btn d-lg-none me-2" type="button" id="sidebar-toggler">
+                            <i class="fa-solid fa-bars"></i>
+                        </button>
+
+                        <!-- Profile Dropdown -->
+                        <div class="dropdown profile-dropdown ms-lg-3">
+                            <a href="#" class="d-flex align-items-center text-decoration-none text-dark" 
+                               id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="../assets/images/profile.png" 
+                                     alt="Avatar" class="profile-avatar" />
+                                <span class="me-2 d-none d-sm-block">اهلا محمود</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-start" aria-labelledby="profileDropdown">
+                                <li><a class="dropdown-item" href="#"><i class="fa-solid fa-user me-2"></i>ملفي الشخصي</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="fa-solid fa-gear me-2"></i>اعدادات</a></li>
+                                <li><hr class="dropdown-divider" /></li>
+                                <li><a class="dropdown-item text-danger" href="#"><i class="fa-solid fa-arrow-right-from-bracket me-2"></i>تسجيل الخروج</a></li>
+                            </ul>
+                        </div>
+                     <!-- Center search bar -->
+                        <div class="navbar-center">
+                            <div class="search-container">
+                                <input type="text" class="search-input" placeholder="بحث...">
+                                <button class="search-btn">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                <!-- Left side icons and logo -->
+                <div class="navbar-left">
+                    <div class="store-preview-btn">
+                        <i class="fas fa-eye"></i>
+                        معاينة المتجر
+                    </div>
+                    <a href="#" class="nav-icon position-relative">
+                      <i class="fa-solid fa-bell"></i>
+                      <span class="notification-dot"></span>
+                    </a>
+                    <div class="nav-icon crown">
+                        <i class="fas fa-crown"></i>
+                    </div>
+    
+                </div>
+
+
+
+                    </div>
+                </nav>
+            </header>
+        <!-- /* ========== START: Page Content ========== */ -->
+
+        <!-- Main Content Area -->
+        <main class="main-content2">
+            <!-- Content Header with Tabs -->
+            <div class="content-header">
+                <div class="tabs-container">
+                    <div class="tab active" data-tab="tab1">
+                        متجر وطنيا
+                    </div>
+                    <div class="tab" data-tab="tab2">
+                        <i class="fas fa-external-link-alt"></i>
+                        مواقع الكترونية
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Content -->
+            <div class="tab-content active" id="tab1">
+                <!-- Domains List Content -->
+                <div class="domains-content">
+                    <div class="domains-list">
+                        <!-- Domain Item 1 -->
+                        <div class="domain-item">
+                            <div class="domain-info">
+                                <div class="domain-name">
+                                    <i class="fas fa-globe"></i>
+                                    <span>rumh-store.com</span>
+                                </div>
+                                <div class="domain-expiry">
+                                    ينتهي المجال في 13-2-2025
+                                </div>
+                            </div>
+                            <div class="domain-actions">
+                                <button class="btn-delete">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                    حذف
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="tab2">
+                <div class="content-placeholder">
+                    <h3>مواقع الكترونية</h3>
+                    <p>محتوى هذا القسم سيتم إضافته لاحقاً</p>
+                </div>
+            </div>
+        </main>
+        <!-- /* ========== END: Page Content ========== */ -->
+      </div>
+      <!-- /* ========== END: Main Content ========== */ -->
+    </div>
+
+    <!-- Scroll To Top Button -->
+    <button id="scrollToTopBtn" class="scroll-to-top" title="الرجوع للأعلى">
+      <i class="fa-brands fa-gripfire fa-fade fa-xl" style="color: #fffefa"></i>
+    </button>
+
+    <!-- Scripts -->
+     <!-- <canvas id="ordersChart"></canvas> -->
+    <script src="../assets/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../assets/JS/addDomain.js"></script>
+
+  </body>
+</html>

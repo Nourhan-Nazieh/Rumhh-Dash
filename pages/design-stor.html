@@ -1,0 +1,2171 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تصميم متجرك</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تصميم متجرك - لوحة التحكم</title>
+
+    <!-- Stylesheets -->
+    <link rel="icon" href="../assets/images/logo..svg" />
+    <link rel="stylesheet" href="../assets/CSS/all.min.css" />
+    <link rel="stylesheet" href="../assets/bootstrap/bootstrap.min.css" />    
+    <!-- AOS Animation Library CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Main and Page-specific stylesheets -->
+    <link rel="stylesheet" href="../assets/CSS/style.css" />
+    <link rel="stylesheet" href="../assets/CSS/design-stor.css" />
+</head>
+<body>
+    <div class="d-grid">
+        <!-- ================== START: SIDEBAR ================== -->
+        <aside class="sidebar">
+                <div class="logo-container">
+                <img src="../assets/images/logo.png" alt="Logo" class="logo-img" />
+                <span class="logo-text">Dashboard</span>
+                </div>
+                    
+                    <ul class="nav flex-column sidebar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link " href="../index.html">
+                                <i class="fa-solid fa-house-chimney"></i>
+                                <span>لوحة التحكم</span>
+                            </a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link " href="../pages/manag-orde.html ">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>ادارة الطلبات</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/managProducts.html">
+                                <i class="fa-solid fa-box-archive"></i>
+                                <span>ادارة المنتجات</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/managCustomer.html">
+                                <i class="fa-solid fa-users-gear"></i>
+                                <span>ادارة العملاء</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="../pages/design-stor.html">
+                                <i class="fa-solid fa-palette"></i>
+                                <span>تصميم متجرك</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link " href="../pages/discount.html">
+                                <i class="fa-solid fa-tags"></i>
+                                <span>كوبونات الخصم</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/reports.html">
+                                <i class="fa-solid fa-chart-pie"></i>
+                                <span>تقارير واحصائيات</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/scops.html">
+                                <i class="fa-solid fa-globe"></i>
+                                <span>نطاقات ومجالات</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/ticketSup.html">
+                                <i class="fa-solid fa-headset"></i>
+                                <span>تذاكر الدعم الفني</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/Tax-add.html">
+                                <i class="fa-solid fa-truck-fast"></i>
+                                <span>الضريبة والتوصيل</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/settingPay.html">
+                                <i class="fa-solid fa-credit-card"></i>
+                                <span>اعدادات الدفع</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/settingAcc.html">
+                                <i class="fa-solid fa-gear"></i>
+                                <span>اعدادات حسابك</span>
+                            </a>
+                        </li>
+                    </ul>
+        </aside>
+
+        <!-- ================== Main Content ================== -->
+        <main class="main-content">
+            <!-- Navbar -->
+            <header class="navbar-container flex-grow-1">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid">
+                        <!-- Hamburger Menu for Mobile -->
+                        <button class="btn d-lg-none me-2" type="button" id="sidebar-toggler">
+                            <i class="fa-solid fa-bars"></i>
+                        </button>
+
+                        <!-- Profile Dropdown -->
+                        <div class="dropdown profile-dropdown ms-lg-3">
+                            <a href="#" class="d-flex align-items-center text-decoration-none text-dark" 
+                               id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="../assets/images/profile.png" 
+                                     alt="Avatar" class="profile-avatar" />
+                                <span class="me-2 d-none d-sm-block">اهلا محمود</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-start" aria-labelledby="profileDropdown">
+                                <li><a class="dropdown-item" href="#"><i class="fa-solid fa-user me-2"></i>ملفي الشخصي</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="fa-solid fa-gear me-2"></i>اعدادات</a></li>
+                                <li><hr class="dropdown-divider" /></li>
+                                <li><a class="dropdown-item text-danger" href="#"><i class="fa-solid fa-arrow-right-from-bracket me-2"></i>تسجيل الخروج</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Center search bar -->
+                        <div class="navbar-center">
+                            <div class="search-container">
+                                <input type="text" class="search-input" placeholder="بحث...">
+                                <button class="search-btn">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Left side icons and logo -->
+                        <div class="navbar-left">
+                            <div class="store-preview-btn">
+                                <i class="fas fa-eye"></i>
+                                معاينة المتجر
+                            </div>
+                            <a href="#" class="nav-icon position-relative">
+                              <i class="fa-solid fa-bell"></i>
+                              <span class="notification-dot"></span>
+                            </a>
+                            <div class="nav-icon crown">
+                                <i class="fas fa-crown"></i>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+
+            <!-- Page Content -->
+            <div class="page-content" >
+                <div class="content-header">
+                    <ul class="nav nav-tabs-custom">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">شحن مع بوسطة </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">شحن مع OTO  </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="settings-list">
+
+                    <!-- (1) إدارة القوالب -->
+                    <div class="setting-item" data-bs-toggle="collapse" data-bs-target="#templatesCollapse" aria-expanded="false">
+                        <div class="setting-item-content">
+                            <i class="fas fa-palette setting-icon"></i>
+                            <span>إدارة القوالب</span>
+                        </div>
+                        <i class="fas fa-chevron-down arrow-icon"></i>
+                    </div>
+                    
+                    <!--(2) Templates Collapse Content -->
+                    <div class="collapse" id="templatesCollapse">
+                        <div class="collapse-content">
+                            <!-- Site Pages Section -->
+                            <div class="main-page-section mb-4">
+                                <div class="section-header">
+                                    <h5 class="section-title">صفحات الموقع</h5>
+                                    <button class="btn add-page-btn">
+                                        <i class="fas fa-plus"></i>
+                                        إضافة صفحة
+                                    </button>
+                                </div>
+                                
+                                <div class="page-item-container">
+                                    <div class="page-item">
+                                        <div class="page-info">
+                                            <div class="page-status-icon">
+                                                <i class="fas fa-check"></i>
+                                            </div>
+                                            <span class="page-name">الرئيسية</span>
+                                        </div>
+                                        
+                                        <div class="page-actions">
+                                            <button class="btn action-btn set-main-btn">تعيين كصفحة رئيسية</button>
+                                            <button class="btn action-btn-icon view-btn" title="عرض">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                            <button class="btn action-btn-icon edit-btn" title="تعديل">
+                                                <i class="fas fa-pen"></i>
+                                            </button>
+                                            <button class="btn action-btn-icon delete-btn" title="حذف">
+                                                <i class="fas fa-trash"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- (3)قائمة الشريط العلوي -->
+                    <div class="setting-item" data-bs-toggle="collapse" data-bs-target="#topBarCollapse" aria-expanded="false">
+                        <div class="setting-item-content">
+                            <i class="fas fa-window-maximize setting-icon"></i>
+                            <span>قائمة الشريط العلوي</span>
+                        </div>
+                        <i class="fas fa-chevron-down arrow-icon"></i>
+                    </div>
+
+                    <!-- Top Bar Collapse Content -->
+                    <div class="collapse" id="topBarCollapse">
+                        <div class="collapse-content">
+                            <!-- Top Bar Section -->
+                            <div class="top-bar-section">
+                                <!-- Top Bar Header -->
+                                <div class="section-item">
+                                    <div class="section-title-with-icon">
+                                        <i class="fas fa-window-maximize section-icon"></i>
+                                        <span>شريط علوي</span>
+                                    </div>
+                                    <div class="toggle-buttons">
+                                        <button class="btn toggle-btn btn-danger"><i class="fas fa-times"></i></button>
+                                        <button class="btn toggle-btn btn-success active"><i class="fas fa-check"></i></button>
+                                    </div>
+                                </div>
+
+                                <!-- Image Upload Sections -->
+                                <div class="row g-4 mb-4">
+                                    <!-- Main Image -->
+                                    <div class="col-md-6">
+                                        <div class="image-upload-section">
+                                            <h6 class="upload-title">صورة أساسية</h6>
+                                            <div class="image-placeholder">
+                                                <i class="fas fa-image"></i>
+                                                <p>اضغط هنا لرفع صورة</p>
+                                            </div>
+                                            <div class="opacity-control">
+                                                <label>الشفافية من الأسفل</label>
+                                                <div class="slider-container">
+                                                    <input type="range" class="form-range opacity-slider" min="0" max="100" value="75">
+                                                    <span class="slider-value">75%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Background Image -->
+                                    <div class="col-md-6">
+                                        <div class="image-upload-section">
+                                            <h6 class="upload-title">صورة خلفية</h6>
+                                            <div class="image-placeholder">
+                                                <i class="fas fa-image"></i>
+                                                <p>اضغط هنا لرفع صورة</p>
+                                            </div>
+                                            <div class="opacity-control">
+                                                <label>الشفافية من الأعلى</label>
+                                                <div class="slider-container">
+                                                    <input type="range" class="form-range opacity-slider" min="0" max="100" value="75">
+                                                    <span class="slider-value">75%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Text Input Fields -->
+                                <div class="row g-3 mb-4">
+                                    <div class="col-md-6">
+                                        <label class="form-label">عنوان الموقع</label>
+                                        <input type="text" class="form-control" placeholder="أدخل عنوان الموقع">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">عنوان الشريط</label>
+                                        <input type="text" class="form-control" placeholder="أدخل عنوان الشريط">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">نص أول</label>
+                                        <input type="text" class="form-control" placeholder="أدخل النص الأول هنا">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">متن الوصف</label>
+                                        <input type="text" class="form-control" placeholder="أدخل متن الوصف">
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label">رابط أول</label>
+                                        <input type="text" class="form-control" placeholder="أدخل الرابط الأول هنا">
+                                    </div>
+                                </div>
+
+                                <!-- Save Button -->
+                                <div class="text-center mb-4">
+                                    <button class="btn save-changes-btn">حفظ التغييرات</button>
+                                </div>
+
+                                <!-- Other Sections List -->
+                                <div class="sections-list">
+                                    <div class="section-item">
+                                        <div class="section-title-with-icon">
+                                            <i class="fas fa-th-large section-icon"></i>
+                                            <span>قوائم</span>
+                                        </div>
+                                        <div class="toggle-buttons">
+                                            <button class="btn toggle-btn btn-danger"><i class="fas fa-times"></i></button>
+                                            <button class="btn toggle-btn btn-success active"><i class="fas fa-check"></i></button>
+                                        </div>
+                                    </div>
+
+                                    <div class="section-item">
+                                        <div class="section-title-with-icon">
+                                            <i class="fas fa-star section-icon"></i>
+                                            <span>عناصر مميزة</span>
+                                        </div>
+                                        <div class="toggle-buttons">
+                                            <button class="btn toggle-btn btn-danger"><i class="fas fa-times"></i></button>
+                                            <button class="btn toggle-btn btn-success active"><i class="fas fa-check"></i></button>
+                                        </div>
+                                    </div>
+
+                                    <div class="section-item">
+                                        <div class="section-title-with-icon">
+                                            <i class="fas fa-tags section-icon"></i>
+                                            <span>عرض منتجات</span>
+                                        </div>
+                                        <div class="toggle-buttons">
+                                            <button class="btn toggle-btn btn-danger"><i class="fas fa-times"></i></button>
+                                            <button class="btn toggle-btn btn-success active"><i class="fas fa-check"></i></button>
+                                        </div>
+                                    </div>
+
+                                    <div class="section-item">
+                                        <div class="section-title-with-icon">
+                                            <i class="fas fa-bullhorn section-icon"></i>
+                                            <span>شريط التسويق</span>
+                                        </div>
+                                        <div class="toggle-buttons">
+                                            <button class="btn toggle-btn btn-danger"><i class="fas fa-times"></i></button>
+                                            <button class="btn toggle-btn btn-success active"><i class="fas fa-check"></i></button>
+                                        </div>
+                                    </div>
+
+                                    <div class="section-item">
+                                        <div class="section-title-with-icon">
+                                            <i class="fas fa-gem section-icon"></i>
+                                            <span>افضل المنتجات</span>
+                                        </div>
+                                        <div class="toggle-buttons">
+                                            <button class="btn toggle-btn btn-danger"><i class="fas fa-times"></i></button>
+                                            <button class="btn toggle-btn btn-success active"><i class="fas fa-check"></i></button>
+                                        </div>
+                                    </div>
+
+                                    <div class="section-item">
+                                        <div class="section-title-with-icon">
+                                            <i class="fas fa-newspaper section-icon"></i>
+                                            <span>بانر الإصدارات الجديدة</span>
+                                        </div>
+                                        <div class="toggle-buttons">
+                                            <button class="btn toggle-btn btn-danger"><i class="fas fa-times"></i></button>
+                                            <button class="btn toggle-btn btn-success active"><i class="fas fa-check"></i></button>
+                                        </div>
+                                    </div>
+
+                                    <div class="section-item">
+                                        <div class="section-title-with-icon">
+                                            <i class="fas fa-box-open section-icon"></i>
+                                            <span>منتجات جديدة</span>
+                                        </div>
+                                        <div class="toggle-buttons">
+                                            <button class="btn toggle-btn btn-danger"><i class="fas fa-times"></i></button>
+                                            <button class="btn toggle-btn btn-success active"><i class="fas fa-check"></i></button>
+                                        </div>
+                                    </div>
+
+                                    <div class="section-item">
+                                        <div class="section-title-with-icon">
+                                            <i class="fas fa-copyright section-icon"></i>
+                                            <span>علامة تجارية</span>
+                                        </div>
+                                        <div class="toggle-buttons">
+                                            <button class="btn toggle-btn btn-danger"><i class="fas fa-times"></i></button>
+                                            <button class="btn toggle-btn btn-success active"><i class="fas fa-check"></i></button>
+                                        </div>
+                                    </div>
+
+                                    <div class="section-item">
+                                        <div class="section-title-with-icon">
+                                            <i class="fas fa-blog section-icon"></i>
+                                            <span>مقالات الموقع</span>
+                                        </div>
+                                        <div class="toggle-buttons">
+                                            <button class="btn toggle-btn btn-danger"><i class="fas fa-times"></i></button>
+                                            <button class="btn toggle-btn btn-success active"><i class="fas fa-check"></i></button>
+                                        </div>
+                                    </div>
+
+                                    <div class="section-item">
+                                        <div class="section-title-with-icon">
+                                            <i class="fas fa-concierge-bell section-icon"></i>
+                                            <span>خدمات الموقع</span>
+                                        </div>
+                                        <div class="toggle-buttons">
+                                            <button class="btn toggle-btn btn-danger"><i class="fas fa-times"></i></button>
+                                            <button class="btn toggle-btn btn-success active"><i class="fas fa-check"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            <!-- =============================================== -->
+            <!-- START: القوائم Lists Section -->
+        <!-- Lists Trigger Item -->
+        <div class="setting-item" data-bs-toggle="collapse" data-bs-target="#listsCollapse" aria-expanded="false">
+            <div class="setting-item-content">
+                <i class="fas fa-list-ul setting-icon"></i> <!-- Changed icon for better representation -->
+                <span>القوائم</span>
+            </div>
+            <i class="fas fa-chevron-down arrow-icon"></i>
+        </div>
+
+        <!-- Lists Collapse Content -->
+        <div class="collapse" id="listsCollapse">
+            <div class="collapse-content">
+                <!-- List Card 1 -->
+                <div class="list-card mb-4">
+                    <!-- Card Header -->
+                    <div class="list-card-header">
+                        <div class="list-card-title">
+                            <i class="fas fa-grip-vertical drag-handle"></i>
+                            <span>قائمة</span>
+                        </div>
+                        <div class="list-card-actions">
+                            <button class="btn action-btn-icon delete-btn" title="حذف القائمة"><i class="fas fa-trash"></i></button>
+                            <button class="btn action-btn-icon add-btn" title="إضافة قائمة جديدة"><i class="fas fa-plus"></i></button>
+                            <div class="toggle-buttons">
+                                <button class="btn toggle-btn btn-danger"><i class="fas fa-times"></i></button>
+                                <button class="btn toggle-btn btn-success active"><i class="fas fa-check"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card Body -->
+                    <div class="list-card-body">
+                        <div class="row g-4">
+                            <!-- Image Upload -->
+                            <div class="col-lg-5">
+                                <div class="image-upload-section h-100">
+                                    <div class="image-placeholder">
+                                        <i class="fas fa-image"></i>
+                                        <p>اضغط هنا لرفع صورة</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Form Fields -->
+                            <div class="col-lg-7">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <label class="form-label mb-0">فتح الرابط في تبويب جديد</label>
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" role="switch">
+                                    </div>
+                                </div>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label">عنوان الصورة</label>
+                                        <input type="text" class="form-control" placeholder="ادخل عنوان الوصف">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">نص الزر</label>
+                                        <input type="text" class="form-control" placeholder="ادخل نص الزر الظاهر هنا">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">لون الخلفية</label>
+                                        <input type="text" class="form-control" placeholder="اضغط لتحديد اللون">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">رابط الزر</label>
+                                        <input type="text" class="form-control" placeholder="رابط التحويل عند الضغط">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Save Button -->
+                        <div class="text-center mt-4">
+                            <button class="btn save-changes-btn">حفظ التغييرات</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- List Card 2 (Duplicate for example) -->
+                <div class="list-card">
+                    <!-- Card Header -->
+                    <div class="list-card-header">
+                        <div class="list-card-title">
+                            <i class="fas fa-grip-vertical drag-handle"></i>
+                            <span>قائمة</span>
+                        </div>
+                        <div class="list-card-actions">
+                            <button class="btn action-btn-icon delete-btn" title="حذف القائمة"><i class="fas fa-trash"></i></button>
+                            <button class="btn action-btn-icon add-btn" title="إضافة قائمة جديدة"><i class="fas fa-plus"></i></button>
+                            <div class="toggle-buttons">
+                                <button class="btn toggle-btn btn-danger"><i class="fas fa-times"></i></button>
+                                <button class="btn toggle-btn btn-success active"><i class="fas fa-check"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card Body -->
+                    <div class="list-card-body">
+                        <div class="row g-4">
+                            <!-- Image Upload -->
+                            <div class="col-lg-5">
+                                <div class="image-upload-section h-100">
+                                    <div class="image-placeholder">
+                                        <i class="fas fa-image"></i>
+                                        <p>اضغط هنا لرفع صورة</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Form Fields -->
+                            <div class="col-lg-7">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <label class="form-label mb-0">فتح الرابط في تبويب جديد</label>
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" role="switch">
+                                    </div>
+                                </div>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label">عنوان الصورة</label>
+                                        <input type="text" class="form-control" placeholder="ادخل عنوان الوصف">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">نص الزر</label>
+                                        <input type="text" class="form-control" placeholder="ادخل نص الزر الظاهر هنا">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">لون الخلفية</label>
+                                        <input type="text" class="form-control" placeholder="اضغط لتحديد اللون">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">رابط الزر</label>
+                                        <input type="text" class="form-control" placeholder="رابط التحويل عند الضغط">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Save Button -->
+                        <div class="text-center mt-4">
+                            <button class="btn save-changes-btn">حفظ التغييرات</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- END: Lists Section -->
+        <!-- =============================================== -->
+
+            <!-- START:(4) عناصر مميزة   Featured Elements Section-->
+            <!-- Featured Elements Trigger Item -->
+            <div class="setting-item" data-bs-toggle="collapse" data-bs-target="#featuredCollapse" aria-expanded="false">
+                <div class="setting-item-content">
+                    <i class="fas fa-star setting-icon"></i>
+                    <span>عناصر مميزة</span>
+                </div>
+                <i class="fas fa-chevron-down arrow-icon"></i>
+            </div>
+
+            <!-- Featured Elements Collapse Content -->
+            <div class="collapse" id="featuredCollapse">
+                <div class="collapse-content">
+                    <div class="featured-elements-card">
+                        <!-- Card Header -->
+                        <div class="list-card-header">
+                            <div class="list-card-title">
+                                <i class="fas fa-star"></i>
+                                <span>عناصر مميزة</span>
+                            </div>
+                            <div class="toggle-buttons">
+                                <button class="btn toggle-btn btn-danger"><i class="fas fa-times"></i></button>
+                                <button class="btn toggle-btn btn-success active"><i class="fas fa-check"></i></button>
+                            </div>
+                        </div>
+                        <!-- Card Body -->
+                        <div class="list-card-body">
+                            <!-- Form Fields -->
+                            <div class="row g-3 mb-4">
+                                <div class="col-md-6">
+                                    <label class="form-label">عنوان العنصر</label>
+                                    <input type="text" class="form-control" placeholder="ادخل عنوان القسم">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">عرض المنتج</label>
+                                    <select class="form-select">
+                                        <option selected>حرك السهم لإضافة عدد المنتجات الظاهرة</option>
+                                        <option value="4">4 منتجات</option>
+                                        <option value="8">8 منتجات</option>
+                                        <option value="12">12 منتجات</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Product Selection -->
+                            <div class="mb-4">
+                                <label class="form-label">حدد المنتجات</label>
+                                <div class="product-selection-box">
+                                    <div class="search-in-box">
+                                        <i class="fas fa-search"></i>
+                                        <input type="text" placeholder="ابحث عن مجموعة المنتجات لإضافتها">
+                                    </div>
+                                    <div class="selected-products-tags">
+                                        <div class="product-tag">
+                                            <span>منتجات العناية بالبشرة</span>
+                                            <button class="remove-tag-btn">&times;</button>
+                                        </div>
+                                        <div class="product-tag">
+                                            <span>منتجات العناية بالبشرة</span>
+                                            <button class="remove-tag-btn">&times;</button>
+                                        </div>
+                                        <div class="product-tag">
+                                            <span>منتجات العناية بالبشرة</span>
+                                            <button class="remove-tag-btn">&times;</button>
+                                        </div>
+                                        <div class="product-tag">
+                                            <span>منتجات العناية بالبشرة</span>
+                                            <button class="remove-tag-btn">&times;</button>
+                                        </div>
+                                        <div class="product-tag">
+                                            <span>منتجات العناية بالبشرة</span>
+                                            <button class="remove-tag-btn">&times;</button>
+                                        </div>
+                                        <div class="product-tag">
+                                            <span>منتجات العناية بالبشرة</span>
+                                            <button class="remove-tag-btn">&times;</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Spacing Sliders -->
+                            <div class="row g-4 mb-4">
+                                <div class="col-md-6">
+                                    <div class="opacity-control">
+                                        <label>المسافة من الأعلى</label>
+                                        <div class="slider-container">
+                                            <input type="range" class="form-range opacity-slider" min="0" max="100" value="30">
+                                            <span class="slider-value">30px</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="opacity-control">
+                                        <label>المسافة من الأسفل</label>
+                                        <div class="slider-container">
+                                            <input type="range" class="form-range opacity-slider" min="0" max="100" value="30">
+                                            <span class="slider-value">30px</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Save Button -->
+                            <div class="text-center">
+                                <button class="btn save-changes-btn">حفظ التغييرات</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END: Featured Elements Section -->
+            <!-- =============================================== -->
+             <!--START: (5) عرض منتجات --> <!--  Product Display Section  -->
+            <!-- Product Display Trigger Item -->
+            <div class="setting-item" data-bs-toggle="collapse" data-bs-target="#productDisplayCollapse" aria-expanded="false">
+                <div class="setting-item-content">
+                    <i class="fas fa-tags setting-icon"></i>
+                    <span>عرض المنتجات</span>
+                </div>
+                <i class="fas fa-chevron-down arrow-icon"></i>
+            </div>
+            <!-- Product Display Collapse Content -->
+            <div class="collapse" id="productDisplayCollapse">
+                <div class="collapse-content">
+                    <div class="featured-elements-card"> <!-- Reusing the same card style -->
+                        <!-- Card Header -->
+                        <div class="list-card-header">
+                            <div class="list-card-title">
+                                <i class="fas fa-tags"></i>
+                                <span>عرض المنتجات</span>
+                            </div>
+                            <div class="toggle-buttons">
+                                <button class="btn toggle-btn btn-danger"><i class="fas fa-times"></i></button>
+                                <button class="btn toggle-btn btn-success active"><i class="fas fa-check"></i></button>
+                            </div>
+                        </div>
+                        <!-- Card Body -->
+                        <div class="list-card-body">
+                            <!-- Form Fields -->
+                            <div class="row g-3 mb-4">
+                                <div class="col-md-6">
+                                    <label class="form-label">عنوان العرض</label>
+                                    <input type="text" class="form-control" placeholder="ادخل عنوان العرض">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">عرض المنتج</label>
+                                    <select class="form-select">
+                                        <option selected>حرك السهم لإضافة عدد المنتجات الظاهرة</option>
+                                        <option value="4">4 منتجات</option>
+                                        <option value="8">8 منتجات</option>
+                                        <option value="12">12 منتجات</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Category Selection -->
+                            <div class="mb-4">
+                                <label class="form-label">حدد الفئات</label>
+                                <div class="product-selection-box"> <!-- Reusing class from featured elements -->
+                                    <div class="search-in-box">
+                                        <i class="fas fa-search"></i>
+                                        <input type="text" placeholder="ابحث عن الفئات المراد عرضها">
+                                    </div>
+                                    <div class="selected-products-tags">
+                                        <div class="product-tag">
+                                            <span>نيشات</span>
+                                            <button class="remove-tag-btn">&times;</button>
+                                        </div>
+                                        <div class="product-tag">
+                                            <span>العناية والتجميل</span>
+                                            <button class="remove-tag-btn">&times;</button>
+                                        </div>
+                                        <div class="product-tag">
+                                            <span>أحذية</span>
+                                            <button class="remove-tag-btn">&times;</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Sorting and Display Options -->
+                            <div class="row g-3 mb-4">
+                                <div class="col-md-6">
+                                    <label class="form-label">ترتيب المنتجات حسب</label>
+                                    <select class="form-select">
+                                        <option selected>الرقم التعريفى - السعر - التاريخ</option>
+                                        <option value="id">الرقم التعريفي</option>
+                                        <option value="price">السعر</option>
+                                        <option value="date">التاريخ</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">تصنيف المنتجات</label>
+                                    <select class="form-select">
+                                        <option selected>تصاعدي - تنازلي</option>
+                                        <option value="asc">تصاعدي</option>
+                                        <option value="desc">تنازلي</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">نص الزر</label>
+                                    <input type="text" class="form-control" placeholder="ادخل نص الزر الظاهر اسفل العرض">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">رابط الزر</label>
+                                    <input type="text" class="form-control" placeholder="رابط التحويل عند الضغط">
+                                </div>
+                            </div>
+
+                            <!-- Save Button -->
+                            <div class="text-center">
+                                <button class="btn save-changes-btn">حفظ التغييرات</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END: Product Display Section -->
+            <!-- =============================================== -->
+
+             <!--START: (6) شريط التسويق  Marketing Bar Section-->
+            <!-- Marketing Bar Trigger Item -->
+            <div class="setting-item" data-bs-toggle="collapse" data-bs-target="#marketingBarCollapse" aria-expanded="false">
+                <div class="setting-item-content">
+                    <i class="fas fa-bullhorn setting-icon"></i>
+                    <span>شريط التسويق</span>
+                </div>
+                <i class="fas fa-chevron-down arrow-icon"></i>
+            </div>
+            <!-- Marketing Bar Collapse Content -->
+            <div class="collapse" id="marketingBarCollapse">
+                <div class="collapse-content">
+                    <div class="list-card"> <!-- Reusing the .list-card style -->
+                        <!-- Card Header -->
+                        <div class="list-card-header">
+                            <div class="list-card-title">
+                                <i class="fas fa-bullhorn"></i>
+                                <span>شريط التسويق</span>
+                            </div>
+                            <div class="list-card-actions">
+                                <button class="btn action-btn-icon delete-btn" title="حذف الشريط"><i class="fas fa-trash"></i></button>
+                                <button class="btn action-btn-icon add-btn" title="إضافة شريط جديد"><i class="fas fa-plus"></i></button>
+                                <div class="toggle-buttons">
+                                    <button class="btn toggle-btn btn-danger"><i class="fas fa-times"></i></button>
+                                    <button class="btn toggle-btn btn-success active"><i class="fas fa-check"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card Body -->
+                        <div class="list-card-body">
+                            <div class="row g-4">
+                                <!-- Image Upload -->
+                                <div class="col-lg-5">
+                                    <div class="image-upload-section h-100">
+                                        <h6 class="upload-title">صورة</h6>
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-image"></i>
+                                            <p>اضغط هنا لرفع صورة</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Form Fields -->
+                                <div class="col-lg-7">
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <label class="form-label mb-0">فتح الرابط في تبويب جديد</label>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch" checked>
+                                        </div>
+                                    </div>
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label class="form-label">عنوان الحملة التسويقية</label>
+                                            <input type="text" class="form-control" placeholder="حملة صيفية">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">نوع الحملة التسويقية</label>
+                                            <select class="form-select">
+                                                <option selected>عريض - ملون</option>
+                                                <option value="1">صغير - بسيط</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">محتوى الحملة التسويقية</label>
+                                            <input type="text" class="form-control" placeholder="قادم قريباً">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">نص الزر</label>
+                                            <input type="text" class="form-control" placeholder="ادخل نص الزر الظاهر هنا">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">لون الخلفية</label>
+                                            <input type="text" class="form-control" placeholder="اضغط للتحديد">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">رابط الزر</label>
+                                            <input type="text" class="form-control" placeholder="رابط التحويل عند الضغط">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Save Button -->
+                            <div class="text-center mt-4">
+                                <button class="btn save-changes-btn">حفظ التغييرات</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END: Marketing Bar Section -->
+            <!-- =============================================== -->
+            <!-- START: افضل المنتجات Best Products Section -->
+            <!-- Best Products Trigger Item -->
+            <div class="setting-item" data-bs-toggle="collapse" data-bs-target="#bestProductsCollapse" aria-expanded="false">
+                <div class="setting-item-content">
+                    <i class="fas fa-gem setting-icon"></i>
+                    <span>افضل المنتجات</span>
+                </div>
+                <i class="fas fa-chevron-down arrow-icon"></i>
+            </div>
+
+            <!-- Best Products Collapse Content -->
+            <div class="collapse" id="bestProductsCollapse">
+                <div class="collapse-content">
+                    <div class="featured-elements-card"> <!-- Reusing the same card style -->
+                        <!-- Card Header -->
+                        <div class="list-card-header">
+                            <div class="list-card-title">
+                                <i class="fas fa-gem"></i>
+                                <span>افضل المنتجات</span>
+                            </div>
+                            <div class="toggle-buttons">
+                                <button class="btn toggle-btn btn-danger"><i class="fas fa-times"></i></button>
+                                <button class="btn toggle-btn btn-success active"><i class="fas fa-check"></i></button>
+                            </div>
+                        </div>
+                        <!-- Card Body -->
+                        <div class="list-card-body">
+                            <!-- Form Fields -->
+                            <div class="row g-3 mb-4">
+                                <div class="col-md-6">
+                                    <label class="form-label">عنوان القسم</label>
+                                    <input type="text" class="form-control" placeholder="ادخل عنوان القسم">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">عرض المنتج</label>
+                                    <select class="form-select">
+                                        <option selected>حرك السهم لإضافة عدد المنتجات الظاهرة</option>
+                                        <option value="3">3 منتجات</option>
+                                        <option value="6">6 منتجات</option>
+                                        <option value="9">9 منتجات</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Spacing Sliders -->
+                            <div class="row g-4 mb-4">
+                                <div class="col-md-6">
+                                    <div class="opacity-control">
+                                        <label>المسافة من الأعلى</label>
+                                        <div class="slider-container">
+                                            <input type="range" class="form-range opacity-slider" min="0" max="100" value="30">
+                                            <span class="slider-value">30px</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="opacity-control">
+                                        <label>المسافة من الأسفل</label>
+                                        <div class="slider-container">
+                                            <input type="range" class="form-range opacity-slider" min="0" max="100" value="30">
+                                            <span class="slider-value">30px</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Save Button -->
+                            <div class="text-center">
+                                <button class="btn save-changes-btn">حفظ التغييرات</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END: Best Products Section -->
+            <!-- =============================================== -->
+             <!--  START:  (8) بازر الإصدارات الجديدة  New Releases Banner Section-->
+            <!-- New Releases Banner Trigger Item -->
+            <div class="setting-item" data-bs-toggle="collapse" data-bs-target="#newReleasesCollapse" aria-expanded="false">
+            <div class="setting-item-content">
+                <i class="fas fa-newspaper setting-icon"></i>
+                <span>بانر الإصدارات الجديدة</span>
+            </div>
+            <i class="fas fa-chevron-down arrow-icon"></i>
+        </div>
+
+        <!-- New Releases Banner Collapse Content -->
+        <div class="collapse" id="newReleasesCollapse">
+            <div class="collapse-content">
+                <div class="featured-elements-card"> <!-- Reusing the same card style -->
+                    <!-- Card Header -->
+                    <div class="list-card-header">
+                        <div class="list-card-title">
+                            <i class="fas fa-newspaper"></i>
+                            <span>بانر الإصدارات الجديدة</span>
+                        </div>
+                        <div class="toggle-buttons">
+                            <button class="btn toggle-btn btn-danger"><i class="fas fa-times"></i></button>
+                            <button class="btn toggle-btn btn-success active"><i class="fas fa-check"></i></button>
+                        </div>
+                    </div>
+                    <!-- Card Body -->
+                    <div class="list-card-body">
+                        <!-- Image Uploads -->
+                        <div class="row g-4 mb-4">
+                            <div class="col-md-6">
+                                <div class="image-upload-section h-100">
+                                    <h6 class="upload-title">صورة أساسية <small class="text-muted">(1721 x 612 px)</small></h6>
+                                    <div class="image-placeholder">
+                                        <i class="fas fa-image"></i>
+                                        <p>اضغط هنا لرفع صورة</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="image-upload-section h-100">
+                                    <h6 class="upload-title">صورة خلفية <small class="text-muted">(3:1)</small></h6>
+                                    <div class="image-placeholder">
+                                        <i class="fas fa-image"></i>
+                                        <p>اضغط هنا لرفع صورة</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Form Fields -->
+                        <div class="row g-3 mb-4">
+                            <div class="col-md-6">
+                                <label class="form-label">ادخل العنوان بالكامل</label>
+                                <input type="text" class="form-control" placeholder="ادخل عنوان البانر">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">ادخل السعر</label>
+                                <div class="input-group">
+                                    <input type="number" class="form-control" placeholder="100">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">نص الزر</label>
+                                <input type="text" class="form-control" placeholder="اشتري الآن">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">رابط الزر</label>
+                                <input type="text" class="form-control" placeholder="رابط التحويل عند الضغط">
+                            </div>
+                        </div>
+
+                        <!-- Spacing Sliders -->
+                        <div class="row g-4 mb-4">
+                            <div class="col-md-6">
+                                <div class="opacity-control">
+                                    <label>المسافة من الأعلى</label>
+                                    <div class="slider-container">
+                                        <input type="range" class="form-range opacity-slider" min="0" max="100" value="50">
+                                        <span class="slider-value">50px</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="opacity-control">
+                                    <label>المسافة من الأسفل</label>
+                                    <div class="slider-container">
+                                        <input type="range" class="form-range opacity-slider" min="0" max="100" value="50">
+                                        <span class="slider-value">50px</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Save Button -->
+                        <div class="text-center">
+                            <button class="btn save-changes-btn">حفظ التغييرات</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- END: New Releases Banner Section -->
+        <!-- =============================================== -->
+             <!-- START: (9) منتجات جديدة New Products Section-->
+        <!-- New Products Trigger Item -->
+        <div class="setting-item" data-bs-toggle="collapse" data-bs-target="#newProductsCollapse" aria-expanded="false">
+            <div class="setting-item-content">
+                <i class="fas fa-box-open setting-icon"></i>
+                <span>منتجات جديدة</span>
+            </div>
+            <i class="fas fa-chevron-down arrow-icon"></i>
+        </div>
+
+        <!-- New Products Collapse Content -->
+        <div class="collapse" id="newProductsCollapse">
+            <div class="collapse-content">
+                <div class="featured-elements-card"> <!-- Reusing the same card style -->
+                    <!-- Card Header -->
+                    <div class="list-card-header">
+                        <div class="list-card-title">
+                            <i class="fas fa-box-open"></i>
+                            <span>منتجات جديدة</span>
+                        </div>
+                        <div class="toggle-buttons">
+                            <button class="btn toggle-btn btn-danger"><i class="fas fa-times"></i></button>
+                            <button class="btn toggle-btn btn-success active"><i class="fas fa-check"></i></button>
+                        </div>
+                    </div>
+                    <!-- Card Body -->
+                    <div class="list-card-body">
+                        <!-- Form Fields -->
+                        <div class="row g-3 mb-4">
+                            <div class="col-md-6">
+                                <label class="form-label">عنوان القسم</label>
+                                <input type="text" class="form-control" placeholder="ادخل عنوان القسم">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">عرض المنتج</label>
+                                <select class="form-select">
+                                    <option selected>حرك السهم لإضافة عدد المنتجات الظاهرة</option>
+                                    <option value="5">5 منتجات</option>
+                                    <option value="10">10 منتجات</option>
+                                    <option value="15">15 منتجات</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Spacing Sliders -->
+                        <div class="row g-4 mb-4">
+                            <div class="col-md-6">
+                                <div class="opacity-control">
+                                    <label>المسافة من الأعلى</label>
+                                    <div class="slider-container">
+                                        <input type="range" class="form-range opacity-slider" min="0" max="100" value="30">
+                                        <span class="slider-value">30px</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="opacity-control">
+                                    <label>المسافة من الأسفل</label>
+                                    <div class="slider-container">
+                                        <input type="range" class="form-range opacity-slider" min="0" max="100" value="30">
+                                        <span class="slider-value">30px</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Save Button -->
+                        <div class="text-center">
+                            <button class="btn save-changes-btn">حفظ التغييرات</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END: New Products Section -->
+        <!-- =============================================== -->
+             <!-- START: (10) علامة تجارية Brands Section-->
+              <!-- Brands Trigger Item -->
+        <div class="setting-item" data-bs-toggle="collapse" data-bs-target="#brandsCollapse" aria-expanded="false">
+        <div class="setting-item-content">
+                <i class="fas fa-copyright setting-icon"></i>
+                <span>علامة تجارية</span>
+            </div>
+            <i class="fas fa-chevron-down arrow-icon"></i>
+        </div>
+        <!-- Brands Collapse Content -->
+        <div class="collapse" id="brandsCollapse">
+            <div class="collapse-content">
+                <div class="featured-elements-card"> <!-- Reusing the same card style -->
+                    <!-- Card Header -->
+                    <div class="list-card-header">
+                        <div class="list-card-title">
+                            <i class="fas fa-copyright"></i>
+                            <span>علامة تجارية</span>
+                        </div>
+                        <div class="toggle-buttons">
+                            <button class="btn toggle-btn btn-danger"><i class="fas fa-times"></i></button>
+                            <button class="btn toggle-btn btn-success active"><i class="fas fa-check"></i></button>
+                        </div>
+                    </div>
+                    <!-- Card Body -->
+                    <div class="list-card-body">
+                        <!-- Brand Selection -->
+                        <div class="mb-4">
+                            <label class="form-label">حدد المنتجات</label>
+                            <div class="product-selection-box"> <!-- Reusing class -->
+                                <div class="search-in-box">
+                                    <i class="fas fa-search"></i>
+                                    <input type="text" placeholder="ابحث عن العلامة التجارية">
+                                </div>
+                                <div class="selected-products-tags">
+                                    <div class="product-tag">
+                                        <span>اديداس</span>
+                                        <button class="remove-tag-btn">&times;</button>
+                                    </div>
+                                    <div class="product-tag">
+                                        <span>نايك</span>
+                                        <button class="remove-tag-btn">&times;</button>
+                                    </div>
+                                    <div class="product-tag">
+                                        <span>غوتشي</span>
+                                        <button class="remove-tag-btn">&times;</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Display Options -->
+                        <div class="row g-3 mb-4">
+                            <div class="col-md-6">
+                                <label class="form-label">العنصر المتبقي</label>
+                                <select class="form-select">
+                                    <option selected>يتم ترقيم الصفحات أو تركه فارغاً</option>
+                                    <option value="paginate">ترقيم الصفحات</option>
+                                    <option value="leave_empty">تركه فارغاً</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">عناصر العلامة التجارية</label>
+                                <input type="number" class="form-control" value="10">
+                            </div>
+                        </div>
+
+                        <!-- Spacing Sliders -->
+                        <div class="row g-4 mb-4">
+                            <div class="col-md-6">
+                                <div class="opacity-control">
+                                    <label>المسافة من الأعلى</label>
+                                    <div class="slider-container">
+                                        <input type="range" class="form-range opacity-slider" min="0" max="100" value="30">
+                                        <span class="slider-value">30px</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="opacity-control">
+                                    <label>المسافة من الأسفل</label>
+                                    <div class="slider-container">
+                                        <input type="range" class="form-range opacity-slider" min="0" max="100" value="30">
+                                        <span class="slider-value">30px</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Save Button -->
+                        <div class="text-center">
+                            <button class="btn save-changes-btn">حفظ التغييرات</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END: Brands Section -->
+            <!-- ======================================== -->
+             <!-- START: (11) مقالات الموقع Site Articles Section-->
+
+            <!-- Site Articles Trigger Item -->
+            <div class="setting-item" data-bs-toggle="collapse" data-bs-target="#articlesCollapse" aria-expanded="false">
+                <div class="setting-item-content">
+                    <i class="fas fa-blog setting-icon"></i>
+                    <span>مقالات الموقع</span>
+                </div>
+                <i class="fas fa-chevron-down arrow-icon"></i>
+            </div>
+            <!-- Site Articles Collapse Content -->
+            <div class="collapse" id="articlesCollapse">
+                <div class="collapse-content">
+                    <div class="featured-elements-card"> <!-- Reusing the same card style -->
+                        <!-- Card Header -->
+                        <div class="list-card-header">
+                            <div class="list-card-title">
+                                <i class="fas fa-blog"></i>
+                                <span>مقالات الموقع</span>
+                            </div>
+                            <div class="toggle-buttons">
+                                <button class="btn toggle-btn btn-danger"><i class="fas fa-times"></i></button>
+                                <button class="btn toggle-btn btn-success active"><i class="fas fa-check"></i></button>
+                            </div>
+                        </div>
+                        <!-- Card Body -->
+                        <div class="list-card-body">
+                            <!-- Form Fields -->
+                            <div class="row g-3 mb-4">
+                                <div class="col-md-6">
+                                    <label class="form-label">عنوان القسم</label>
+                                    <input type="text" class="form-control" placeholder="ادخل عنوان القسم">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">عناصر المدونة</label>
+                                    <input type="number" class="form-control" value="10">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">ترتيب حسب</label>
+                                    <select class="form-select">
+                                        <option selected>تصاعدي - تنازلي</option>
+                                        <option value="asc">تصاعدي</option>
+                                        <option value="desc">تنازلي</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">الطلب</label>
+                                    <select class="form-select">
+                                        <option selected>خفض</option>
+                                        <option value="asc">رفع</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Spacing Sliders -->
+                            <div class="row g-4 mb-4">
+                                <div class="col-md-6">
+                                    <div class="opacity-control">
+                                        <label>المسافة من الأعلى</label>
+                                        <div class="slider-container">
+                                            <input type="range" class="form-range opacity-slider" min="0" max="100" value="30">
+                                            <span class="slider-value">30px</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="opacity-control">
+                                        <label>المسافة من الأسفل</label>
+                                        <div class="slider-container">
+                                            <input type="range" class="form-range opacity-slider" min="0" max="100" value="30">
+                                            <span class="slider-value">30px</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Save Button -->
+                            <div class="text-center">
+                                <button class="btn save-changes-btn">حفظ التغييرات</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END: Site Articles Section -->
+            <!-- =============================================== -->
+             <!-- START:  (12) خدمات الموقع Site Services Section-->
+            <!-- Site Services Trigger Item -->
+            <div class="setting-item" data-bs-toggle="collapse" data-bs-target="#servicesCollapse" aria-expanded="false">
+                <div class="setting-item-content">
+                    <i class="fas fa-concierge-bell setting-icon"></i>
+                    <span>خدمات الموقع</span>
+                </div>
+                <i class="fas fa-chevron-down arrow-icon"></i>
+            </div>
+
+            <!-- Site Services Collapse Content -->
+            <div class="collapse" id="servicesCollapse">
+                <div class="collapse-content">
+                    <div class="featured-elements-card"> <!-- Reusing the same card style -->
+                        <!-- Card Header -->
+                        <div class="list-card-header">
+                            <div class="list-card-title">
+                                <i class="fas fa-concierge-bell"></i>
+                                <span>خدمات الموقع</span>
+                            </div>
+                            <div class="list-card-actions">
+                                <button class="btn action-btn-icon delete-btn" title="حذف الخدمة"><i class="fas fa-trash"></i></button>
+                                <button class="btn action-btn-icon add-btn" title="إضافة خدمة جديدة"><i class="fas fa-plus"></i></button>
+                                <div class="toggle-buttons">
+                                    <button class="btn toggle-btn btn-danger"><i class="fas fa-times"></i></button>
+                                    <button class="btn toggle-btn btn-success active"><i class="fas fa-check"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card Body -->
+                        <div class="list-card-body">
+                            <!-- Form Fields -->
+                            <div class="row g-3 mb-4">
+                                <div class="col-md-6">
+                                    <label class="form-label">اسم الخدمة</label>
+                                    <input type="text" class="form-control" placeholder="الدعم الفني">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">وصف الخدمة</label>
+                                    <input type="text" class="form-control" placeholder="تواصل مع الدعم الفني الخاص بنا">
+                                </div>
+                            </div>
+
+                            <!-- Save Button -->
+                            <div class="text-center">
+                                <button class="btn save-changes-btn">حفظ التغييرات</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END: Site Services Section -->
+            <!-- =============================================== -->
+            <!--START: (13) إدارة القائمة السفلية  Footer Menu Management Section-->
+            <!-- Footer Menu Trigger Item -->
+            <div class="setting-item" data-bs-toggle="collapse" data-bs-target="#footerMenuCollapse" aria-expanded="false">
+                <div class="setting-item-content">
+                    <i class="fas fa-window-minimize setting-icon"></i>
+                    <span>إدارة القائمة السفلية</span>
+                </div>
+                <i class="fas fa-chevron-down arrow-icon"></i>
+            </div>
+
+            <!-- Footer Menu Collapse Content -->
+            <div class="collapse" id="footerMenuCollapse">
+                <div class="collapse-content footer-management-container">
+                    <div class="row g-4">
+                        <!-- Available Widgets Column -->
+                        <div class="col-lg-6">
+                            <div class="widget-panel">
+                                <h5 class="widget-panel-title">عناصر واجهة المستخدم</h5>
+                                <div class="widget-list" id="available-widgets">
+                                    <div class="widget-item" draggable="true">
+                                        <i class="fas fa-grip-vertical widget-drag-handle"></i>
+                                        <span>محرك بحث المدونة</span>
+                                    </div>
+                                    <div class="widget-item" draggable="true">
+                                        <i class="fas fa-grip-vertical widget-drag-handle"></i>
+                                        <span>الأكثر قراءة في المدونة</span>
+                                    </div>
+                                    <div class="widget-item" draggable="true">
+                                        <i class="fas fa-grip-vertical widget-drag-handle"></i>
+                                        <span>تصنيفات المدونة (01)</span>
+                                    </div>
+                                    <div class="widget-item" draggable="true">
+                                        <i class="fas fa-grip-vertical widget-drag-handle"></i>
+                                        <span>تصنيفات المدونة (01)</span>
+                                    </div>
+                                    <div class="widget-item" draggable="true">
+                                        <i class="fas fa-grip-vertical widget-drag-handle"></i>
+                                        <span>تصنيفات المدونة (01)</span>
+                                    </div>
+                                    <div class="widget-item" draggable="true">
+                                        <i class="fas fa-grip-vertical widget-drag-handle"></i>
+                                        <span>تصنيفات المدونة (01)</span>
+                                    </div>
+                                    <div class="widget-item" draggable="true">
+                                        <i class="fas fa-grip-vertical widget-drag-handle"></i>
+                                        <span>تصنيفات المدونة (01)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Footer Sections Column -->
+                        <div class="col-lg-6">
+                            <div class="accordion" id="footerSectionsAccordion">
+                                <!-- Section 1: Main Footer Area -->
+                                <div class="accordion-item footer-section">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#footerMainArea">
+                                            منطقة الفوتر الرئيسية
+                                        </button>
+                                    </h2>
+                                    <div id="footerMainArea" class="accordion-collapse collapse show" data-bs-parent="#footerSectionsAccordion">
+                                        <div class="accordion-body drop-zone">
+                                            <!-- Dropped widgets will appear here -->
+                                            <div class="widget-placeholder">اسحب العناصر إلى هنا</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Section 2: Top Footer Area -->
+                                <div class="accordion-item footer-section">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#footerTopArea">
+                                            الجزء العلوي من الفوتر
+                                        </button>
+                                    </h2>
+                                    <div id="footerTopArea" class="accordion-collapse collapse" data-bs-parent="#footerSectionsAccordion">
+                                        <div class="accordion-body drop-zone">
+                                            <div class="widget-placeholder">اسحب العناصر إلى هنا</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Section 3: Bottom Left Footer Area -->
+                                <div class="accordion-item footer-section">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#footerBottomLeftArea">
+                                            الجزء السفلي الأيسر من الفوتر
+                                        </button>
+                                    </h2>
+                                    <div id="footerBottomLeftArea" class="accordion-collapse collapse" data-bs-parent="#footerSectionsAccordion">
+                                        <div class="accordion-body drop-zone">
+                                            <!-- Example of a dropped widget with settings -->
+                                            <div class="dropped-widget">
+                                                <div class="dropped-widget-header">
+                                                    <span>محرك بحث المدونة</span>
+                                                    <div>
+                                                        <button class="btn-widget-action" data-bs-toggle="collapse" data-bs-target="#widgetSettings1"><i class="fas fa-chevron-down"></i></button>
+                                                        <button class="btn-widget-action text-danger"><i class="fas fa-times"></i></button>
+                                                    </div>
+                                                </div>
+                                                <div class="collapse" id="widgetSettings1">
+                                                    <div class="dropped-widget-body">
+                                                        <div class="mb-2">
+                                                            <label class="form-label">عنوان الرابط</label>
+                                                            <input type="text" class="form-control form-control-sm" placeholder="المدونة">
+                                                        </div>
+                                                        <div>
+                                                            <label class="form-label">عنوان إضافي</label>
+                                                            <input type="text" class="form-control form-control-sm" placeholder="المدونة">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="widget-placeholder">اسحب المزيد من العناصر</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Other sections can be added here following the same pattern -->
+                            </div>
+                            <div class="text-center mt-4">
+                                <button class="btn save-changes-btn">تحديث المعلومات</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- =============================================== -->
+            <!-- START: صفحة غير موجودة - 404 Page Section -->
+            <!-- =============================================== -->
+
+            <!-- 404 Page Trigger Item -->
+            <div class="setting-item" data-bs-toggle="collapse" data-bs-target="#notFoundPageCollapse" aria-expanded="false">
+                <div class="setting-item-content">
+                    <i class="fas fa-exclamation-triangle setting-icon"></i>
+                    <span>صفحة غير موجودة</span>
+                    <span class="badge bg-secondary ms-2">404</span>
+                </div>
+                <i class="fas fa-chevron-down arrow-icon"></i>
+            </div>
+
+            <!-- 404 Page Collapse Content -->
+            <div class="collapse" id="notFoundPageCollapse">
+                <div class="collapse-content">
+                    <div class="not-found-card">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8 col-md-10">
+                                <!-- Image Upload -->
+                                <div class="mb-4">
+                                    <label class="form-label text-center d-block mb-3">لوجو الصفحة</label>
+                                    <div class="image-placeholder-404">
+                                        <i class="fas fa-image"></i>
+                                        <p>اضغط لاضافة صورة</p>
+                                    </div>
+                                </div>
+
+                                <!-- Form Fields -->
+                                <div class="mb-3">
+                                    <label class="form-label">عنوان الصفحة</label>
+                                    <input type="text" class="form-control" value="صفحة غير موجودة">
+                                </div>
+                                <div class="mb-4">
+                                    <label class="form-label">عنوان الزر</label>
+                                    <input type="text" class="form-control" value="الرجوع للخلف">
+                                </div>
+
+                                <!-- Save Button -->
+                                <div class="text-center">
+                                    <button class="btn save-changes-btn">تحديث المعلومات</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- =============================================== -->
+            <!-- START:ربط البريد الالكتروني Email Linking Section -->
+            <!-- =============================================== -->
+
+            <!-- Email Linking Trigger Item -->
+            <div class="setting-item" data-bs-toggle="collapse" data-bs-target="#emailLinkingCollapse" aria-expanded="false">
+                <div class="setting-item-content">
+                    <i class="fas fa-envelope setting-icon"></i>
+                    <span>ربط البريد الالكتروني</span>
+            </div>
+                <i class="fas fa-chevron-down arrow-icon"></i>
+            </div>
+            <!-- Email Linking Collapse Content -->
+            <div class="collapse" id="emailLinkingCollapse">
+                <div class="collapse-content">
+                    <div class="email-linking-card">
+                        <div class="card-header-title">
+                            <i class="fas fa-envelope"></i>
+                            <span>ربط البريد الالكتروني</span>
+                        </div>
+                        <div class="card-body-content">
+                            <!-- Main Email -->
+                            <div class="mb-4">
+                                <label class="form-label">البريد الالكتروني العام للموقع</label>
+                                <input type="email" class="form-control" value="supportsource@gmail.com">
+                            </div>
+                            
+                            <!-- SMTP Settings Grid -->
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <label class="form-label">SMTP Username</label>
+                                    <input type="text" class="form-control" placeholder="SMTP Username">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">SMTP host</label>
+                                    <input type="text" class="form-control" placeholder="SMTP host">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">SMTP Driver</label>
+                                    <select class="form-select">
+                                        <option selected>SMTP</option>
+                                        <option value="sendmail">SendMail</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">SMTP Password</label>
+                                    <input type="password" class="form-control" placeholder="SMTP Password">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">SMTP Encryption</label>
+                                    <select class="form-select">
+                                        <option selected>none</option>
+                                        <option value="ssl">SSL</option>
+                                        <option value="tls">TLS</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">SMTP Port</label>
+                                    <input type="number" class="form-control" value="28">
+                                </div>
+                            </div>
+
+                            <!-- Save Button -->
+                            <div class="text-center mt-5">
+                                <button class="btn save-changes-btn">تحديث المعلومات</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END: Email Linking Section -->
+            <!-- =============================================== -->
+            <!-- START: Add Code Section (اضافة كود) -->
+            <!-- Add Code Trigger Item -->
+            <div class="setting-item" data-bs-toggle="collapse" data-bs-target="#addCodeCollapse" aria-expanded="false">
+                <div class="setting-item-content">
+                    <i class="fas fa-code setting-icon"></i>
+                    <span>إضافة كود</span>
+            </div>
+                <i class="fas fa-chevron-down arrow-icon"></i>
+            </div>
+
+            <!-- Add Code Collapse Content -->
+            <div class="collapse" id="addCodeCollapse">
+                <div class="collapse-content">
+                    <!-- Custom CSS Card -->
+                    <div class="code-card mb-4">
+                        <div class="code-card-header">
+                            <span>Custom Css</span>
+                            <i class="fab fa-css3-alt code-icon css-icon"></i>
+                        </div>
+                        <div class="code-card-body">
+                            <label class="form-label">Css</label>
+                            <textarea class="form-control code-editor" rows="8" placeholder="#"></textarea>
+                        </div>
+                        <div class="code-card-footer">
+                            <button class="btn save-changes-btn">تحديث المعلومات</button>
+                        </div>
+                    </div>
+
+                    <!-- Custom JS Card -->
+                    <div class="code-card">
+                        <div class="code-card-header">
+                            <span>Custom JS</span>
+                            <i class="fab fa-js-square code-icon js-icon"></i>
+                        </div>
+                        <div class="code-card-body">
+                            <label class="form-label">JS</label>
+                            <textarea class="form-control code-editor" rows="8" placeholder="//"></textarea>
+                        </div>
+                        <div class="code-card-footer">
+                            <button class="btn save-changes-btn">تحديث المعلومات</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END: Add Code Section -->
+            <!-- =============================================== -->
+            <!-- START: Cache Settings Section (إعدادات الكاش) -->
+            <!-- Cache Settings Trigger Item -->
+            <div class="setting-item" data-bs-toggle="collapse" data-bs-target="#cacheSettingsCollapse" aria-expanded="false">
+                <div class="setting-item-content">
+                    <i class="fas fa-folder setting-icon"></i>
+                    <span>إعدادات الكاش</span>
+                </div>
+                <i class="fas fa-chevron-down arrow-icon"></i>
+            </div>
+            <!-- Cache Settings Collapse Content -->
+            <div class="collapse" id="cacheSettingsCollapse">
+                <div class="collapse-content">
+                    <div class="cache-settings-card">
+                        <div class="card-header-title">
+                            <i class="fas fa-folder-open"></i>
+                            <span>إعدادات الكاش</span>
+                        </div>
+                        <div class="cache-buttons-container">
+                            <button class="btn cache-btn">Clear Route:Cache</button>
+                            <button class="btn cache-btn">Clear View:Cache</button>
+                            <button class="btn cache-btn">Clear Config:Cache</button>
+                            <button class="btn cache-btn">Clear Event:Cache</button>
+                            <button class="btn cache-btn cache-btn-all">Clear All Kind Of Cache</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END: Cache Settings Section -->
+            <!-- =============================================== -->
+            <!-- START: Maintenance Mode Section (وضع الصيانة) -->
+            <!-- Maintenance Mode Trigger Item -->
+            <div class="setting-item" data-bs-toggle="collapse" data-bs-target="#maintenanceModeCollapse" aria-expanded="false">
+                <div class="setting-item-content">
+                    <i class="fas fa-wrench setting-icon"></i>
+                    <span>وضع الصيانة</span>
+                </div>
+                <i class="fas fa-chevron-down arrow-icon"></i>
+            </div>
+
+            <!-- Maintenance Mode Collapse Content -->
+            <div class="collapse" id="maintenanceModeCollapse">
+                <div class="collapse-content">
+                    <div class="email-linking-card"> <!-- Reusing the card style from email section -->
+                        <div class="card-header-title">
+                            <i class="fas fa-wrench"></i>
+                            <span>وضع الصيانة</span>
+                        </div>
+                        <div class="card-body-content">
+                            <!-- Image Uploads -->
+                            <div class="row g-4 mb-4">
+                                <div class="col-md-6">
+                                    <label class="form-label text-center d-block mb-2">لوجو الصيانة</label>
+                                    <div class="image-placeholder-404"> <!-- Reusing the 404 placeholder style -->
+                                        <i class="fas fa-image"></i>
+                                        <p>اضغط لاضافة صورة</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label text-center d-block mb-2">صورة الصيانة</label>
+                                    <div class="image-placeholder-404"> <!-- Reusing the 404 placeholder style -->
+                                        <i class="fas fa-image"></i>
+                                        <p>اضغط لاضافة صورة</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Form Fields -->
+                            <div class="row g-4 mb-4">
+                                <div class="col-md-6">
+                                    <label class="form-label">الوصف</label>
+                                    <input type="text" class="form-control" placeholder="الوصف">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">عنوان الصيانة</label>
+                                    <input type="text" class="form-control" placeholder="العنوان">
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">تاريخ العودة</label>
+                                    <input type="text" class="form-control" value="15-6-2025">
+                                </div>
+                            </div>
+
+                            <!-- Save Button -->
+                            <div class="text-center mt-4">
+                                <button class="btn save-changes-btn">تحديث المعلومات</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END: Maintenance Mode Section -->
+            <!-- =============================================== -->
+            <!-- START: Additional Settings Section (اعدادات اضافية) -->
+            <!-- Additional Settings Trigger Item -->
+            <div class="setting-item" data-bs-toggle="collapse" data-bs-target="#additionalSettingsCollapse" aria-expanded="false">
+                <div class="setting-item-content">
+                    <i class="fas fa-cogs setting-icon"></i>
+                    <span>اعدادات اضافية</span>
+                </div>
+                <i class="fas fa-chevron-down arrow-icon"></i>
+            </div>
+
+            <!-- Additional Settings Collapse Content اعدادات عامة -->
+            <div class="collapse" id="additionalSettingsCollapse">
+            <!-- =============================================== -->
+            <!-- START: General Settings Sub-Collapse (كولابس اعدادات عامة) -->
+            
+            <!-- General Settings Trigger Item (This is a sub-collapse) -->
+            <div class="setting-item sub-setting-item" data-bs-toggle="collapse" data-bs-target="#generalSettingsCollapse" aria-expanded="false">
+                <div class="setting-item-content">
+                    <i class="fas fa-cog setting-icon"></i>
+                    <span>اعدادات عامة</span>
+                </div>
+                <i class="fas fa-chevron-down arrow-icon"></i>
+            </div>
+            <!-- General Settings Collapse Content -->
+            <div class="collapse" id="generalSettingsCollapse">
+                <div class="collapse-content">
+                    <div class="general-settings-card">
+                        <!-- Image Upload -->
+                        <div class="mb-4">
+                            <label class="form-label text-center d-block mb-2">صورة توضيحية مؤقتة</label>
+                            <div class="image-placeholder-404" style="max-width: 500px; margin: auto;"> <!-- Reusing style -->
+                                <i class="fas fa-image"></i>
+                                <p>اضغط لاضافة صورة</p>
+                            </div>
+                        </div>
+
+                        <!-- Form Fields -->
+                        <div class="row g-3 mb-4">
+                            <div class="col-md-6">
+                                <label class="form-label">عنوان الموقع</label>
+                                <input type="text" class="form-control" placeholder="رمز">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">العبارة التعريفية</label>
+                                <input type="text" class="form-control" placeholder="منصة رمز للمتاجر">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">نص حقوق الملكية أسفل الصفحة</label>
+                                <input type="text" class="form-control" placeholder="copyright">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">تحديد المنطقة الزمنية</label>
+                                <select class="form-select">
+                                    <option selected>مصر/القاهرة</option>
+                                    <option value="1">الرياض</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Toggle Switches -->
+                        <div class="row g-3 mb-4">
+                            <div class="col-md-4 d-flex justify-content-between align-items-center form-switch-card">
+                                <label class="form-label mb-0">تفعيل/تعطيل وضع الصيانة</label>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch">
+                                </div>
+                            </div>
+                            <div class="col-md-4 d-flex justify-content-between align-items-center form-switch-card">
+                                <label class="form-label mb-0">إظهار/إخفاء نظام الطلب للزوار</label>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch" checked>
+                                </div>
+                            </div>
+                            <div class="col-md-4 d-flex justify-content-between align-items-center form-switch-card">
+                                <label class="form-label mb-0">تعطيل/تفعيل التحقق من بريد المستخدم</label>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch" checked>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Save Button -->
+                        <div class="text-center mt-4">
+                            <button class="btn save-changes-btn">تحديث المعلومات</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END: General Settings Sub-Collapse -->
+            <!-- =============================================== -->
+            <!-- START: Color Settings Sub-Collapse ((كولابس الألوان عامة جوا الاعدادات الاضافية  )) -->
+            <!-- =============================================== -->
+
+            <!-- Color Settings Trigger Item (This is a sub-collapse) -->
+            <div class="setting-item sub-setting-item" data-bs-toggle="collapse" data-bs-target="#colorSettingsCollapse" aria-expanded="false">
+                <div class="setting-item-content">
+                    <i class="fas fa-palette setting-icon"></i>
+                    <span>اعدادات الالوان</span>
+                </div>
+                <i class="fas fa-chevron-down arrow-icon"></i>
+            </div>
+
+            <!-- Color Settings Collapse Content -->
+            <div class="collapse" id="colorSettingsCollapse">
+                <div class="collapse-content">
+                    <div class="general-settings-card"> <!-- Reusing the same card style -->
+                        <div class="row g-4">
+                            <!-- Dynamically create color input fields -->
+                            <script>
+                                const colorSettings = [
+                                    { label: 'اللون الرئيسي الأول للموقع', placeholder: '#RRGGBB' },
+                                    { label: 'اللون الرئيسي الثاني للموقع', placeholder: '#RRGGBB' },
+                                    { label: 'اللون الرئيسي الثالث للموقع', placeholder: '#RRGGBB' },
+                                    { label: 'اللون الرئيسي الرابع للموقع', placeholder: '#RRGGBB' },
+                                    { label: 'اللون الثانوي الأول للموقع', placeholder: '#RRGGBB' },
+                                    { label: 'اللون الثانوي الثاني للموقع', placeholder: '#RRGGBB' },
+                                    { label: 'لون خلفية القسم الأول', placeholder: '#RRGGBB' },
+                                    { label: 'لون خلفية القسم الثاني', placeholder: '#RRGGBB' },
+                                    { label: 'لون خلفية القسم الثالث', placeholder: '#RRGGBB' },
+                                    { label: 'لون خلفية القسم الرابع', placeholder: '#RRGGBB' },
+                                    { label: 'لون خلفية القسم الخامس', placeholder: '#RRGGBB' },
+                                    { label: 'لون خلفية القسم السادس', placeholder: '#RRGGBB' },
+                                    { label: 'لون خلفية شريط التنقل', placeholder: '#RRGGBB' },
+                                    { label: 'لون التعليقات أو الملاحظات', placeholder: '#RRGGBB' },
+                                    { label: 'لون العناوين الرئيسية في الموقع', placeholder: '#RRGGBB' },
+                                    { label: 'لون النصوص أو المحتوى العام', placeholder: '#RRGGBB' },
+                                    { label: 'اللون الفاتح في الموقع', placeholder: '#RRGGBB' },
+                                    { label: 'اللون الغامق جداً في الموقع', placeholder: '#RRGGBB' },
+                                    { label: 'لون التقييمات', placeholder: '#RRGGBB' },
+                                    { label: 'لون المتاجر الجديدة', placeholder: '#RRGGBB' }
+                                ];
+
+                                const container = document.currentScript.parentElement;
+                                colorSettings.forEach(setting => {
+                                    const col = document.createElement('div');
+                                    col.className = 'col-md-6';
+                                    
+                                    const label = document.createElement('label');
+                                    label.className = 'form-label';
+                                    label.textContent = setting.label;
+                                    
+                                    const inputGroup = document.createElement('div');
+                                    inputGroup.className = 'input-group color-picker-group';
+                                    
+                                    const input = document.createElement('input');
+                                    input.type = 'text';
+                                    input.className = 'form-control';
+                                    input.placeholder = setting.placeholder;
+                                    
+                                    const colorPreview = document.createElement('span');
+                                    colorPreview.className = 'input-group-text color-preview';
+                                    
+                                    const colorInput = document.createElement('input');
+                                    colorInput.type = 'color';
+                                    colorInput.className = 'color-input-hidden';
+                                    colorInput.value = '#5e72e4'; // Default color
+                                    
+                                    // Link color input to text input and preview
+                                    colorInput.addEventListener('input', (e) => {
+                                        input.value = e.target.value;
+                                        colorPreview.style.backgroundColor = e.target.value;
+                                    });
+                                    
+                                    inputGroup.appendChild(input);
+                                    inputGroup.appendChild(colorPreview);
+                                    inputGroup.appendChild(colorInput);
+                                    
+                                    col.appendChild(label);
+                                    col.appendChild(inputGroup);
+                                    
+                                    container.appendChild(col);
+                                });
+                            </script>
+                        </div>
+                        <!-- Save Button -->
+                        <div class="text-center mt-4">
+                            <button class="btn save-changes-btn">تحديث المعلومات</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- END: Color Settings Sub-Collapse -->
+            <!-- =============================================== -->
+            <!-- START: Text Settings Sub-Collapse ( اعدادات النص جوا كولابس اعدادا الاضافية) -->
+            <!-- Text Settings Trigger Item (This is a sub-collapse) -->
+            <div class="setting-item sub-setting-item" data-bs-toggle="collapse" data-bs-target="#textSettingsCollapse" aria-expanded="false">
+                <div class="setting-item-content">
+                    <i class="fas fa-font setting-icon"></i>
+                    <span>اعدادات النص</span>
+                </div>
+                <i class="fas fa-chevron-down arrow-icon"></i>
+            </div>
+
+            <!-- Text Settings Collapse Content -->
+            <div class="collapse" id="textSettingsCollapse">
+                <div class="collapse-content">
+                    <div class="general-settings-card"> <!-- Reusing the same card style -->
+                        
+                        <!-- Main Font Settings -->
+                        <div class="font-setting-block">
+                            <h6 class="font-setting-title">عائلة الخط</h6>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label">نمط الخط</label>
+                                    <select class="form-select">
+                                        <option selected>اختار نمط الخط المناسب</option>
+                                        <option value="normal">Normal</option>
+                                        <option value="italic">Italic</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">عائلة الخط</label>
+                                    <select class="form-select">
+                                        <option selected>اختار نوع الخط في الموقع</option>
+                                        <option value="Cairo">Cairo</option>
+                                        <option value="Roboto">Roboto</option>
+                                        <option value="Open Sans">Open Sans</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Divider and Toggle -->
+                        <div class="d-flex align-items-center my-4">
+                            <hr class="flex-grow-1">
+                            <div class="form-check form-switch mx-3">
+                                <input class="form-check-input" type="checkbox" role="switch" checked>
+                            </div>
+                            <hr class="flex-grow-1">
+                        </div>
+
+                        <!-- Headings Font Settings -->
+                        <div class="font-setting-block">
+                            <h6 class="font-setting-title">إعدادات نمط الخط للعناوين</h6>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label">نمط الخط</label>
+                                    <select class="form-select">
+                                        <option selected>اختار نمط الخط المناسب</option>
+                                        <option value="normal">Normal</option>
+                                        <option value="italic">Italic</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">عائلة الخط</label>
+                                    <select class="form-select">
+                                        <option selected>اختار نوع الخط في الموقع</option>
+                                        <option value="Cairo">Cairo</option>
+                                        <option value="Roboto">Roboto</option>
+                                        <option value="Open Sans">Open Sans</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Save Button -->
+                        <div class="text-center mt-5">
+                            <button class="btn save-changes-btn">تحديث المعلومات</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END: Text Settings Sub-Collapse -->
+        <!-- =============================================== -->
+        <!-- START: SEO Settings Sub-Collapse (اعدادات SEO ) -->
+        <!-- =============================================== -->
+        <!-- SEO Settings Trigger Item (This is a sub-collapse) -->
+        <div class="setting-item sub-setting-item" data-bs-toggle="collapse" data-bs-target="#seoSettingsCollapse" aria-expanded="false">
+            <div class="setting-item-content">
+                <i class="fas fa-search-dollar setting-icon"></i>
+                <span>اعدادات SEO</span>
+            </div>
+            <i class="fas fa-chevron-down arrow-icon"></i>
+        </div>
+        <!-- SEO Settings Collapse Content -->
+        <div class="collapse" id="seoSettingsCollapse">
+            <div class="collapse-content">
+                <div class="general-settings-card"> <!-- Reusing the same card style -->
+
+                    <!-- SEO Block -->
+                    <div class="seo-block">
+                        <h6 class="seo-block-title">الهوية التعريفية لـ SEO</h6>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">الكاتب التعريفي للموقع</label>
+                                <input type="text" class="form-control" placeholder="الكاتب التعريفي للموقع">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">الكلمات المفتاحية التعريفية للموقع</label>
+                                <input type="text" class="form-control" placeholder="الكلمات المفتاحية التعريفية للموقع">
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">الوصف الذي يظهر في نتائج البحث</label>
+                                <textarea class="form-control" rows="3" placeholder="الوصف الذي يظهر في نتائج البحث"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- OG Block -->
+                    <div class="seo-block">
+                        <h6 class="seo-block-title">معلومات OG التعريفية</h6>
+                        <div class="mb-3">
+                            <label class="form-label">صورة توضيحية</label>
+                            <div class="image-placeholder-404"> <!-- Reusing style -->
+                                <i class="fas fa-image"></i>
+                                <p>اضغط لاضافة صورة</p>
+                            </div>
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">عنوان OG التعريفي</label>
+                                <input type="text" class="form-control" placeholder="عنوان OG التعريفي">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">الوصف التعريفي لـ OG</label>
+                                <input type="text" class="form-control" placeholder="الوصف التعريفي لـ OG">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Facebook Meta Block -->
+                    <div class="seo-block">
+                        <h6 class="seo-block-title">معلومات الميتا الخاصة بفيسبوك</h6>
+                        <div class="mb-3">
+                            <label class="form-label">صورة توضيحية</label>
+                            <div class="image-placeholder-404"> <!-- Reusing style -->
+                                <i class="fas fa-image"></i>
+                                <p>اضغط لاضافة صورة</p>
+                            </div>
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">العنوان التعريفي</label>
+                                <input type="text" class="form-control" placeholder="العنوان التعريفي">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">الوصف التعريفي</label>
+                                <input type="text" class="form-control" placeholder="الوصف التعريفي">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Twitter Meta Block -->
+                    <div class="seo-block">
+                        <h6 class="seo-block-title">معلومات الميتا الخاصة بتويتر</h6>
+                        <div class="mb-3">
+                            <label class="form-label">صورة توضيحية</label>
+                            <div class="image-placeholder-404"> <!-- Reusing style -->
+                                <i class="fas fa-image"></i>
+                                <p>اضغط لاضافة صورة</p>
+                            </div>
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">العنوان التعريفي</label>
+                                <input type="text" class="form-control" placeholder="العنوان التعريفي">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">الوصف التعريفي</label>
+                                <input type="text" class="form-control" placeholder="الوصف التعريفي">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Save Button -->
+                    <div class="text-center mt-5">
+                        <button class="btn save-changes-btn">تحديث المعلومات</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END: SEO Settings Sub-Collapse -->
+        <!-- =============================================== -->
+
+                            </div>
+                        </div>
+                    </main>
+                </div>
+
+    <!-- Bootstrap JS -->
+        <script src="../assets/bootstrap/bootstrap.bundle.min.js"></script>
+     <!-- AOS Animation Library JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="dashboard-with-collapse.js"></script>
+<script src="../assets/JS/design-stor.js"></script>
+</body>
+</html>
+

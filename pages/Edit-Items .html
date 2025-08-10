@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إدارة المنتجات - لوحة التحكم</title>
+    
+    <!-- /* ========== START: Stylesheets ========== */ -->
+    <link rel="icon" href="../assets/images/logo..svg" />
+    <link rel="stylesheet" href="../assets/CSS/all.min.css" />
+    <link rel="stylesheet" href="../assets/bootstrap/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap"rel="stylesheet"/>
+    <link rel="stylesheet" href="../assets/CSS/Items.css" />
+    <link rel="stylesheet" href="../assets/CSS/style.css" />
+
+  <!-- /* ========== END: Stylesheets ========== */ -->
+</head>
+<body >
+    <div class="d-flex">
+        <!-- ================== START: SIDEBAR ================== -->
+    <aside class="sidebar">
+            <div class="logo-container">
+            <img src="../assets/images/logo.png" alt="Logo" class="logo-img" />
+            <span class="logo-text">Dashboard</span>
+            </div>
+                
+                <ul class="nav flex-column sidebar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">
+                            <i class="fa-solid fa-house-chimney"></i>
+                            <span>لوحة التحكم</span>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="./manag-orde.html ">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span>ادارة الطلبات</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./managProducts.html">
+                            <i class="fa-solid fa-box-archive"></i>
+                            <span>ادارة المنتجات</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/managCustomer.html">
+                            <i class="fa-solid fa-users-gear"></i>
+                            <span>ادارة العملاء</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#design">
+                            <i class="fa-solid fa-palette"></i>
+                            <span>تصميم متجرك</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./discount.html">
+                            <i class="fa-solid fa-tags"></i>
+                            <span>كوبونات الخصم</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#reports">
+                            <i class="fa-solid fa-chart-pie"></i>
+                            <span>تقارير واحصائيات</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./scops.html">
+                            <i class="fa-solid fa-globe"></i>
+                            <span>نطاقات ومجالات</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./ticketSup.html">
+                            <i class="fa-solid fa-headset"></i>
+                            <span>تذاكر الدعم الفني</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#shipping">
+                            <i class="fa-solid fa-truck-fast"></i>
+                            <span>الضريبة والتوصيل</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#payment">
+                            <i class="fa-solid fa-credit-card"></i>
+                            <span>اعدادات الدفع</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                    <a class="nav-link" href="../pages/settingAcc.html">
+                            <i class="fa-solid fa-gear"></i>
+                            <span>اعدادات حسابك</span>
+                        </a>
+                    </li>
+                </ul>
+    </aside>
+      <!-- /* ========== START: Main Content ========== */ -->
+      <div class="main-content flex-grow-1">
+        <!-- /* ========== START: Navbar ========== */ -->
+            <header class="navbar-container">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid">
+                        <!-- Hamburger Menu for Mobile -->
+                        <button class="btn d-lg-none me-2" type="button" id="sidebar-toggler">
+                            <i class="fa-solid fa-bars"></i>
+                        </button>
+
+                        <!-- Profile Dropdown -->
+                        <div class="dropdown profile-dropdown ms-lg-3">
+                            <a href="#" class="d-flex align-items-center text-decoration-none text-dark" 
+                               id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="../assets/images/profile.png" 
+                                     alt="Avatar" class="profile-avatar" />
+                                <span class="me-2 d-none d-sm-block">اهلا محمود</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-start" aria-labelledby="profileDropdown">
+                                <li><a class="dropdown-item" href="#"><i class="fa-solid fa-user me-2"></i>ملفي الشخصي</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="fa-solid fa-gear me-2"></i>اعدادات</a></li>
+                                <li><hr class="dropdown-divider" /></li>
+                                <li><a class="dropdown-item text-danger" href="#"><i class="fa-solid fa-arrow-right-from-bracket me-2"></i>تسجيل الخروج</a></li>
+                            </ul>
+                        </div>
+                     <!-- Center search bar -->
+                        <div class="navbar-center">
+                            <div class="search-container">
+                                <input type="text" class="search-input" placeholder="بحث...">
+                                <button class="search-btn">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                <!-- Left side icons and logo -->
+                <div class="navbar-left">
+                    <div class="store-preview-btn">
+                        <i class="fas fa-eye"></i>
+                        معاينة المتجر
+                    </div>
+                    <a href="#" class="nav-icon position-relative">
+                      <i class="fa-solid fa-bell"></i>
+                      <span class="notification-dot"></span>
+                    </a>
+                    <div class="nav-icon crown">
+                        <i class="fas fa-crown"></i>
+                    </div>
+    
+                </div>
+
+
+
+                    </div>
+                </nav>
+            </header>
+            <!-- ================== START: PAGE CONTENT ================== -->
+            <div class="page-content ">
+          <!-- Store Selector -->
+          <div
+            class="d-flex justify-content-start justify-content-md-start align-items-center mb-4"
+          >
+            <a href="#" class="store-link active">شحن مع بوسطه </a>
+            <a href="#" class="store-link">  شحن مع OTO</a>
+          </div>
+
+                <!-- Page Title -->
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h1 class="page-title">المنتجات</h1>
+                </div>
+
+                                <!-- Page Header with Action Buttons -->
+                <div class="page-header-actions">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                      <!-- Right Side - Filter Button -->
+                        <div class="header-right">
+                            <button class="btn btn-outline-secondary filter-btn">
+                                <i class="fa-solid fa-sliders me-2"></i>
+                                تصفية
+                            </button>
+                        </div>
+                        <!-- Left Side - Products Button -->
+                        <div class="header-left">
+                            <button class="btn btn-success products-btn">
+                              <i class="fa-solid fa-box-open" style="color: #e6f5e4;"></i>                                المنتجات
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Content Row -->
+                <div class="row">
+                    <!-- Categories List Section (left Side) -->
+                    <div class="col-lg-8 col-md-7 fade-in-up" style="animation-delay: 0.3s">
+                        <div class="card shadow-sm">
+                            <div class="card-body p-0">
+                                <!-- Categories Table -->
+                                <div class="categories-table">
+                                    <!-- Table Header -->
+                                    <div class="categories-table-header">
+                                        <div class="category-header-item category-image-col"> <i class="fa-solid fa-image fa-lg m-2" style="color: #31aa33;"></i> صورة  </div>
+                                        <div class="category-header-item category-name-col">اسم</div>
+                                        <div class="category-header-item category-products-col">المنتجات</div>
+                                        <div class="category-header-item category-type-col">تصنيف</div>
+                                        <div class="category-header-item category-actions-col">إجراءات</div>
+                                    </div>
+
+                                    <!-- Categories List -->
+                                    <div class="categories-list" id="categoriesList">
+                                        <!-- Category Item 1 - أحذية -->
+                                        <div class="category-item">
+                                            <div class="category-image-container">
+                                                <img src="../assets/images/shoes (1).png" 
+                                                     alt="أحذية" class="category-image">
+                                            </div>
+                                            <div class="category-name">
+                                                <h6 class="category-title">أحذية</h6>
+                                                <p class="category-subtitle">تعديل | <span>حذف</span></p>
+                                            </div>
+                                            <div class="category-products">
+                                                <span class="products-badge">3×1</span>
+                                            </div>
+                                            <div class="category-type">
+                                                <span class="type-label">رئيسي</span>
+                                            </div>
+                                            <div class="category-actions">
+                                              <a href="./Edit-Items .html">
+                                                <button class="btn btn-outline-primary btn-sm" title="تعديل">
+                                                    <i class="fas fa-edit"></i>
+                                                </button>
+                                                </a>
+                                                <button class="btn btn-outline-danger btn-sm" title="حذف">
+                                                    <i class="fas fa-trash"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Category Item 2 - أجهزة -->
+                                        <div class="category-item">
+                                            <div class="category-image-container">
+                                                <img src="../assets/images/shoes (2).png" 
+                                                     alt="أجهزة إلكترونية" class="category-image">
+                                            </div>
+                                            <div class="category-name">
+                                                <h6 class="category-title">أجهزة</h6>
+                                                <p class="category-subtitle">تعديل | <span>حذف</span></p>
+                                            </div>
+                                            <div class="category-products">
+                                                <span class="products-badge">3×1</span>
+                                            </div>
+                                            <div class="category-type">
+                                                <span class="type-label">فرعي</span>
+                                            </div>
+                                            <div class="category-actions">
+                                                <button class="btn btn-outline-primary btn-sm" title="تعديل">
+                                                    <i class="fas fa-edit"></i>
+                                                </button>
+                                                <button class="btn btn-outline-danger btn-sm" title="حذف">
+                                                    <i class="fas fa-trash"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Category Item 3 - جوارب -->
+                                        <div class="category-item">
+                                            <div class="category-image-container">
+                                                <img src="../assets/images/shoes (3).png" 
+                                                     alt="جوارب" class="category-image">
+                                            </div>
+                                            <div class="category-name">
+                                                <h6 class="category-title">جوارب</h6>
+                                                <p class="category-subtitle">تعديل | <span>حذف</span></p>
+                                            </div>
+                                            <div class="category-products">
+                                                <span class="products-badge">3×1</span>
+                                            </div>
+                                            <div class="category-type">
+                                                <span class="type-label">فرعي</span>
+                                            </div>
+                                            <div class="category-actions">
+                                                <button class="btn btn-outline-primary btn-sm" title="تعديل">
+                                                    <i class="fas fa-edit"></i>
+                                                </button>
+                                                <button class="btn btn-outline-danger btn-sm" title="حذف">
+                                                    <i class="fas fa-trash"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Category Item 4 - فلات -->
+                                        <div class="category-item">
+                                            <div class="category-image-container">
+                                                <img src="../assets/images/shoes (4).png" 
+                                                     alt="فلات" class="category-image">
+                                            </div>
+                                            <div class="category-name">
+                                                <h6 class="category-title">فلات</h6>
+                                                <p class="category-subtitle">تعديل | <span>حذف</span></p>
+                                            </div>
+                                            <div class="category-products">
+                                                <span class="products-badge">3×1</span>
+                                            </div>
+                                            <div class="category-type">
+                                                <span class="type-label">فرعي</span>
+                                            </div>
+                                            <div class="category-actions">
+                                                <button class="btn btn-outline-primary btn-sm" title="تعديل">
+                                                    <i class="fas fa-edit"></i>
+                                                </button>
+                                                <button class="btn btn-outline-danger btn-sm" title="حذف">
+                                                    <i class="fas fa-trash"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Category Item 5 - بوت بلاتين -->
+                                        <div class="category-item">
+                                            <div class="category-image-container">
+                                                <img src="../assets/images/shoes (5).png" 
+                                                     alt="بوت بلاتين" class="category-image">
+                                            </div>
+                                            <div class="category-name">
+                                                <h6 class="category-title">بوت بلاتين</h6>
+                                                <p class="category-subtitle">تعديل | <span>حذف</span></p>
+                                            </div>
+                                            <div class="category-products">
+                                                <span class="products-badge">3×1</span>
+                                            </div>
+                                            <div class="category-type">
+                                                <span class="type-label">فرعي</span>
+                                            </div>
+                                            <div class="category-actions">
+                                                <button class="btn btn-outline-primary btn-sm" title="تعديل">
+                                                    <i class="fas fa-edit"></i>
+                                                </button>
+                                                <button class="btn btn-outline-danger btn-sm" title="حذف">
+                                                    <i class="fas fa-trash"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Category Item 6 - بوت بلاتين -->
+                                        <div class="category-item">
+                                            <div class="category-image-container">
+                                                <img src="../assets/images/shoes (1).png" 
+                                                     alt="بوت بلاتين" class="category-image">
+                                            </div>
+                                            <div class="category-name">
+                                                <h6 class="category-title">بوت بلاتين</h6>
+                                                <p class="category-subtitle">تعديل | <span>حذف</span></p>
+                                            </div>
+                                            <div class="category-products">
+                                                <span class="products-badge">3×1</span>
+                                            </div>
+                                            <div class="category-type">
+                                                <span class="type-label">فرعي</span>
+                                            </div>
+                                            <div class="category-actions">
+                                                <button class="btn btn-outline-primary btn-sm" title="تعديل">
+                                                    <i class="fas fa-edit"></i>
+                                                </button>
+                                                <button class="btn btn-outline-danger btn-sm" title="حذف">
+                                                    <i class="fas fa-trash"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Category Item 7 - بوت بلاتين -->
+                                        <div class="category-item">
+                                            <div class="category-image-container">
+                                                <img src="../assets/images/shoes (2).png" 
+                                                     alt="بوت بلاتين" class="category-image">
+                                            </div>
+                                            <div class="category-name">
+                                                <h6 class="category-title">بوت بلاتين</h6>
+                                                <p class="category-subtitle">تعديل | <span>حذف</span></p>
+                                            </div>
+                                            <div class="category-products">
+                                                <span class="products-badge">3×1</span>
+                                            </div>
+                                            <div class="category-type">
+                                                <span class="type-label">فرعي</span>
+                                            </div>
+                                            <div class="category-actions">
+                                                <button class="btn btn-outline-primary btn-sm" title="تعديل">
+                                                    <i class="fas fa-edit"></i>
+                                                </button>
+                                                <button class="btn btn-outline-danger btn-sm" title="حذف">
+                                                    <i class="fas fa-trash"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Pagination -->
+                                <div class="pagination-container">
+                                    <nav aria-label="Categories pagination">
+                                        <ul class="pagination justify-content-center mb-0">
+                                            <li class="page-item">
+                                                <a class="page-link" href="#" aria-label="Previous">
+                                                    <i class="fa-solid fa-chevron-right"></i>
+                                                </a>
+                                            </li>
+                                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                            <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#" aria-label="Next">
+                                                    <i class="fa-solid fa-chevron-left"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /* ================= START Add New Category Section (Right Side) ================= */ -->
+                    <div class="col-lg-4 col-md-5 mb-4 fade-in-up" style="animation-delay: 0.3s">
+                    <div class="card shadow-sm rounded-3">
+                        <div class="card-body p-4">
+                        <!-- Category Form -->
+                        <form id="categoryForm" class="d-flex flex-column gap-4">
+                            <!-- Title -->
+                            <div class="text-center">
+                            <h5 class="fw-bold m-0">فئة جديدة</h5>
+                            </div>
+
+                            <!-- Image Upload -->
+                            <div>
+                            <div class="uploadImg border rounded-3 text-center py-4 px-3 position-relative cursor-pointer " id="categoryImageUploadArea" onclick="document.getElementById('categoryImage').click();">
+                                <img src="../assets/images/shoes (4).png" alt="" class="w-75">
+                                <input type="file" id="categoryImage" class="d-none" accept="image/*">
+                            </div>
+                            </div>
+
+                            <!-- Category Name -->
+                            <div>
+                            <label for="categoryName" class="form-label mb-1">اسم الفئة</label>
+                            <input type="text" class="form-control" id="categoryName" placeholder="ادخل اسم الفئة">
+                            </div>
+
+                            <!-- Description -->
+                            <div>
+                            <label for="categoryDescription" class="form-label mb-1">وصف الفئة</label>
+                            <textarea class="form-control" id="categoryDescription" rows="3" placeholder="ادخل وصف الفئة في حالة الرغبة"></textarea>
+                            </div>
+
+                            <!-- Classification -->
+                            <div>
+                            <label for="categoryClassification" class="form-label mb-1">تصنيف الفئة</label>
+                            <div class="position-relative">
+                                <i class="fa-solid fa-check-circle position-absolute text-success" style="top: 50%; right: 10px; transform: translateY(-50%);"></i>
+                                <input type="text" class="form-control pe-5" id="categoryClassification" placeholder="اختر تصنيف الفئة الرئيسية والفرعية">
+                            </div>
+                            </div>
+
+                            <!-- Submit -->
+                            <button type="submit" class="btn btn-success w-100 mt-2">إضافة الفئة</button>
+                        </form>
+                        </div>
+                    </div>
+                    </div>
+
+<!-- /* ================= END Add New Category Section ================= */ -->
+
+                </div>
+            </div>
+            <!-- ================== END: PAGE CONTENT ================== -->
+        </div>
+        <!-- ================== END: MAIN CONTENT ================== -->
+    </div>
+
+    <!-- ========== START: Scripts ========== -->
+    <!-- Scripts -->
+    <script src="../assets/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../assets/JS/script.js"></script>
+</body>
+</html>
+
