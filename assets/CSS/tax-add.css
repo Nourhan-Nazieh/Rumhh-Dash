@@ -1,5 +1,109 @@
-/* Tax and Delivery Page Specific Styles */
-
+/* =================Loading Screen Style============ */
+/* Loader Fullscreen */
+#page-loader {
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at center, #f5f1e8e9, #d3e2d4eb, #c8d6c1e5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    overflow: hidden;
+    transition: background 0.5s ease-in-out;
+  }
+  
+  /* Background Particles Effect */
+  .loader-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/stardust.png');
+    animation: moveBg 10s linear infinite;
+    opacity: 0.2;
+    filter: brightness(1.2);
+    z-index: 0;
+  }
+  @keyframes moveBg {
+    from { background-position: 0 0; }
+    to { background-position: 400px 400px; }
+  }
+  .bot-avatar {
+    text-align: center;
+    margin-bottom: 10px;
+    animation: fadeIn 0.5s ease-in;
+  }
+  
+  .bot-avatar img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    animation: talking 1.5s ease-in-out infinite;
+  }
+  
+  @keyframes talking {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); opacity: 1; }
+  }
+  /* Logo Animation */
+  .loader-logo {
+    position: relative;
+    animation: fadeScale 2s ease-in-out infinite alternate;
+    max-width: 90%;
+    width: clamp(150px, 30vw, 350px);
+    height: auto;
+  }
+  .loader-logo img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
+  
+  /* Shine Effect */
+  .shine {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.5), transparent);
+    animation: shineMove 2s ease-in-out infinite;
+  }
+  @keyframes shineMove {
+    to { left: 150%; }
+  }
+  
+  /* Fade + Scale Animation */
+  @keyframes fadeScale {
+    0% { opacity: 0.8; transform: scale(1); }
+    100% { opacity: 1; transform: scale(1.08); }
+  }
+  
+  /* Hide Loader */
+  body.loaded #page-loader {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 1s ease-in-out;
+  }
+  
+  /* Responsive Adjustments for Small Screens */
+  @media (max-width: 768px) {
+    .loader-logo {
+      width: 50vw;
+    }
+  }
+  @media (max-width: 480px) {
+    .loader-logo {
+      width: 70vw;
+    }
+  }
+  
 /* Form Styling */
 .form-label {
     font-weight: 600;

@@ -14,6 +14,14 @@
   <!-- /* ========== END: Stylesheets ========== */ -->
   </head>
   <body>
+    <!-- Loading Screen -->
+    <div id="page-loader">
+      <div class="loader-bg"></div>
+      <div class="loader-logo">
+        <img src="./assets/images/لوحة التحكم.gif" alt="Logo">
+      </div>
+    </div>
+
     <div class="d-flex">
         <!-- ================== START: SIDEBAR ================== -->
         <aside class="sidebar">
@@ -373,6 +381,60 @@
         <!-- /* ========== END: Page Content ========== */ -->
       </div>
       <!-- /* ========== END: Main Content ========== */ -->
+       <!-- ================= START AI Chat  ================= -->
+<div class="ai-chat-wrap" id="aiChatWrap">
+  <!-- hint message -->
+  <div id="aiHint" class="ai-hint">
+    هل تريد المساعدة؟
+  </div>
+
+  <!-- minimized bubble -->
+  <div id="aiMin" class="ai-bubble" title="افتح المساعد">
+    <img src="./assets/images/chat animated icon.gif" alt="Rumh Bot">
+  </div>
+
+  <!-- full panel -->
+  <div id="aiPanel" class="ai-panel d-none">
+    <div class="ai-header">
+      <div>
+        <div class="title">مساعد Rumh</div>
+        <div class="subtitle">هنا لمساعدتك دائمًا ✨</div>
+      </div>
+      <div class="ms-auto d-flex gap-2">
+        <button id="closeBtn" class="btn btn-sm btn-outline-light" title="إغلاق">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Messages Section -->
+    <div id="messages" class="ai-messages">
+      <!-- bot animated avatar -->
+      <div class="bot-avatar" id="botAvatar">
+        <img src="./assets/images/giving information chat animated icon.gif" alt="Rumh Bot Talking" />
+      </div>
+      <!-- welcome message (hidden at first) -->
+      <div class="msg ai d-none" id="welcomeMsg">
+        أهلًا بك 👋 أنا مساعد Rumh. كيف أقدر أخدمك اليوم؟
+      </div>
+    </div>
+
+    <!-- quick actions -->
+    <div class="quick-actions d-none" id="quickActions">
+      <button class="btn btn-outline-success" data-q="خدماتنا">خدماتنا</button>
+      <button class="btn btn-outline-success" data-q="الأسعار">الأسعار</button>
+      <button class="btn btn-outline-success" data-q="تواصل معنا">تواصل معنا</button>
+    </div>
+
+    <!-- input area -->
+    <div class="ai-input">
+      <textarea id="inputText" placeholder="اكتب رسالتك..." class="form-control" rows="1"></textarea>
+      <button id="sendBtn" class="btn send-btn">
+        <i class="fa-solid fa-paper-plane"></i>
+      </button>
+    </div>
+  </div>
+</div>
     </div>
 
     <!-- Scroll To Top Button -->

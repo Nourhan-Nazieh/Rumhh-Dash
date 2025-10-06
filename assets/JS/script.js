@@ -99,3 +99,122 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+
+
+// ==================== Loading ====================
+window.addEventListener("load", function() {
+    setTimeout(() => {
+      document.body.classList.add("loaded");
+    }, 800);
+  });
+  
+  const aiMin = document.getElementById('aiMin');
+  const aiPanel = document.getElementById('aiPanel');
+  const botAvatar = document.getElementById('botAvatar');
+  const welcomeMsg = document.getElementById('welcomeMsg');
+  const closeBtn = document.getElementById('closeBtn');
+  
+  aiMin.addEventListener('click', () => {
+    aiPanel.classList.remove('d-none');
+    aiMin.classList.add('d-none');
+  
+    // Show avatar immediately
+    botAvatar.style.display = 'block';
+    
+    // Show welcome message after 1.5 seconds
+    setTimeout(() => {
+      welcomeMsg.classList.remove('d-none');
+    }, 1500);
+  });
+  
+  closeBtn.addEventListener('click', () => {
+    aiPanel.classList.add('d-none');
+    aiMin.classList.remove('d-none');
+  });
+
+
+  // ==================== Feature & Floating Cards ====================
+document.querySelectorAll('.feature-card').forEach(card => {
+    card.addEventListener('mouseenter', () => { card.style.transform = 'translateY(-10px) scale(1.02)'; });
+    card.addEventListener('mouseleave', () => { card.style.transform = 'translateY(0) scale(1)'; });
+  });
+  function animateFloatingCards() {
+    document.querySelectorAll('.floating-card').forEach(card => {
+      setInterval(() => card.style.transform = 'translate(0,0)', 3000);
+    });
+  }
+  setTimeout(animateFloatingCards, 2000);
+  
+  
+  (function(){
+    const aiPanel = document.getElementById('aiPanel');
+    const aiMin = document.getElementById('aiMin');
+    const closeBtn = document.getElementById('closeBtn');
+    const quickActions = document.getElementById('quickActions');
+    const messagesEl = document.getElementById('messages');
+    const inputText = document.getElementById('inputText');
+    const sendBtn = document.getElementById('sendBtn');
+  
+    aiPanel.classList.add('d-none');
+    aiMin.classList.remove('d-none');
+  
+    aiMin.addEventListener('click', ()=>{
+      aiPanel.classList.remove('d-none');
+      aiMin.classList.add('d-none');
+      document.getElementById('aiHint').style.display='none';
+    });
+  
+    closeBtn.addEventListener('click', ()=>{
+      aiPanel.classList.add('d-none');
+      aiMin.classList.remove('d-none');
+    });
+  
+    quickActions.addEventListener('click', (e)=>{
+      const btn = e.target.closest('button');
+      if(!btn) return;
+      const q = btn.dataset.q;
+      if(q) sendUserMessage(q);
+    });
+  
+    sendBtn.addEventListener('click', ()=>{ const v=inputText.value.trim(); if(!v) return; sendUserMessage(v); });
+    inputText.addEventListener('keydown', e=>{ if(e.key==='Enter'&&!e.shiftKey){ e.preventDefault(); sendBtn.click(); } });
+  
+    function appendMessage(text, who='ai'){
+      const div = document.createElement('div');
+      div.className = 'msg ' + (who==='user'? 'user':'ai');
+      div.innerHTML = text;
+      messagesEl.appendChild(div);
+      div.scrollIntoView({behavior:'smooth'});
+    }
+  
+    function sendUserMessage(text){
+      appendMessage(escapeHtml(text),'user');
+      inputText.value=''; quickActions.classList.add('d-none');
+  
+      const typing = document.createElement('div');
+      typing.className='msg ai';
+      typing.innerHTML='<div class="typing"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>';
+      messagesEl.appendChild(typing);
+      typing.scrollIntoView({behavior:'smooth'});
+  
+      setTimeout(()=>{
+        typing.remove();
+        const reply = generateReply(text);
+        appendMessage(reply,'ai');
+        setTimeout(()=> quickActions.classList.remove('d-none'), 400);
+      },900);
+    }
+  
+    function generateReply(userText){
+      const t = userText.toLowerCase();
+      if(t.includes('خدمات')) return 'خدماتنا تشمل حلول تقنية متكاملة ✨.';
+      if(t.includes('سعر')||t.includes('الأسعار')) return 'للاطلاع على الأسعار، زر صفحة التسعير على موقعنا.';
+      if(t.includes('تواصل')) return 'تقدر تتواصل معنا عبر نموذج الاتصال أو الواتساب 📱.';
+      return 'شكراً لاستفسارك 🙏 سوف نرد عليك بالتفاصيل قريباً.';
+    }
+  
+    function escapeHtml(unsafe){
+      return unsafe.replace(/[&<"'>]/g, m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":"&#039;"}[m]));
+    }
+  })();
