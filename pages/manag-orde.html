@@ -12,402 +12,470 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/litepicker/dist/css/litepicker.css" />
     <link rel="stylesheet" href="../assets/CSS/manag-orde.css" />
-    <link rel="stylesheet" href="../assets/CSS/style.css" />
+    <link rel="stylesheet" href="../assets/CSS/nav-sid-chat-load.css" />
+
+
+
+
+
     <!-- /* ========== END: Stylesheets ========== */ -->
 </head>
-<body>
-<!-- Loading Screen -->
-<div id="page-loader">
-    <div class="loader-bg"></div>
-    <div class="loader-logo">
-    <img src="../assets/images/ادارة الطلبات.gif" alt="Logo">
+  <body>
+    <!-- Loading Screen -->
+    <div id="page-loader">
+        <div class="loader-bg"></div>
+        <div class="loader-logo">
+        <img src="../assets/images/ادارة الطلبات.gif" alt="Logo">
+        </div>
     </div>
- </div>
 
     <div class="d-flex">
-                <!-- ================== START: SIDEBAR ================== -->
-                <aside class="sidebar">
-                <div class="logo-container">
-                <img src="../assets/images/logo.png" alt="Logo" class="logo-img" />
-                <span class="logo-text">Dashboard</span>
-                </div>
-                    
-                    <ul class="nav flex-column sidebar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link " href="../index.html">
-                                <i class="fa-solid fa-house-chimney"></i>
-                                <span>لوحة التحكم</span>
-                            </a>
-                        </li>
-                        
-                        <li class="nav-item">
-                            <a class="nav-link active" href="../pages/manag-orde.html ">
-                                <i class="fa-solid fa-cart-shopping"></i>
-                                <span>ادارة الطلبات</span>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="../pages/managProducts.html">
-                                <i class="fa-solid fa-box-archive"></i>
-                                <span>ادارة المنتجات</span>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="../pages/managCustomer.html">
-                                <i class="fa-solid fa-users-gear"></i>
-                                <span>ادارة العملاء</span>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="../pages/design-stor.html">
-                                <i class="fa-solid fa-palette"></i>
-                                <span>تصميم متجرك</span>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="../pages/discount.html">
-                                <i class="fa-solid fa-tags"></i>
-                                <span>كوبونات الخصم</span>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="../pages/reports.html">
-                                <i class="fa-solid fa-chart-pie"></i>
-                                <span>تقارير واحصائيات</span>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="../pages/scops.html">
-                                <i class="fa-solid fa-globe"></i>
-                                <span>نطاقات ومجالات</span>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="../pages/ticketSup.html">
-                                <i class="fa-solid fa-headset"></i>
-                                <span>تذاكر الدعم الفني</span>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="../pages/Tax-add.html">
-                                <i class="fa-solid fa-truck-fast"></i>
-                                <span>الضريبة والتوصيل</span>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="../pages/settingPay.html">
-                                <i class="fa-solid fa-credit-card"></i>
-                                <span>اعدادات الدفع</span>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="../pages/settingAcc.html">
-                                <i class="fa-solid fa-gear"></i>
-                                <span>اعدادات حسابك</span>
-                            </a>
-                        </li>
-                    </ul>
-                </aside>
-                <!-- Overlay for mobile sidebar -->
-                <div class="sidebar-overlay"></div>
-            <!-- /* ========== START: Main Content ========== */ -->
-                <div class="main-wrapper flex-grow-1">
-                <!-- /* ========== START: Navbar ========== */ -->
-                    <header class="navbar-container">
-                        <nav class="navbar navbar-expand-lg">
-                            <div class="container-fluid">
-                                <!-- Right side on mobile -->
-                                <div class="d-flex align-items-center">
-                                    <button class="btn d-lg-none me-2" type="button" id="sidebar-toggler">
-                                        <i class="fa-solid fa-bars"></i>
-                                    </button>
-                                    <div class="dropdown profile-dropdown">
-                                    <a href="#" class="d-flex align-items-center text-decoration-none text-dark" 
-                                    id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <img src="../assets/images/profile.png" 
-                                            alt="Avatar" class="profile-avatar" />
-                                        <span class="me-2 d-none d-sm-block">اهلا محمود</span>
-                                    </a>
-                                    <ul class="dropdown-menu dropdown-menu-start" aria-labelledby="profileDropdown">
-                                        <li><a class="dropdown-item" href="../pages/settingAcc.html"><i class="fa-solid fa-user me-2"></i>ملفي الشخصي</a></li>
-                                        <li><a class="dropdown-item" href="../pages/settingAcc.html"><i class="fa-solid fa-gear me-2"></i>اعدادات</a></li>
-                                        <li><hr class="dropdown-divider" /></li>
-                                        <li><a class="dropdown-item text-danger" href="#"><i class="fa-solid fa-arrow-right-from-bracket me-2"></i>تسجيل الخروج</a></li>
-                                    </ul>
-                                    </div>
-                                </div>
-
-                                <!-- Center search bar (hidden on mobile) -->
-                                <div class="navbar-center d-none d-lg-flex">
-                                    <div class="search-container">
-                                        <input type="text" class="search-input" placeholder="بحث...">
-                                        <button class="search-btn"><i class="fas fa-search"></i></button>
-                                    </div>
-                                </div>
-
-                                <!-- Left side -->
-                                <div class="navbar-left">
-                                    <div class="store-preview-btn">
-                                        <i class="fas fa-eye"></i>
-                                        <span>معاينة المتجر</span>
-                                    </div>
-                                    <a href="#" class="nav-icon position-relative">
-                                        <i class="fa-solid fa-bell"></i>
-                                        <span class="notification-dot"></span>
-                                    </a>
-                                    <div class="nav-icon crown">
-                                        <i class="fas fa-crown"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </nav>
-                    </header>
-            <!-- ================== END: Navbar ================== -->
-
-            <!-- ================== START: Page Content for Orders ================== -->
-            <main class="page-content  fade-in-up" style="animation-delay: 0.1s">
-                <!-- Store Selector -->
-                <div class="d-flex justify-content-start justify-content-md-start align-items-center mb-4">
-                    <a href="#" class="store-link active">شحن مع بوسطه </a>
-                    <a href="#" class="store-link">  شحن مع OTO</a>
-                </div>
+        <!-- ================== START: SIDEBAR ================== -->
+        <aside class="sidebar">
+        <div class="logo-container">
+          <img src="../assets/images/logo.png" alt="Logo" class="logo-img" />
+          <span class="logo-text">Dashboard</span>
+        </div>   
+            <ul class="nav flex-column sidebar-nav">
+                <li class="nav-item">
+                    <a class="nav-link " href="../index.html">
+                        <i class="fa-solid fa-house-chimney"></i>
+                        <span>لوحة التحكم</span>
+                    </a>
+                </li>
                 
-                <!-- Stat Cards -->
-                <div class="row g-4">
-                    <!-- اجمالي الطلبات -->
-                    <div class="col-xl-3 col-md-6">
-                        <div class="card stat-card-v2">
-                            <div class="card-body d-flex align-items-center">
-                                <div class="stat-icon-v2 bg-success-light">
-                                    <img src="../assets/images/basket.svg" alt="icon">
-                                </div>
-                                <div class="me-3">
-                                    <p class="stat-title">اجمالي الطلبات</p>
-                                    <p class="stat-value">3000</p>
-                                </div>
+                <li class="nav-item">
+                    <a class="nav-link active" href="../pages/manag-orde.html ">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span>ادارة الطلبات</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="../pages/managProducts.html">
+                        <i class="fa-solid fa-box-archive"></i>
+                        <span>ادارة المنتجات</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="../pages/managCustomer.html">
+                        <i class="fa-solid fa-users-gear"></i>
+                        <span>ادارة العملاء</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="../pages/design-stor.html">
+                        <i class="fa-solid fa-palette"></i>
+                        <span>تصميم متجرك</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="../pages/discount.html">
+                        <i class="fa-solid fa-tags"></i>
+                        <span>كوبونات الخصم</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="../pages/reports.html">
+                        <i class="fa-solid fa-chart-pie"></i>
+                        <span>تقارير واحصائيات</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="../pages/scops.html">
+                        <i class="fa-solid fa-globe"></i>
+                        <span>نطاقات ومجالات</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="../pages/ticketSup.html">
+                        <i class="fa-solid fa-headset"></i>
+                        <span>تذاكر الدعم الفني</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="../pages/Tax-add.html">
+                        <i class="fa-solid fa-truck-fast"></i>
+                        <span>الضريبة والتوصيل</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="../pages/settingPay.html">
+                        <i class="fa-solid fa-credit-card"></i>
+                        <span>اعدادات الدفع</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="../pages/settingAcc.html">
+                        <i class="fa-solid fa-gear"></i>
+                        <span>اعدادات حسابك</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+        <!-- mobile sidebar -->
+        <div class="sidebar-overlay"></div>
+        <!-- /* ========== START: Navbar + Page Content ========== */ -->
+        <div class="main-content flex-grow-1 main-wrapper ">
+           <!-- /* ---- Start: Navbar ---- */ -->
+              <header class="navbar-container">
+                  <nav class="navbar navbar-expand-lg">
+                      <div class="container-fluid">
+                          <!-- Right side on mobile -->
+                          <div class="d-flex align-items-center">
+                              <button class="btn d-lg-none me-2" type="button" id="sidebar-toggler">
+                                  <i class="fa-solid fa-bars"></i>
+                              </button>
+                              <div class="dropdown profile-dropdown">
+                              <a href="#" class="d-flex align-items-center text-decoration-none text-dark" 
+                                id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                  <img src="../assets/images/profile.png" 
+                                      alt="Avatar" class="profile-avatar" />
+                                  <span class="me-2 d-none d-sm-block">اهلا محمود</span>
+                              </a>
+                              <ul class="dropdown-menu dropdown-menu-start" aria-labelledby="profileDropdown">
+                                  <li><a class="dropdown-item" href="../pages/settingAcc.html"><i class="fa-solid fa-user me-2"></i>ملفي الشخصي</a></li>
+                                  <li><a class="dropdown-item" href="../pages/settingAcc.html"><i class="fa-solid fa-gear me-2"></i>اعدادات</a></li>
+                                  <li><hr class="dropdown-divider" /></li>
+                                  <li><a class="dropdown-item text-danger" href="#"><i class="fa-solid fa-arrow-right-from-bracket me-2"></i>تسجيل الخروج</a></li>
+                              </ul>
+                              </div>
+                          </div>
+
+                          <!-- Center search bar (hidden on mobile) -->
+                          <div class="navbar-center d-none d-lg-flex">
+                              <div class="search-container">
+                                  <input type="text" class="search-input" placeholder="بحث...">
+                                  <button class="search-btn"><i class="fas fa-search"></i></button>
+                              </div>
+                          </div>
+
+                          <!-- Left side -->
+                          <div class="navbar-left">
+                              <div class="store-preview-btn">
+                                  <i class="fas fa-eye"></i>
+                                  <span>معاينة المتجر</span>
+                              </div>
+                              <a href="#" class="nav-icon position-relative">
+                                  <i class="fa-solid fa-bell"></i>
+                                  <span class="notification-dot"></span>
+                              </a>
+                              <div class="nav-icon crown">
+                                  <i class="fas fa-crown"></i>
+                              </div>
+                          </div>
+                      </div>
+                  </nav>
+              </header>
+         <!-- /* ---- END: Navbar  ---- */ -->
+          
+        <!-- /* --- START: Page Content---- */ -->
+        <main class="page-content  fade-in-up" style="animation-delay: 0.1s">
+            <!-- Store Selector -->
+            <div class="d-flex justify-content-start justify-content-md-start align-items-center mb-4">
+                <a href="#" class="store-link active">شحن مع بوسطه </a>
+                <a href="#" class="store-link">  شحن مع OTO</a>
+            </div>
+            
+            <!-- Stat Cards -->
+            <div class="row g-4">
+                <!-- اجمالي الطلبات -->
+                <div class="col-xl-3 col-md-6">
+                    <div class="card stat-card-v2">
+                        <div class="card-body d-flex align-items-center">
+                            <div class="stat-icon-v2 bg-success-light">
+                                <img src="../assets/images/basket.svg" alt="icon">
                             </div>
-                        </div>
-                    </div>
-                    <!-- اجمالي الارباح -->
-                    <div class="col-xl-3 col-md-6">
-                        <div class="card stat-card-v2">
-                            <div class="card-body d-flex align-items-center">
-                                <div class="stat-icon-v2 bg-warning-light">
-                                    <img src="../assets/images/coin.svg" alt="icon">
-                                </div>
-                                <div class="me-3">
-                                    <p class="stat-title">اجمالي الارباح</p>
-                                    <p class="stat-value">15000 <span class="currency">EGP</span></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- صافي المبيعات -->
-                    <div class="col-xl-3 col-md-6">
-                        <div class="card stat-card-v2">
-                            <div class="card-body d-flex align-items-center">
-                                <div class="stat-icon-v2 bg-primary-light">
-                                    <img src="../assets/images/home.svg" alt="icon">
-                                </div>
-                                <div class="me-3">
-                                    <p class="stat-title">صافي المبيعات</p>
-                                    <p class="stat-value">13280 <span class="currency">EGP</span></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- متوسط الطلب -->
-                    <div class="col-xl-3 col-md-6">
-                        <div class="card stat-card-v2">
-                            <div class="card-body d-flex align-items-center">
-                                <div class="stat-icon-v2 bg-info-light">
-                                    <img src="../assets/images/box.svg" alt="icon">
-                                </div>
-                                <div class="me-3">
-                                    <p class="stat-title">متوسط الطلب</p>
-                                    <p class="stat-value">150 <span class="currency">EGP</span></p>
-                                </div>
+                            <div class="me-3">
+                                <p class="stat-title">اجمالي الطلبات</p>
+                                <p class="stat-value">3000</p>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Filters and Actions Bar -->
-                <div class="card mt-4">
-                <div class="card-body d-flex justify-content-between align-items-center flex-wrap gap-3">
-
-                    <!-- التاريخ + تصفية على اليمين -->
-                    <div class="d-flex align-items-center flex-wrap gap-3">
-                        <!-- زر تصفية -->
-                    <button class="btn btn-outline-secondary px-4 py-2 d-flex align-items-center rounded-pill shadow-sm">
-                        <i class="fa-solid fa-filter ms-2"></i>
-                        تصفية
-                    </button>
-                    
-                    <!-- التقويم -->
-                        <div class="date-range-picker d-flex align-items-center">
-                        <i class="fa-solid fa-calendar-days ms-2 text-primary"></i>
-                        <input type="text" id="calendarPicker" class="form-control w-auto" value="20-22 September 2024" />
+                <!-- اجمالي الارباح -->
+                <div class="col-xl-3 col-md-6">
+                    <div class="card stat-card-v2">
+                        <div class="card-body d-flex align-items-center">
+                            <div class="stat-icon-v2 bg-warning-light">
+                                <img src="../assets/images/coin.svg" alt="icon">
+                            </div>
+                            <div class="me-3">
+                                <p class="stat-title">اجمالي الارباح</p>
+                                <p class="stat-value">15000 <span class="currency">EGP</span></p>
+                            </div>
                         </div>
                     </div>
-                        <!-- زر تحميل الملف على الشمال -->
-                    <div>
-                    <button class="btn btn-success px-4 py-2 d-flex align-items-center rounded-pill shadow-sm">
-                        <i class="fa-solid fa-download ms-2"></i>
-                        تحميل الملف
-                    </button>
-                    </div>
-
                 </div>
-                </div>
-                <!-- ----Orders Table Card---- -->
-                <div class="card mt-4">
-                    <div class="card-body">
-                        <div class="table-responsive">
-                            <table class="table orders-table align-middle">
-                                <thead>
-                                    <tr>
-                                        <th>رقم الطلب</th>
-                                        <th>اسم العميل</th>
-                                        <th>حالة الطلب</th>
-                                        <th>سعر الطلب</th>
-                                        <th>تاريخ الطلب</th>
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <!-- ROW-1-->
-                                    <tr>
-                                        <td><span class="fw-bold">1</span></td>
-                                        <td>محمود شحاتة</td>
-                                        <td><span class="badge bg-status-success">مكتمل</span></td>
-                                        <td>1500 <span class="text-muted">EGP</span></td>
-                                        <td>10-8-2024</td>
-                                        <td>
-                                            <div class="d-flex gap-2">
-                                                <a href="../pages/view-order.html" class="btn btn-sm btn-icon-v2 btn-icon-view"><i class="fa-solid fa-eye"></i></a>
-                                                <a href="#" class="btn btn-sm btn-icon-v2 btn-icon-edit"><i class="fa-solid fa-pen"></i></a>
-                                                <a href="#" class="btn btn-sm btn-icon-v2 btn-icon-delete"><i class="fa-solid fa-trash-can"></i></a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <!-- ROW -2-->
-                                    <tr>
-                                        <td><span class="fw-bold">2</span></td>
-                                        <td>محمود شحاتة</td>
-                                        <td><span class="badge bg-status-danger">ملغي</span></td>
-                                        <td>1500 <span class="text-muted">EGP</span></td>
-                                        <td>10-8-2024</td>
-                                        <td>
-                                            <div class="d-flex gap-2">
-                                                <a href="view-order.html" class="btn btn-sm btn-icon-v2 btn-icon-view"><i class="fa-solid fa-eye"></i></a>
-                                                <a href="#" class="btn btn-sm btn-icon-v2 btn-icon-edit"><i class="fa-solid fa-pen"></i></a>
-                                                <a href="#" class="btn btn-sm btn-icon-v2 btn-icon-delete"><i class="fa-solid fa-trash-can"></i></a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <!-- ROW - 3-->
-                                     <tr>
-                                        <td><span class="fw-bold">3</span></td>
-                                        <td>محمود شحاتة</td>
-                                        <td><span class="badge bg-status-warning">جاري</span></td>
-                                        <td>1500 <span class="text-muted">EGP</span></td>
-                                        <td>10-8-2024</td>
-                                        <td>
-                                            <div class="d-flex gap-2">
-                                                <a href="view-order.html" class="btn btn-sm btn-icon-v2 btn-icon-view"><i class="fa-solid fa-eye"></i></a>
-                                                <a href="#" class="btn btn-sm btn-icon-v2 btn-icon-edit"><i class="fa-solid fa-pen"></i></a>
-                                                <a href="#" class="btn btn-sm btn-icon-v2 btn-icon-delete"><i class="fa-solid fa-trash-can"></i></a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <!-- ROW-4-->
-                                    <tr>
-                                        <td><span class="fw-bold">4</span></td>
-                                        <td>محمود شحاتة</td>
-                                        <td><span class="badge bg-status-success">مكتمل</span></td>
-                                        <td>1500 <span class="text-muted">EGP</span></td>
-                                        <td>10-8-2024</td>
-                                        <td>
-                                            <div class="d-flex gap-2">
-                                                <a href="view-order.html" class="btn btn-sm btn-icon-v2 btn-icon-view"><i class="fa-solid fa-eye"></i></a>
-                                                <a href="#" class="btn btn-sm btn-icon-v2 btn-icon-edit"><i class="fa-solid fa-pen"></i></a>
-                                                <a href="#" class="btn btn-sm btn-icon-v2 btn-icon-delete"><i class="fa-solid fa-trash-can"></i></a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <!-- ROW -5-->
-                                    <tr>
-                                        <td><span class="fw-bold">5</span></td>
-                                        <td>محمود شحاتة</td>
-                                        <td><span class="badge bg-status-danger">ملغي</span></td>
-                                        <td>1500 <span class="text-muted">EGP</span></td>
-                                        <td>10-8-2024</td>
-                                        <td>
-                                            <div class="d-flex gap-2">
-                                                <a href="view-order.html" class="btn btn-sm btn-icon-v2 btn-icon-view"><i class="fa-solid fa-eye"></i></a>
-                                                <a href="#" class="btn btn-sm btn-icon-v2 btn-icon-edit"><i class="fa-solid fa-pen"></i></a>
-                                                <a href="#" class="btn btn-sm btn-icon-v2 btn-icon-delete"><i class="fa-solid fa-trash-can"></i></a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <!-- ROW -6-->
-                                     <tr>
-                                        <td><span class="fw-bold">6</span></td>
-                                        <td>محمود شحاتة</td>
-                                        <td><span class="badge bg-status-warning">جاري</span></td>
-                                        <td>1500 <span class="text-muted">EGP</span></td>
-                                        <td>10-8-2024</td>
-                                        <td>
-                                            <div class="d-flex gap-2">
-                                                <a href="view-order.html" class="btn btn-sm btn-icon-v2 btn-icon-view"><i class="fa-solid fa-eye"></i></a>
-                                                <a href="#" class="btn btn-sm btn-icon-v2 btn-icon-edit"><i class="fa-solid fa-pen"></i></a>
-                                                <a href="#" class="btn btn-sm btn-icon-v2 btn-icon-delete"><i class="fa-solid fa-trash-can"></i></a>
-                                            </div>
-                                        </td>
-                                    </tr>
-
-                                </tbody>
-                            </table>
+                <!-- صافي المبيعات -->
+                <div class="col-xl-3 col-md-6">
+                    <div class="card stat-card-v2">
+                        <div class="card-body d-flex align-items-center">
+                            <div class="stat-icon-v2 bg-primary-light">
+                                <img src="../assets/images/home.svg" alt="icon">
+                            </div>
+                            <div class="me-3">
+                                <p class="stat-title">صافي المبيعات</p>
+                                <p class="stat-value">13280 <span class="currency">EGP</span></p>
+                            </div>
                         </div>
-                        <!-- Pagination -->
-                        <nav aria-label="Page navigation" class="d-flex justify-content-center mt-4">
-                            <ul class="pagination custom-pagination">
-                                <li class="page-item"><a class="page-link" href="#"><i class="fa-solid fa-angles-right"></i></a></li>
-                                <li class="page-item"><a class="page-link" href="#"><i class="fa-solid fa-angle-right"></i></a></li>
-                                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item active"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item"><a class="page-link" href="#">4</a></li>
-                                <li class="page-item"><a class="page-link" href="#">5</a></li>
-                                <li class="page-item"><a class="page-link" href="#"><i class="fa-solid fa-angle-left"></i></a></li>
-                                <li class="page-item"><a class="page-link" href="#"><i class="fa-solid fa-angles-left"></i></a></li>
-                            </ul>
-                        </nav>
                     </div>
                 </div>
-            </main>
-            <!-- ================== END: Page Content for Orders ================== -->
+                <!-- متوسط الطلب -->
+                <div class="col-xl-3 col-md-6">
+                    <div class="card stat-card-v2">
+                        <div class="card-body d-flex align-items-center">
+                            <div class="stat-icon-v2 bg-info-light">
+                                <img src="../assets/images/box.svg" alt="icon">
+                            </div>
+                            <div class="me-3">
+                                <p class="stat-title">متوسط الطلب</p>
+                                <p class="stat-value">150 <span class="currency">EGP</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filters and Actions Bar -->
+            <div class="card mt-4">
+            <div class="card-body d-flex justify-content-between align-items-center flex-wrap gap-3">
+
+                <!-- التاريخ + تصفية على اليمين -->
+                <div class="d-flex align-items-center flex-wrap gap-3">
+                    <!-- زر تصفية -->
+                <button class="btn btn-outline-secondary px-4 py-2 d-flex align-items-center rounded-pill shadow-sm">
+                    <i class="fa-solid fa-filter ms-2"></i>
+                    تصفية
+                </button>
+                
+                <!-- التقويم -->
+                    <div class="date-range-picker d-flex align-items-center">
+                    <i class="fa-solid fa-calendar-days ms-2 text-primary"></i>
+                    <input type="text" id="calendarPicker" class="form-control w-auto" value="20-22 September 2024" />
+                    </div>
+                </div>
+                    <!-- زر تحميل الملف على الشمال -->
+                <div>
+                <button class="btn btn-success px-4 py-2 d-flex align-items-center rounded-pill shadow-sm">
+                    <i class="fa-solid fa-download ms-2"></i>
+                    تحميل الملف
+                </button>
+                </div>
+
+            </div>
+            </div>
+            <!-- ----Orders Table Card---- -->
+            <div class="card mt-4">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table orders-table align-middle">
+                            <thead>
+                                <tr>
+                                    <th>رقم الطلب</th>
+                                    <th>اسم العميل</th>
+                                    <th>حالة الطلب</th>
+                                    <th>سعر الطلب</th>
+                                    <th>تاريخ الطلب</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- ROW-1-->
+                                <tr>
+                                    <td><span class="fw-bold">1</span></td>
+                                    <td>محمود شحاتة</td>
+                                    <td><span class="badge bg-status-success">مكتمل</span></td>
+                                    <td>1500 <span class="text-muted">EGP</span></td>
+                                    <td>10-8-2024</td>
+                                    <td>
+                                        <div class="d-flex gap-2">
+                                            <a href="../pages/view-order.html" class="btn btn-sm btn-icon-v2 btn-icon-view"><i class="fa-solid fa-eye"></i></a>
+                                            <a href="#" class="btn btn-sm btn-icon-v2 btn-icon-edit"><i class="fa-solid fa-pen"></i></a>
+                                            <a href="#" class="btn btn-sm btn-icon-v2 btn-icon-delete"><i class="fa-solid fa-trash-can"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!-- ROW -2-->
+                                <tr>
+                                    <td><span class="fw-bold">2</span></td>
+                                    <td>محمود شحاتة</td>
+                                    <td><span class="badge bg-status-danger">ملغي</span></td>
+                                    <td>1500 <span class="text-muted">EGP</span></td>
+                                    <td>10-8-2024</td>
+                                    <td>
+                                        <div class="d-flex gap-2">
+                                            <a href="view-order.html" class="btn btn-sm btn-icon-v2 btn-icon-view"><i class="fa-solid fa-eye"></i></a>
+                                            <a href="#" class="btn btn-sm btn-icon-v2 btn-icon-edit"><i class="fa-solid fa-pen"></i></a>
+                                            <a href="#" class="btn btn-sm btn-icon-v2 btn-icon-delete"><i class="fa-solid fa-trash-can"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!-- ROW - 3-->
+                                 <tr>
+                                    <td><span class="fw-bold">3</span></td>
+                                    <td>محمود شحاتة</td>
+                                    <td><span class="badge bg-status-warning">جاري</span></td>
+                                    <td>1500 <span class="text-muted">EGP</span></td>
+                                    <td>10-8-2024</td>
+                                    <td>
+                                        <div class="d-flex gap-2">
+                                            <a href="view-order.html" class="btn btn-sm btn-icon-v2 btn-icon-view"><i class="fa-solid fa-eye"></i></a>
+                                            <a href="#" class="btn btn-sm btn-icon-v2 btn-icon-edit"><i class="fa-solid fa-pen"></i></a>
+                                            <a href="#" class="btn btn-sm btn-icon-v2 btn-icon-delete"><i class="fa-solid fa-trash-can"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!-- ROW-4-->
+                                <tr>
+                                    <td><span class="fw-bold">4</span></td>
+                                    <td>محمود شحاتة</td>
+                                    <td><span class="badge bg-status-success">مكتمل</span></td>
+                                    <td>1500 <span class="text-muted">EGP</span></td>
+                                    <td>10-8-2024</td>
+                                    <td>
+                                        <div class="d-flex gap-2">
+                                            <a href="view-order.html" class="btn btn-sm btn-icon-v2 btn-icon-view"><i class="fa-solid fa-eye"></i></a>
+                                            <a href="#" class="btn btn-sm btn-icon-v2 btn-icon-edit"><i class="fa-solid fa-pen"></i></a>
+                                            <a href="#" class="btn btn-sm btn-icon-v2 btn-icon-delete"><i class="fa-solid fa-trash-can"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!-- ROW -5-->
+                                <tr>
+                                    <td><span class="fw-bold">5</span></td>
+                                    <td>محمود شحاتة</td>
+                                    <td><span class="badge bg-status-danger">ملغي</span></td>
+                                    <td>1500 <span class="text-muted">EGP</span></td>
+                                    <td>10-8-2024</td>
+                                    <td>
+                                        <div class="d-flex gap-2">
+                                            <a href="view-order.html" class="btn btn-sm btn-icon-v2 btn-icon-view"><i class="fa-solid fa-eye"></i></a>
+                                            <a href="#" class="btn btn-sm btn-icon-v2 btn-icon-edit"><i class="fa-solid fa-pen"></i></a>
+                                            <a href="#" class="btn btn-sm btn-icon-v2 btn-icon-delete"><i class="fa-solid fa-trash-can"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!-- ROW -6-->
+                                 <tr>
+                                    <td><span class="fw-bold">6</span></td>
+                                    <td>محمود شحاتة</td>
+                                    <td><span class="badge bg-status-warning">جاري</span></td>
+                                    <td>1500 <span class="text-muted">EGP</span></td>
+                                    <td>10-8-2024</td>
+                                    <td>
+                                        <div class="d-flex gap-2">
+                                            <a href="view-order.html" class="btn btn-sm btn-icon-v2 btn-icon-view"><i class="fa-solid fa-eye"></i></a>
+                                            <a href="#" class="btn btn-sm btn-icon-v2 btn-icon-edit"><i class="fa-solid fa-pen"></i></a>
+                                            <a href="#" class="btn btn-sm btn-icon-v2 btn-icon-delete"><i class="fa-solid fa-trash-can"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- Pagination -->
+                    <nav aria-label="Page navigation" class="d-flex justify-content-center mt-4">
+                        <ul class="pagination custom-pagination">
+                            <li class="page-item"><a class="page-link" href="#"><i class="fa-solid fa-angles-right"></i></a></li>
+                            <li class="page-item"><a class="page-link" href="#"><i class="fa-solid fa-angle-right"></i></a></li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item active"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+                            <li class="page-item"><a class="page-link" href="#">5</a></li>
+                            <li class="page-item"><a class="page-link" href="#"><i class="fa-solid fa-angle-left"></i></a></li>
+                            <li class="page-item"><a class="page-link" href="#"><i class="fa-solid fa-angles-left"></i></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </main>
+        <!-- /* ----END: Page Content---- */ -->
+              
         </div>
-        <!-- ================== END: Main Content ================== -->
+
+       <!-- ================= START AI Chat  ================= -->
+    <div class="ai-chat-wrap" id="aiChatWrap">
+      <!-- hint message -->
+      <div id="aiHint" class="ai-hint">
+        هل تريد المساعدة؟
+      </div>
+
+      <!-- minimized bubble -->
+      <div id="aiMin" class="ai-bubble" title="افتح المساعد">
+        <img src="../assets/images/chat animated icon.gif" alt="Rumh Bot">
+      </div>
+
+      <!-- full panel -->
+      <div id="aiPanel" class="ai-panel d-none">
+        <div class="ai-header">
+          <div>
+            <div class="title">مساعد Rumh</div>
+            <div class="subtitle">هنا لمساعدتك دائمًا ✨</div>
+          </div>
+          <div class="ms-auto d-flex gap-2">
+            <button id="closeBtn" class="btn btn-sm btn-outline-light" title="إغلاق">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Messages Section -->
+        <div id="messages" class="ai-messages">
+          <!-- bot animated avatar -->
+          <div class="bot-avatar" id="botAvatar">
+            <img src="../assets/images/giving information chat animated icon.gif" alt="Rumh Bot Talking" />
+          </div>
+          <!-- welcome message (hidden at first) -->
+          <div class="msg ai d-none" id="welcomeMsg">
+            أهلًا بك 👋 أنا مساعد Rumh. كيف أقدر أخدمك اليوم؟
+          </div>
+        </div>
+
+        <!-- quick actions -->
+        <div class="quick-actions d-none" id="quickActions">
+          <button class="btn btn-outline-success" data-q="خدماتنا">خدماتنا</button>
+          <button class="btn btn-outline-success" data-q="الأسعار">الأسعار</button>
+          <button class="btn btn-outline-success" data-q="تواصل معنا">تواصل معنا</button>
+        </div>
+
+        <!-- input area -->
+        <div class="ai-input">
+          <textarea id="inputText" placeholder="اكتب رسالتك..." class="form-control" rows="1"></textarea>
+          <button id="sendBtn" class="btn send-btn">
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </div>
+      </div>
+    </div>
     </div>
 
-    <!-- Scripts -->
-    <script src="../assets/bootstrap/bootstrap.bundle.min.js"></script>
-    <!-- كاليندر -->
-     <!-- Litepicker JS -->
-      <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js"></script>
-    <script src="../assets/JS/script.js"></script>
-    <script src="../assets/JS/managOrder.js"></script>
-</body>
+    <!-- Scroll To Top Button -->
+    <button id="scrollToTopBtn" class="scroll-to-top" title="الرجوع للأعلى">
+      <i class="fa-brands fa-gripfire fa-fade fa-xl" style="color: #fffefa"></i>
+    </button>
+
+     <!-- Scripts -->
+     <script src="../assets/bootstrap/bootstrap.bundle.min.js"></script>
+     <!-- كاليندر -->
+      <!-- Litepicker JS -->
+       <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js"></script>
+     <script src="../assets/JS/script.js"></script>
+     <script src="../assets/JS/managOrder.js"></script>
+
+
+    
+
+  </body>
 </html>

@@ -98,57 +98,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Sidebar Toggle for Mobile
-    const sidebarToggle = document.createElement('button');
-    sidebarToggle.innerHTML = '<i class="fas fa-bars"></i>';
-    sidebarToggle.className = 'sidebar-toggle';
-    sidebarToggle.style.cssText = `
-        display: none;
-        position: fixed;
-        top: 15px;
-        right: 15px;
-        z-index: 1001;
-        background: #28a745;
-        color: white;
-        border: none;
-        border-radius: 6px;
-        padding: 10px;
-        cursor: pointer;
-    `;
-    
-    document.body.appendChild(sidebarToggle);
-    
-    sidebarToggle.addEventListener('click', function() {
-        const sidebar = document.querySelector('.sidebar');
-        sidebar.classList.toggle('show');
-    });
-    
-    // Show sidebar toggle on mobile
-    function checkScreenSize() {
-        if (window.innerWidth <= 992) {
-            sidebarToggle.style.display = 'block';
-        } else {
-            sidebarToggle.style.display = 'none';
-            document.querySelector('.sidebar').classList.remove('show');
-        }
-    }
-    
-    window.addEventListener('resize', checkScreenSize);
-    checkScreenSize();
-    
-    // Close sidebar when clicking outside on mobile
-    document.addEventListener('click', function(e) {
-        const sidebar = document.querySelector('.sidebar');
-        const sidebarToggle = document.querySelector('.sidebar-toggle');
-        
-        if (window.innerWidth <= 992 && 
-            sidebar.classList.contains('show') && 
-            !sidebar.contains(e.target) && 
-            !sidebarToggle.contains(e.target)) {
-            sidebar.classList.remove('show');
-        }
-    });
-    
+   
     // Form Input Enhancement
     const formInputs = document.querySelectorAll('.form-control');
     

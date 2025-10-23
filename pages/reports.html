@@ -13,25 +13,26 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>    
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../assets/CSS/reports.css">
-        <link rel="stylesheet" href="../assets/CSS/style.css">
+        <link rel="stylesheet" href="../assets/CSS/nav-sid-chat-load.css">
 
 </head>
 <body>
     <!-- Loading Screen -->
- <div id="page-loader">
-    <div class="loader-bg"></div>
-    <div class="loader-logo">
-    <img src="../assets/images/تقارير واحصائيات.gif" alt="Logo">
-    </div>
- </div>
-    <div class="dashboard-container">
-                <!-- Sidebar -->
+    <div id="page-loader">
+        <div class="loader-bg"></div>
+        <div class="loader-logo">
+        <img src="../assets/images/تقارير واحصائيات.gif" alt="Logo">
+        </div>
+     </div>
+
+    <div class="d-flex">
+        <!-- ================== START: SIDEBAR ================== -->
+         
         <aside class="sidebar" id="sidebar">
         <div class="logo-container">
           <img src="../assets/images/logo.png" alt="Logo" class="logo-img" />
           <span class="logo-text">Dashboard</span>
-        </div>
-            
+        </div>   
             <ul class="nav flex-column sidebar-nav">
                 <li class="nav-item">
                     <a class="nav-link " href="../index.html">
@@ -55,14 +56,14 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="../pages/managCustomer.html">
+                    <a class="nav-link " href="../pages/managCustomer.html">
                         <i class="fa-solid fa-users-gear"></i>
                         <span>ادارة العملاء</span>
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="../pages/design-stor.html">
+                    <a class="nav-link " href="../pages/design-stor.html">
                         <i class="fa-solid fa-palette"></i>
                         <span>تصميم متجرك</span>
                     </a>
@@ -118,265 +119,232 @@
                 </li>
             </ul>
         </aside>
+        <!-- mobile sidebar -->
+        <div class="sidebar-overlay"></div>
 
-                <!-- Main Content -->
-                <div class="main-content">
-                    <!-- Top Navbar -->
-                    <header class="top-navbar">
-                        <div class="navbar-content">
-                            <!-- Mobile Menu Toggle -->
-                            <button class="btn btn-link d-lg-none" id="sidebarToggle">
-                                <i class="fas fa-bars"></i>
-                            </button>
+        <!-- /* ========== START: Navbar + Page Content ========== */ -->
+        <div class=" flex-grow-1 main-wrapper  ">
+            
+           <!-- /* ---- Start: Navbar ---- */ -->
+              <header class="navbar-container">
+                  <nav class="navbar navbar-expand-lg">
+                      <div class="container-fluid">
+                          <!-- Right side on mobile -->
+                          <div class="d-flex align-items-center">
+                              <!-- ✅ FIXED: غيرنا id من "sidebar-toggler" إلى "sidebarToggle" -->
+                              <button class="btn d-lg-none me-2" type="button" id="sidebarToggle">
+                                  <i class="fa-solid fa-bars"></i>
+                              </button>
+                              <div class="dropdown profile-dropdown">
+                              <a href="#" class="d-flex align-items-center text-decoration-none text-dark" 
+                                id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                  <img src="../assets/images/profile.png" 
+                                      alt="Avatar" class="profile-avatar" />
+                                  <span class="me-2 d-none d-sm-block">اهلا محمود</span>
+                              </a>
+                              <ul class="dropdown-menu dropdown-menu-start" aria-labelledby="profileDropdown">
+                                  <li><a class="dropdown-item" href="../pages/settingAcc.html"><i class="fa-solid fa-user me-2"></i>ملفي الشخصي</a></li>
+                                  <li><a class="dropdown-item" href="../pages/settingAcc.html"><i class="fa-solid fa-gear me-2"></i>اعدادات</a></li>
+                                  <li><hr class="dropdown-divider" /></li>
+                                  <li><a class="dropdown-item text-danger" href="#"><i class="fa-solid fa-arrow-right-from-bracket me-2"></i>تسجيل الخروج</a></li>
+                              </ul>
+                              </div>
+                          </div>
 
-                                <!-- Profile Dropdown -->
-                                <div class="dropdown profile-dropdown ms-lg-3">
-                                    <a href="#" class="d-flex align-items-center text-decoration-none text-dark" 
-                                    id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <img src="../assets/images/profile.png" 
-                                            alt="Avatar" class="profile-avatar" />
-                                        <span class="me-2 d-none d-sm-block">اهلا محمود</span>
-                                    </a>
-                                    <ul class="dropdown-menu dropdown-menu-start" aria-labelledby="profileDropdown">
-                                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-user me-2"></i>ملفي الشخصي</a></li>
-                                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-gear me-2"></i>اعدادات</a></li>
-                                        <li><hr class="dropdown-divider" /></li>
-                                        <li><a class="dropdown-item text-danger" href="#"><i class="fa-solid fa-arrow-right-from-bracket me-2"></i>تسجيل الخروج</a></li>
-                                    </ul>
-                                </div>
-                            <!-- Center search bar -->
-                                <div class="navbar-center">
-                                    <div class="search-container">
-                                        <input type="text" class="search-input" placeholder="بحث...">
-                                        <button class="search-btn">
-                                            <i class="fas fa-search"></i>
-                                        </button>
-                                    </div>
-                                </div>
+                          <!-- Center search bar (hidden on mobile) -->
+                          <div class="navbar-center d-none d-lg-flex">
+                              <div class="search-container">
+                                  <input type="text" class="search-input" placeholder="بحث...">
+                                  <button class="search-btn"><i class="fas fa-search"></i></button>
+                              </div>
+                          </div>
 
-                            <!-- Action Buttons -->
-                            <div class="action-buttons">
-                                <button class="btn btn-success btn-sm store-preview-btn">
-                                    <i class="fas fa-eye"></i>
-                                    معاينة المتجر
-                                </button>
-                                <button class="btn btn-link position-relative notification-btn">
-                                    <i class="fas fa-bell"></i>
-                                    <span class="notification-badge"></span>
-                                </button>
-                                <button class="btn btn-link text-warning crown-btn">
-                                    <i class="fas fa-crown"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </header>
-
-            <!-- Page Content -->
-            <div class="page-content">
-                <!-- Store Tabs -->
-                <div class="store-tabs mb-4">
-                    <div class="btn-group" role="group">
-                        <button type="button" class="btn btn-success active stor-Wasalha" id="tab1">شحن مع بوسطة </button>
-                        <button type="button" class="btn btn-outline-success" id="tab2">شحن مع OTO</button>
-                    </div>
-                </div>
-
-                <!-- Dashboard Cards Row -->
-                <div class="row mb-4 g-4">
-                    <!-- Customers Card -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="dashboard-card">
-                            <h5 class="card-title text-center">العملاء</h5>
-                            <div class="chart-container">
-                                <canvas id="customersChart"></canvas>
-                                <div class="chart-center-text">85%</div>
-                            </div>
-                            <div class="chart-legend">
-                                <div class="legend-item">
-                                    <span class="legend-color" style="background-color: #28a745;"></span>
-                                    <span>اجمالي</span>
-                                </div>
-                                <div class="legend-item">
-                                    <span class="legend-color" style="background-color: #e9ecef;"></span>
-                                    <span>شهر يوليو</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Profits Card -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="dashboard-card">
-                            <h5 class="card-title text-center">الارباح</h5>
-                            <div class="chart-container">
-                                <canvas id="profitsChart"></canvas>
-                                <div class="chart-center-text">15%</div>
-                            </div>
-                            <div class="chart-legend">
-                                <div class="legend-item">
-                                    <span class="legend-color" style="background-color: #dc3545;"></span>
-                                    <span>اجمالي</span>
-                                </div>
-                                <div class="legend-item">
-                                    <span class="legend-color" style="background-color: #e9ecef;"></span>
-                                    <span>شهر يوليو</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Orders Card -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="dashboard-card">
-                            <h5 class="card-title text-center">الطلبات</h5>
-                            <div class="chart-container">
-                                <canvas id="ordersChart"></canvas>
-                                <div class="chart-center-text">85%</div>
-                            </div>
-                            <div class="chart-legend">
-                                <div class="legend-item">
-                                    <span class="legend-color" style="background-color: #007bff;"></span>
-                                    <span>اجمالي</span>
-                                </div>
-                                <div class="legend-item">
-                                    <span class="legend-color" style="background-color: #e9ecef;"></span>
-                                    <span>شهر يوليو</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Content Grid -->
-                <div class="row mb-4 g-4">
-                    <!-- Sales Chart -->
-                    <div class="col-lg-8">
-                        <div class="dashboard-card h-100">
-                            <div class="d-flex justify-content-between align-items-center mb-3">
-                                <div>
-                                    <h5 class="card-title mb-1">اجمالي المبيعات</h5>
-                                    <p class="text-muted small">اجمالي المبيعات الشهرية اسبوعيا</p>
-                                </div>
-                                <div class="chart-controls">
-                                    <button class="btn btn-outline-secondary btn-sm">
-                                        <i class="fas fa-calendar"></i>
-                                    </button>
-                                    <button class="btn btn-outline-secondary btn-sm">
-                                        <i class="fas fa-filter"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="chart-container-large">
-                                <canvas id="salesChart"></canvas>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Products Section -->
-                    <div class="col-lg-4">
-                        <div class="dashboard-card h-100">
-                            <h5 class="card-title">الطلبات الاكثر مبيعا</h5>
-                            <div class="products-list" id="productsList">
-                                <!-- Products will be populated by JavaScript -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Bottom Section -->
-                <div class="row mb-4 g-4">
-
-                    <!-- Social Media -->
-                    <div class="col-lg-6">
-                        <div class="dashboard-card h-100">
-                            <h5 class="card-title">اجمالي الزيارات</h5>
-                            <p class="text-muted small mb-3">بيانات منصات التواصل الاجتماعي</p>
-                            <div class="social-media" id="socialMedia">
-                                <!-- Social media data will be populated by JavaScript -->
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Shipping Companies -->
-                    <div class="col-lg-6">
-                        <div class="dashboard-card h-100">
-                            <h5 class="card-title">شركات الشحن</h5>
-                            <p class="text-muted small mb-3">اجمالي طلبات شركات الشحن</p>
-                            <div class="shipping-companies" id="shippingCompanies">
-                                <!-- Shipping companies will be populated by JavaScript -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Orders Table -->
-                <div class="dashboard-card">
-                    <div class="d-flex justify-content-between align-items-center mb-3">
-                        <h5 class="card-title">تحميل التقرير</h5>
-                        <button class="btn btn-success download-btn">
-                            <i class="fas fa-download"></i>
-                            تحميل التقرير
-                        </button>
-                    </div>
-                    
-                    <!-- Date Range -->
-                    <div class="date-range-container mb-3">
-                        <span class="date-range-text">20-22 September 2024</span>
-                        <button class="btn btn-outline-secondary btn-sm">
-                            <i class="fas fa-calendar"></i>
-                            تحديد
-                        </button>
-                    </div>
-                    
-                    <div class="table-responsive">
-                        <table class="table table-hover" id="ordersTable">
-                            <thead>
-                                <tr>
-                                    <th>اسم العميل</th>
-                                    <th>عدد الطلبات</th>
-                                    <th>المنتجات</th>
-                                    <th>الطلبات المكتملة</th>
-                                    <th>المبلغ المدفوعة</th>
-                                    <th>الطلبات المعلقة</th>
-                                </tr>
-                            </thead>
-                            <tbody id="ordersTableBody">
-                                <!-- Table data will be populated by JavaScript -->
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <!-- Pagination -->
-                    <nav aria-label="Page navigation">
-                        <ul class="pagination justify-content-center">
-                            <li class="page-item">
-                                <a class="page-link" href="#" aria-label="Previous">
-                                    <span aria-hidden="true">&laquo;</span>
-                                </a>
-                            </li>
-                            <li class="page-item"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item active"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">4</a></li>
-                            <li class="page-item"><a class="page-link" href="#">5</a></li>
-                            <li class="page-item">
-                                <a class="page-link" href="#" aria-label="Next">
-                                    <span aria-hidden="true">&raquo;</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
+                          <!-- Left side -->
+                          <div class="navbar-left">
+                              <div class="store-preview-btn">
+                                  <i class="fas fa-eye"></i>
+                                  <span>معاينة المتجر</span>
+                              </div>
+                              <a href="#" class="nav-icon position-relative">
+                                  <i class="fa-solid fa-bell"></i>
+                                  <span class="notification-dot"></span>
+                              </a>
+                              <div class="nav-icon crown">
+                                  <i class="fas fa-crown"></i>
+                              </div>
+                          </div>
+                      </div>
+                  </nav>
+              </header>
+         <!-- /* ---- END: Navbar  ---- */ -->
+          
+        <!-- /* --- START: Page Content---- */ -->
+        <div class="page-content">
+            <!-- Store Tabs -->
+            <div class="store-tabs mb-4">
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-success active stor-Wasalha" id="tab1">شحن مع بوسطة </button>
+                    <button type="button" class="btn btn-outline-success" id="tab2">شحن مع OTO</button>
                 </div>
             </div>
+
+            <!-- Dashboard Cards Row -->
+            <div class="row mb-4 g-4">
+                <!-- Customers Card -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="dashboard-card">
+                        <h5 class="card-title text-center">العملاء</h5>
+                        <div class="chart-container">
+                            <canvas id="customersChart"></canvas>
+                            <div class="chart-center-text">85%</div>
+                        </div>
+                        <div class="chart-legend">
+                            <div class="legend-item">
+                                <span class="legend-color" style="background-color: #28a745;"></span>
+                                <span>اجمالي</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-color" style="background-color: #e9ecef;"></span>
+                                <span>شهر يوليو</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Profits Card -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="dashboard-card">
+                        <h5 class="card-title text-center">الارباح</h5>
+                        <div class="chart-container">
+                            <canvas id="profitsChart"></canvas>
+                            <div class="chart-center-text">15%</div>
+                        </div>
+                        <div class="chart-legend">
+                            <div class="legend-item">
+                                <span class="legend-color" style="background-color: #dc3545;"></span>
+                                <span>اجمالي</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-color" style="background-color: #e9ecef;"></span>
+                                <span>شهر يوليو</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Orders Card -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="dashboard-card ">
+                        <h5 class="card-title text-center">الطلبات</h5>
+                        <div class="chart-container">
+                            <canvas id="ordersChart"></canvas>
+                            <div class="chart-center-text">85%</div>
+                        </div>
+                        <div class="chart-legend">
+                            <div class="legend-item">
+                                <span class="legend-color" style="background-color: #007bff;"></span>
+                                <span>اجمالي</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-color" style="background-color: #e9ecef;"></span>
+                                <span>شهر يوليو</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-4 g-4">
+            <!-- Sales Section -->
+                <div class="col-lg-8">
+                    <div class="dashboard-card">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h5 class="card-title mb-0">احصائيات المبيعات</h5>
+                            <!-- ✅ ADDED: زر التحميل المطلوب -->
+                            <button class="btn btn-success download-btn">
+                                <i class="fas fa-download"></i> تحميل التقرير
+                            </button>
+                        </div>
+                        <div class="chart-container" style="height: 300px;">
+                            <canvas id="salesChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            <!-- Products Section -->
+                <div class="col-lg-4">
+                    <div class="dashboard-card h-100">
+                        <h5 class="card-title">المنتجات الأكثر مبيعاً</h5>
+                        <div id="productsList">
+                            <!-- Products will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Products and Companies Row -->
+            <div class="row mb-4 g-4">
+                
+            <!-- Social Media Section -->
+                <div class="col-lg-6">
+                    <div class="dashboard-card">
+                        <h5 class="card-title">وسائل التواصل الاجتماعي</h5>
+                        <div id="socialMedia">
+                            <!-- Social media items will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Shipping Companies -->
+                <div class="col-lg-6">
+                    <div class="dashboard-card h-100">
+                        <h5 class="card-title">شركات الشحن</h5>
+                        <div id="shippingCompanies">
+                            <!-- Shipping companies will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+
+            <!-- Orders Table -->
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="dashboard-card">
+                        <h5 class="card-title">جدول الطلبات</h5>
+                        <div class="table-responsive">
+                            <table class="table table-hover" id="ordersTable">
+                                <thead>
+                                    <tr>
+                                        <th>اسم العميل</th>
+                                        <th>عدد الطلبات</th>
+                                        <th>المنتجات</th>
+                                        <th>الطلبات المكتملة</th>
+                                        <th>المبلغ المدفوع</th>
+                                        <th>الطلبات المعلقة</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="ordersTableBody">
+                                    <!-- Orders will be populated by JavaScript -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
+        <!-- /* --- END: Page Content---- */ -->
+
+        </div>
+        <!-- /* ========== END: Navbar + Page Content ========== */ -->
     </div>
 
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
-    <!-- Custom JS -->
-    <script src="../assets/JS/script.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="../assets/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
     <script src="../assets/JS/reports.js"></script>
+    <script src="../assets/JS/script.js"></script>
 </body>
 </html>
-
 

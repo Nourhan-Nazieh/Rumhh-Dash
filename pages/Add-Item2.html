@@ -4,336 +4,396 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>إضافة منتج جديد - لوحة التحكم</title>
-    <!-- /* ========== START: Stylesheets ========== */ -->
+    
+  <!-- /* ========== START: Stylesheets ========== */ -->
     <link rel="icon" href="../assets/images/logo..svg" />
     <link rel="stylesheet" href="../assets/CSS/all.min.css" />
     <link rel="stylesheet" href="../assets/bootstrap/bootstrap.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap"rel="stylesheet"/>
-    <link rel="stylesheet" href="../assets/CSS/Add-Item2.css" />
-    <link rel="stylesheet" href="../assets/CSS/style.css" />
+    <link rel="stylesheet" href="../assets/CSS/nav-sid-chat-load.css" />
+    <link rel="stylesheet" href="../assets/CSS/Add-Item.css" /> 
+    <link rel="stylesheet" href="../assets/CSS/nav-sid-chat-load.css" /> 
 
 
-  <!-- /* ========== END: Stylesheets ========== */ -->
 </head>
 <body>
-    <!-- Main Container -->
+
     <div class="d-flex">
         <!-- ================== START: SIDEBAR ================== -->
-    <aside class="sidebar">
-            <div class="logo-container">
-            <img src="../assets/images/logo.png" alt="Logo" class="logo-img" />
-            <span class="logo-text">Dashboard</span>
-            </div>
-                
-                <ul class="nav flex-column sidebar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html">
-                            <i class="fa-solid fa-house-chimney"></i>
-                            <span>لوحة التحكم</span>
-                        </a>
-                    </li>
-                    
-                    <li class="nav-item">
-                        <a class="nav-link" href="./manag-orde.html ">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                            <span>ادارة الطلبات</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="./managProducts.html">
-                            <i class="fa-solid fa-box-archive"></i>
-                            <span>ادارة المنتجات</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="../pages/managCustomer.html">
-                            <i class="fa-solid fa-users-gear"></i>
-                            <span>ادارة العملاء</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#design">
-                            <i class="fa-solid fa-palette"></i>
-                            <span>تصميم متجرك</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="./discount.html">
-                            <i class="fa-solid fa-tags"></i>
-                            <span>كوبونات الخصم</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#reports">
-                            <i class="fa-solid fa-chart-pie"></i>
-                            <span>تقارير واحصائيات</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link active" href="./scops.html">
-                            <i class="fa-solid fa-globe"></i>
-                            <span>نطاقات ومجالات</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="./ticketSup.html">
-                            <i class="fa-solid fa-headset"></i>
-                            <span>تذاكر الدعم الفني</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#shipping">
-                            <i class="fa-solid fa-truck-fast"></i>
-                            <span>الضريبة والتوصيل</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                    <a class="nav-link" href="../pages/settingAcc.html">
-                            <i class="fa-solid fa-credit-card"></i>
-                            <span>اعدادات الدفع</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#settings">
-                            <i class="fa-solid fa-gear"></i>
-                            <span>اعدادات حسابك</span>
-                        </a>
-                    </li>
-                </ul>
-    </aside>
-      <!-- /* ========== START: Main Content ========== */ -->
-      <div class="main-content flex-grow-1">
-        <!-- /* ========== START: Navbar ========== */ -->
-            <header class="navbar-container">
-                <nav class="navbar navbar-expand-lg">
-                    <div class="container-fluid">
-                        <!-- Hamburger Menu for Mobile -->
-                        <button class="btn d-lg-none me-2" type="button" id="sidebar-toggler">
-                            <i class="fa-solid fa-bars"></i>
-                        </button>
-
-                        <!-- Profile Dropdown -->
-                        <div class="dropdown profile-dropdown ms-lg-3">
-                            <a href="#" class="d-flex align-items-center text-decoration-none text-dark" 
-                               id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="../assets/images/profile.png" 
-                                     alt="Avatar" class="profile-avatar" />
-                                <span class="me-2 d-none d-sm-block">اهلا محمود</span>
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-start" aria-labelledby="profileDropdown">
-                                <li><a class="dropdown-item" href="#"><i class="fa-solid fa-user me-2"></i>ملفي الشخصي</a></li>
-                                <li><a class="dropdown-item" href="#"><i class="fa-solid fa-gear me-2"></i>اعدادات</a></li>
-                                <li><hr class="dropdown-divider" /></li>
-                                <li><a class="dropdown-item text-danger" href="#"><i class="fa-solid fa-arrow-right-from-bracket me-2"></i>تسجيل الخروج</a></li>
-                            </ul>
-                        </div>
-                     <!-- Center search bar -->
-                        <div class="navbar-center">
-                            <div class="search-container">
-                                <input type="text" class="search-input" placeholder="بحث...">
-                                <button class="search-btn">
-                                    <i class="fas fa-search"></i>
-                                </button>
-                            </div>
-                        </div>
-
-                <!-- Left side icons and logo -->
-                <div class="navbar-left">
-                    <div class="store-preview-btn">
-                        <i class="fas fa-eye"></i>
-                        معاينة المتجر
-                    </div>
-                    <a href="#" class="nav-icon position-relative">
-                      <i class="fa-solid fa-bell"></i>
-                      <span class="notification-dot"></span>
+        <aside class="sidebar">
+        <div class="logo-container">
+          <img src="../assets/images/logo.png" alt="Logo" class="logo-img" />
+          <span class="logo-text">Dashboard</span>
+        </div>   
+            <ul class="nav flex-column sidebar-nav">
+                <li class="nav-item">
+                    <a class="nav-link " href="../index.html">
+                        <i class="fa-solid fa-house-chimney"></i>
+                        <span>لوحة التحكم</span>
                     </a>
-                    <div class="nav-icon crown">
-                        <i class="fas fa-crown"></i>
-                    </div>
-    
-                </div>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link active" href="../pages/manag-orde.html ">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span>ادارة الطلبات</span>
+                    </a>
+                </li>
 
+                <li class="nav-item">
+                    <a class="nav-link" href="../pages/managProducts.html">
+                        <i class="fa-solid fa-box-archive"></i>
+                        <span>ادارة المنتجات</span>
+                    </a>
+                </li>
 
+                <li class="nav-item">
+                    <a class="nav-link" href="../pages/managCustomer.html">
+                        <i class="fa-solid fa-users-gear"></i>
+                        <span>ادارة العملاء</span>
+                    </a>
+                </li>
 
-                    </div>
-                </nav>
-            </header>
+                <li class="nav-item">
+                    <a class="nav-link" href="../pages/design-stor.html">
+                        <i class="fa-solid fa-palette"></i>
+                        <span>تصميم متجرك</span>
+                    </a>
+                </li>
 
-            <!-- ================== START: FORM CONTENT ================== -->
-            <div class="container-fluid p-4">
-                <div class="form-wrapper">
+                <li class="nav-item">
+                    <a class="nav-link" href="../pages/discount.html">
+                        <i class="fa-solid fa-tags"></i>
+                        <span>كوبونات الخصم</span>
+                    </a>
+                </li>
 
-                                      <!-- القسم الأيمن - رفع الصور والتفاصيل -->
-                    <div class="upload-section">
-                        
-                        <!-- منطقة رفع الصورة الرئيسية -->
-                        <div class="main-upload-area" id="mainUpload">
-                            <div class="upload-content">
-                                <i class="fas fa-cloud-upload-alt upload-icon"></i>
-                                <p class="upload-text">اضغط لاضافة صورة</p>
-                            </div>
-                            <input type="file" id="mainFileInput" accept="image/*" style="display: none;">
-                        </div>
+                <li class="nav-item">
+                    <a class="nav-link" href="../pages/reports.html">
+                        <i class="fa-solid fa-chart-pie"></i>
+                        <span>تقارير واحصائيات</span>
+                    </a>
+                </li>
 
-                        <!-- الصور المصغرة -->
-                        <div class="thumbnail-grid">
-                            <div class="thumbnail-upload" data-index="0">
-                                <i class="fas fa-plus"></i>
-                                <input type="file" accept="image/*" style="display: none;">
-                            </div>
-                            <div class="thumbnail-upload" data-index="1">
-                                <i class="fas fa-plus"></i>
-                                <input type="file" accept="image/*" style="display: none;">
-                            </div>
-                            <div class="thumbnail-upload" data-index="2">
-                                <i class="fas fa-plus"></i>
-                                <input type="file" accept="image/*" style="display: none;">
-                            </div>
-                        </div>
+                <li class="nav-item">
+                    <a class="nav-link" href="../pages/scops.html">
+                        <i class="fa-solid fa-globe"></i>
+                        <span>نطاقات ومجالات</span>
+                    </a>
+                </li>
 
-                        <!-- اسم المنتج -->
-                        <div class="form-group">
-                            <label class="form-label">اسم المنتج</label>
-                            <input type="text" class="form-input" id="productName" placeholder="ادخل اسم المنتج">
-                        </div>
+                <li class="nav-item">
+                    <a class="nav-link" href="../pages/ticketSup.html">
+                        <i class="fa-solid fa-headset"></i>
+                        <span>تذاكر الدعم الفني</span>
+                    </a>
+                </li>
 
-                        <!-- وصف المنتج -->
-                        <div class="form-group">
-                            <label class="form-label">وصف المنتج</label>
-                            <textarea class="form-textarea" id="productDescription" placeholder="ادخل وصف المنتج" rows="4"></textarea>
-                        </div>
+                <li class="nav-item">
+                    <a class="nav-link" href="../pages/Tax-add.html">
+                        <i class="fa-solid fa-truck-fast"></i>
+                        <span>الضريبة والتوصيل</span>
+                    </a>
+                </li>
 
-                        <!-- فئة المنتج -->
-                        <div class="form-group">
-                            <label class="form-label">فئة المنتج</label>
-                            <div class="select-wrapper">
-                                <select class="form-select" id="productCategory">
-                                    <option value="">فئة</option>
-                                    <option value="electronics">إلكترونيات</option>
-                                    <option value="clothing">ملابس</option>
-                                    <option value="shoes">أحذية</option>
-                                    <option value="accessories">إكسسوارات</option>
-                                    <option value="home">منزل وحديقة</option>
-                                </select>
-                                <i class="fas fa-chevron-down select-arrow"></i>
-                            </div>
-                        </div>
+                <li class="nav-item">
+                    <a class="nav-link" href="../pages/settingPay.html">
+                        <i class="fa-solid fa-credit-card"></i>
+                        <span>اعدادات الدفع</span>
+                    </a>
+                </li>
 
-                        <!-- زر إضافة المنتج -->
-                        <button class="submit-btn" id="submitBtn">
-                            <i class="fas fa-plus"></i>
-                            اضافة المنتج
-                        </button>
+                <li class="nav-item">
+                    <a class="nav-link" href="../pages/settingAcc.html">
+                        <i class="fa-solid fa-gear"></i>
+                        <span>اعدادات حسابك</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+        <!-- mobile sidebar -->
+        <div class="sidebar-overlay"></div>
+        <!-- /* ========== START: Navbar + Page Content ========== */ -->
+        <div class="main-content flex-grow-1 main-wrapper ">
+           <!-- /* ---- Start: Navbar ---- */ -->
+              <header class="navbar-container">
+                  <nav class="navbar navbar-expand-lg">
+                      <div class="container-fluid">
+                          <!-- Right side on mobile -->
+                          <div class="d-flex align-items-center">
+                              <button class="btn d-lg-none me-2" type="button" id="sidebar-toggler">
+                                  <i class="fa-solid fa-bars"></i>
+                              </button>
+                              <div class="dropdown profile-dropdown">
+                              <a href="#" class="d-flex align-items-center text-decoration-none text-dark" 
+                                id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                  <img src="../assets/images/profile.png" 
+                                      alt="Avatar" class="profile-avatar" />
+                                  <span class="me-2 d-none d-sm-block">اهلا محمود</span>
+                              </a>
+                              <ul class="dropdown-menu dropdown-menu-start" aria-labelledby="profileDropdown">
+                                  <li><a class="dropdown-item" href="../pages/settingAcc.html"><i class="fa-solid fa-user me-2"></i>ملفي الشخصي</a></li>
+                                  <li><a class="dropdown-item" href="../pages/settingAcc.html"><i class="fa-solid fa-gear me-2"></i>اعدادات</a></li>
+                                  <li><hr class="dropdown-divider" /></li>
+                                  <li><a class="dropdown-item text-danger" href="#"><i class="fa-solid fa-arrow-right-from-bracket me-2"></i>تسجيل الخروج</a></li>
+                              </ul>
+                              </div>
+                          </div>
 
-                    </div>
+                          <!-- Center search bar (hidden on mobile) -->
+                          <div class="navbar-center d-none d-lg-flex">
+                              <div class="search-container">
+                                  <input type="text" class="search-input" placeholder="بحث...">
+                                  <button class="search-btn"><i class="fas fa-search"></i></button>
+                              </div>
+                          </div>
 
-                    <!-- القسم الأيسر - النموذج -->
-                    <div class="form-section">
-                        <div class="form-container">
-                            
-                            <!-- لوحة الألوان -->
-                            <div class="form-group">
-                                <label class="form-label">الوان المنتج</label>
-                                <div class="color-palette">
-                                    <div class="color-strip" id="colorStrip">
-                                        <div class="color-segment" style="background: #ff4444"></div>
-                                        <div class="color-segment" style="background: #ff8844"></div>
-                                        <div class="color-segment" style="background: #ffff44"></div>
-                                        <div class="color-segment" style="background: #88ff44"></div>
-                                        <div class="color-segment" style="background: #44ff88"></div>
-                                        <div class="color-segment" style="background: #44ffff"></div>
-                                        <div class="color-segment" style="background: #4488ff"></div>
-                                        <div class="color-segment" style="background: #8844ff"></div>
-                                        <div class="color-segment" style="background: #ff44ff"></div>
-                                        <div class="color-segment" style="background: #ff4488"></div>
+                          <!-- Left side -->
+                          <div class="navbar-left">
+                              <div class="store-preview-btn">
+                                  <i class="fas fa-eye"></i>
+                                  <span>معاينة المتجر</span>
+                              </div>
+                              <a href="#" class="nav-icon position-relative">
+                                  <i class="fa-solid fa-bell"></i>
+                                  <span class="notification-dot"></span>
+                              </a>
+                              <div class="nav-icon crown">
+                                  <i class="fas fa-crown"></i>
+                              </div>
+                          </div>
+                      </div>
+                  </nav>
+              </header>
+         <!-- /* ---- END: Navbar  ---- */ -->
+          
+        <!-- /* --- START: Page Content---- */ -->
+                     <!-- ================== START: FORM CONTENT ================== -->
+                     <div class="container-fluid p-4">
+                        <div class="form-wrapper">
+        
+                            <!-- القسم الأيمن - رفع الصور والتفاصيل -->
+                            <div class="upload-section">
+                                
+                                <!-- منطقة رفع الصورة الرئيسية -->
+                                <div class="main-upload-area" id="mainUpload">
+                                    <div class="upload-content">
+                                        <i class="fas fa-cloud-upload-alt upload-icon"></i>
+                                        <p class="upload-text">اضغط لاضافة صورة</p>
                                     </div>
-                                    <div class="color-picker-indicator" id="colorPicker"></div>
+                                    <input type="file" id="mainFileInput" accept="image/*" style="display: none;">
+                                </div>
+        
+                                <!-- الصور المصغرة -->
+                                <div class="thumbnail-grid">
+                                    <div class="thumbnail-upload" data-index="0">
+                                        <i class="fas fa-plus"></i>
+                                        <input type="file" accept="image/*" style="display: none;">
+                                    </div>
+                                    <div class="thumbnail-upload" data-index="1">
+                                        <i class="fas fa-plus"></i>
+                                        <input type="file" accept="image/*" style="display: none;">
+                                    </div>
+                                    <div class="thumbnail-upload" data-index="2">
+                                        <i class="fas fa-plus"></i>
+                                        <input type="file" accept="image/*" style="display: none;">
+                                    </div>
+                                </div>
+        
+                                <!-- اسم المنتج -->
+                                <div class="form-group">
+                                    <label class="form-label">اسم المنتج</label>
+                                    <input type="text" class="form-input" id="productName" placeholder="ادخل اسم المنتج">
+                                </div>
+        
+                                <!-- وصف المنتج -->
+                                <div class="form-group">
+                                    <label class="form-label">وصف المنتج</label>
+                                    <textarea class="form-textarea" id="productDescription" placeholder="ادخل وصف المنتج" rows="4"></textarea>
+                                </div>
+        
+                                <!-- فئة المنتج -->
+                                <div class="form-group">
+                                    <label class="form-label">فئة المنتج</label>
+                                    <div class="select-wrapper">
+                                        <select class="form-select" id="productCategory">
+                                            <option value="">فئة</option>
+                                            <option value="electronics">إلكترونيات</option>
+                                            <option value="clothing">ملابس</option>
+                                            <option value="shoes">أحذية</option>
+                                            <option value="accessories">إكسسوارات</option>
+                                            <option value="home">منزل وحديقة</option>
+                                        </select>
+                                        <i class="fas fa-chevron-down select-arrow"></i>
+                                    </div>
+                                </div>
+        
+                                <!-- زر إضافة المنتج -->
+                                <button class="submit-btn" id="submitBtn">
+                                    <i class="fas fa-plus"></i>
+                                    اضافة المنتج
+                                </button>
+        
+                            </div>
+        
+                            <!-- القسم الأيسر - النموذج -->
+                            <div class="form-section">
+                                <div class="form-container">
+                                    
+                                    <!-- لوحة الألوان -->
+                                    <div class="form-group">
+                                        <label class="form-label">الوان المنتج</label>
+                                        <div class="color-palette">
+                                            <div class="color-strip" id="colorStrip">
+                                                <div class="color-segment" style="background: #ff4444"></div>
+                                                <div class="color-segment" style="background: #ff8844"></div>
+                                                <div class="color-segment" style="background: #ffff44"></div>
+                                                <div class="color-segment" style="background: #88ff44"></div>
+                                                <div class="color-segment" style="background: #44ff88"></div>
+                                                <div class="color-segment" style="background: #44ffff"></div>
+                                                <div class="color-segment" style="background: #4488ff"></div>
+                                                <div class="color-segment" style="background: #8844ff"></div>
+                                                <div class="color-segment" style="background: #ff44ff"></div>
+                                                <div class="color-segment" style="background: #ff4488"></div>
+                                            </div>
+                                            <div class="color-picker-indicator" id="colorPicker"></div>
+                                        </div>
+                                    </div>
+        
+                                    <!-- اسم اللون -->
+                                    <div class="form-group">
+                                        <label class="form-label">اسم اللون</label>
+                                        <input type="text" class="form-input" id="colorName" placeholder="ادخل اسم اللون">
+                                    </div>
+        
+                                    <!-- رمز اللون -->
+                                    <div class="form-group">
+                                        <label class="form-label">رمز اللون</label>
+                                        <input type="text" class="form-input" id="colorCode" placeholder="ادخل رمز اللون (#ff5733)">
+                                    </div>
+        
+                                    <!-- مجموعة الألوان -->
+                                    <div class="form-group">
+                                        <label class="form-label">مجموعة الوان</label>
+                                        <div class="tags-container" id="colorTags">
+                                            <span class="tag">احمر <i class="fas fa-times"></i></span>
+                                            <span class="tag">اصفر <i class="fas fa-times"></i></span>
+                                        </div>
+                                    </div>
+        
+                                    <!-- مقاس المنتج -->
+                                    <div class="form-group">
+                                        <label class="form-label">مقاس المنتج</label>
+                                        <input type="text" class="form-input" id="productSize" placeholder="ادخل مقاسات المنتج (XL,L,M,S)">
+                                    </div>
+        
+                                    <!-- مجموعة المقاسات -->
+                                    <div class="form-group">
+                                        <label class="form-label">مجموعة الوان</label>
+                                        <div class="tags-container" id="sizeTags">
+                                            <span class="tag">M <i class="fas fa-times"></i></span>
+                                            <span class="tag">S <i class="fas fa-times"></i></span>
+                                        </div>
+                                    </div>
+        
+                                    <!-- سعر المنتج -->
+                                    <div class="form-group">
+                                        <label class="form-label">سعر المنتج</label>
+                                        <div class="price-input">
+                                            <input type="number" class="form-input" id="productPrice" placeholder="0">
+                                            <span class="currency">ر.س</span>
+                                        </div>
+                                    </div>
+        
+                                    <!-- سعر المنتج بعد الخصم -->
+                                    <div class="form-group">
+                                        <label class="form-label">سعر المنتج بعد الخصم</label>
+                                        <div class="price-input">
+                                            <input type="number" class="form-input" id="discountPrice" placeholder="0">
+                                            <span class="currency">ر.س</span>
+                                        </div>
+                                    </div>
+        
                                 </div>
                             </div>
-
-                            <!-- اسم اللون -->
-                            <div class="form-group">
-                                <label class="form-label">اسم اللون</label>
-                                <input type="text" class="form-input" id="colorName" placeholder="ادخل اسم اللون">
-                            </div>
-
-                            <!-- رمز اللون -->
-                            <div class="form-group">
-                                <label class="form-label">رمز اللون</label>
-                                <input type="text" class="form-input" id="colorCode" placeholder="ادخل رمز اللون (#ff5733)">
-                            </div>
-
-                            <!-- مجموعة الألوان -->
-                            <div class="form-group">
-                                <label class="form-label">مجموعة الوان</label>
-                                <div class="tags-container" id="colorTags">
-                                    <span class="tag">احمر <i class="fas fa-times"></i></span>
-                                    <span class="tag">اصفر <i class="fas fa-times"></i></span>
-                                </div>
-                            </div>
-
-                            <!-- مقاس المنتج -->
-                            <div class="form-group">
-                                <label class="form-label">مقاس المنتج</label>
-                                <input type="text" class="form-input" id="productSize" placeholder="ادخل مقاسات المنتج (XL,L,M,S)">
-                            </div>
-
-                            <!-- مجموعة المقاسات -->
-                            <div class="form-group">
-                                <label class="form-label">مجموعة الوان</label>
-                                <div class="tags-container" id="sizeTags">
-                                    <span class="tag">M <i class="fas fa-times"></i></span>
-                                    <span class="tag">S <i class="fas fa-times"></i></span>
-                                </div>
-                            </div>
-
-                            <!-- سعر المنتج -->
-                            <div class="form-group">
-                                <label class="form-label">سعر المنتج</label>
-                                <div class="price-input">
-                                    <input type="number" class="form-input" id="productPrice" placeholder="0">
-                                    <span class="currency">ر.س</span>
-                                </div>
-                            </div>
-
-                            <!-- سعر المنتج بعد الخصم -->
-                            <div class="form-group">
-                                <label class="form-label">سعر المنتج بعد الخصم</label>
-                                <div class="price-input">
-                                    <input type="number" class="form-input" id="discountPrice" placeholder="0">
-                                    <span class="currency">ر.س</span>
-                                </div>
-                            </div>
-
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <!-- نافذة معاينة الصورة -->
-            <div class="image-preview-modal" id="imageModal">
-                <div class="modal-content">
-                    <span class="close-modal" id="closeModal">&times;</span>
-                    <img id="previewImage" src="" alt="معاينة الصورة">
-                    <div class="modal-actions">
-                        <button class="modal-btn confirm-btn" id="confirmImage">تأكيد</button>
-                        <button class="modal-btn cancel-btn" id="cancelImage">إلغاء</button>
+        
+                    <!-- نافذة معاينة الصورة -->
+                    <div class="image-preview-modal" id="imageModal">
+                        <div class="modal-content">
+                            <span class="close-modal" id="closeModal">&times;</span>
+                            <img id="previewImage" src="" alt="معاينة الصورة">
+                            <div class="modal-actions">
+                                <button class="modal-btn confirm-btn" id="confirmImage">تأكيد</button>
+                                <button class="modal-btn cancel-btn" id="cancelImage">إلغاء</button>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-
+        <!-- /* ----END: Page Content---- */ -->
+              
         </div>
+
+       <!-- ================= START AI Chat  ================= -->
+    <div class="ai-chat-wrap" id="aiChatWrap">
+      <!-- hint message -->
+      <div id="aiHint" class="ai-hint">
+        هل تريد المساعدة؟
+      </div>
+
+      <!-- minimized bubble -->
+      <div id="aiMin" class="ai-bubble" title="افتح المساعد">
+        <img src="../assets/images/chat animated icon.gif" alt="Rumh Bot">
+      </div>
+
+      <!-- full panel -->
+      <div id="aiPanel" class="ai-panel d-none">
+        <div class="ai-header">
+          <div>
+            <div class="title">مساعد Rumh</div>
+            <div class="subtitle">هنا لمساعدتك دائمًا ✨</div>
+          </div>
+          <div class="ms-auto d-flex gap-2">
+            <button id="closeBtn" class="btn btn-sm btn-outline-light" title="إغلاق">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Messages Section -->
+        <div id="messages" class="ai-messages">
+          <!-- bot animated avatar -->
+          <div class="bot-avatar" id="botAvatar">
+            <img src="../assets/images/giving information chat animated icon.gif" alt="Rumh Bot Talking" />
+          </div>
+          <!-- welcome message (hidden at first) -->
+          <div class="msg ai d-none" id="welcomeMsg">
+            أهلًا بك 👋 أنا مساعد Rumh. كيف أقدر أخدمك اليوم؟
+          </div>
+        </div>
+
+        <!-- quick actions -->
+        <div class="quick-actions d-none" id="quickActions">
+          <button class="btn btn-outline-success" data-q="خدماتنا">خدماتنا</button>
+          <button class="btn btn-outline-success" data-q="الأسعار">الأسعار</button>
+          <button class="btn btn-outline-success" data-q="تواصل معنا">تواصل معنا</button>
+        </div>
+
+        <!-- input area -->
+        <div class="ai-input">
+          <textarea id="inputText" placeholder="اكتب رسالتك..." class="form-control" rows="1"></textarea>
+          <button id="sendBtn" class="btn send-btn">
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </div>
+      </div>
     </div>
+    </div>
+
+    <!-- Scroll To Top Button -->
+    <button id="scrollToTopBtn" class="scroll-to-top" title="الرجوع للأعلى">
+      <i class="fa-brands fa-gripfire fa-fade fa-xl" style="color: #fffefa"></i>
+    </button>
 
     <!-- ========== START: Scripts ========== -->   
     <script src="../assets/bootstrap/bootstrap.bundle.min.js"></script>
@@ -341,4 +401,3 @@
     <script src="../assets/JS/script.js"></script>
 </body>
 </html>
-
