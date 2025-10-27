@@ -1167,3 +1167,89 @@ select.form-control:hover {
     color: #383d41;
 }
 
+/* Save Button Styles */
+
+.save-section {
+    margin-top: 30px;
+    text-align: center;
+    padding: 20px 0;
+    border-top: 2px solid #e9ecef;
+}
+
+.btn-save {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 15px 50px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-save:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(40, 167, 69, 0.4);
+}
+
+.btn-save:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(40, 167, 69, 0.3);
+}
+
+.btn-save:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    background-color: #6c757d;
+}
+
+.btn-save i {
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .btn-save {
+        padding: 12px 40px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    .btn-save {
+        padding: 12px 30px;
+        font-size: 14px;
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .save-section {
+        padding: 15px;
+    }
+}
+
+/* Animation for save success */
+@keyframes saveSuccess {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.btn-save.success {
+    animation: saveSuccess 0.5s ease;
+}
+
