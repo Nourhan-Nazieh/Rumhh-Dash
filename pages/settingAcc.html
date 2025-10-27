@@ -172,7 +172,6 @@
          <!-- /* ---- END: Navbar  ---- */ -->
           
         <!-- /* --- START: Page Content---- */ -->
-                 <!-- Main Content Area -->
         <main class="main-content-2 fade-in-up" style="animation-delay: 0.7s" >
             <!-- Tabs Navigation -->
             <div class="tabs-nav">
@@ -241,23 +240,30 @@
                             </div>
                         </div>
 
-                                                <!-- Left Column: Profile Image, Status, and Files -->
+                        <!-- Left Column: Profile Image, Status, and Files -->
                         <div class="left-column">
                             <!-- Profile Image -->
                             <div class="profile-image-container">
                                 <div class="profile-image">
-                                    <img src="../assets/images/setting img.jpg" alt="Profile Image">
+                                    <img id="profile-img" src="../assets/images/setting img.jpg" alt="Profile Image">
                                 </div>
-                                <button class="edit-profile-btn">
+                                <button class="edit-profile-btn" id="edit-profile-btn">
                                     <i class="fas fa-edit"></i>
                                 </button>
+                                <!-- Hidden file input for profile image -->
+                                <input type="file" id="profile-image-input" accept="image/*" style="display: none;">
                             </div>
                             
-                            <!-- Status Field (Below Profile Image) -->
+                            <!-- Status Field (Below Profile Image) - Changed to Dropdown -->
                             <div class="form-row">
                                 <div class="form-group full-width">
                                     <label for="status">حالة</label>
-                                    <input type="text" id="status" class="form-control" placeholder="نشط">
+                                    <select id="status" class="form-control">
+                                        <option value="active">نشط</option>
+                                        <option value="inactive">غير نشط</option>
+                                        <option value="pending">قيد الانتظار</option>
+                                        <option value="suspended">معلق</option>
+                                    </select>
                                 </div>
                             </div>
                             
@@ -266,11 +272,13 @@
                                 <div class="form-group full-width">
                                     <label for="files">ملفات</label>
                                     <div class="file-upload-section">
-                                        <button type="button" class="btn-upload">
+                                        <button type="button" class="btn-upload" id="btn-upload">
                                             <i class="fas fa-cloud-upload-alt"></i>
                                             تحميل
                                         </button>
-                                        <span class="file-note">من فضلك ادخل ملفات الهوية</span>
+                                        <span class="file-note" id="file-note">من فضلك ادخل ملفات الهوية</span>
+                                        <!-- Hidden file input for documents -->
+                                        <input type="file" id="file-upload-input" accept=".pdf,.jpg,.jpeg,.png,.doc,.docx" multiple style="display: none;">
                                     </div>
                                 </div>
                             </div>
@@ -286,6 +294,7 @@
                 </div>
             </div>
         </main>
+
         <!-- /* ----END: Page Content---- */ -->
               
         </div>
@@ -357,7 +366,7 @@
       <!-- Litepicker JS -->
        <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js"></script>
      <script src="../assets/JS/script.js"></script>
-     <script src="../assets/JS/managOrder.js"></script>
+     <script src="../assets/JS/settingAcc.js"></script>
 
 
     

@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeNotifications();
 });
 
-// Tab Switching Functionality
+// Tab Switching Functionality - FIXED
 function initializeTabs() {
     const tabItems = document.querySelectorAll('.tab-item');
     const tabContents = document.querySelectorAll('.tab-content');
@@ -26,17 +26,20 @@ function initializeTabs() {
             
             // Add active class to clicked tab and corresponding content
             this.classList.add('active');
-            document.getElementById(targetTab).classList.add('active');
-            
-            // Add animation effect
-            const activeContent = document.getElementById(targetTab);
-            activeContent.style.opacity = '0';
-            activeContent.style.transform = 'translateY(20px)';
-            
-            setTimeout(() => {
-                activeContent.style.opacity = '1';
-                activeContent.style.transform = 'translateY(0)';
-            }, 100);
+            const targetContent = document.getElementById(targetTab);
+            if (targetContent) {
+                targetContent.classList.add('active');
+                
+                // Add animation effect
+                targetContent.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+                targetContent.style.opacity = '0';
+                targetContent.style.transform = 'translateY(20px)';
+                
+                setTimeout(() => {
+                    targetContent.style.opacity = '1';
+                    targetContent.style.transform = 'translateY(0)';
+                }, 100);
+            }
         });
     });
 }
@@ -123,31 +126,30 @@ function getErrorMessage(fieldId, fieldType) {
     return messages[fieldId] || messages[fieldType] || 'يرجى إدخال قيمة صحيحة';
 }
 
-// File Upload Functionality
+// File Upload Functionality - FIXED AND ACTIVE
 function initializeFileUpload() {
-    const uploadBtn = document.querySelector('.btn-upload');
+    const uploadBtn = document.getElementById('btn-upload');
+    const fileInput = document.getElementById('file-upload-input');
     
-    if (uploadBtn) {
+    if (uploadBtn && fileInput) {
+        // Click upload button to trigger file input
         uploadBtn.addEventListener('click', function() {
-            // Create hidden file input
-            const fileInput = document.createElement('input');
-            fileInput.type = 'file';
-            fileInput.accept = '.pdf,.jpg,.jpeg,.png,.doc,.docx';
-            fileInput.multiple = true;
-            
-            fileInput.addEventListener('change', function(e) {
-                const files = Array.from(e.target.files);
-                handleFileUpload(files);
-            });
-            
             fileInput.click();
+        });
+        
+        // Handle file selection
+        fileInput.addEventListener('change', function(e) {
+            const files = Array.from(e.target.files);
+            if (files.length > 0) {
+                handleFileUpload(files);
+            }
         });
     }
 }
 
 function handleFileUpload(files) {
-    const uploadBtn = document.querySelector('.btn-upload');
-    const fileNote = document.querySelector('.file-note');
+    const uploadBtn = document.getElementById('btn-upload');
+    const fileNote = document.getElementById('file-note');
     
     if (files.length > 0) {
         // Show loading state
@@ -159,10 +161,14 @@ function handleFileUpload(files) {
             uploadBtn.innerHTML = '<i class="fas fa-check"></i> تم التحميل';
             uploadBtn.style.backgroundColor = '#28a745';
             
-            // Update file note
+            // Update file note with uploaded file names
             const fileNames = files.map(file => file.name).join(', ');
             fileNote.textContent = `تم تحميل: ${fileNames}`;
             fileNote.style.color = '#28a745';
+            fileNote.style.fontWeight = '600';
+            
+            // Show success notification
+            showNotification('تم تحميل الملفات بنجاح', 'success');
             
             // Reset after 3 seconds
             setTimeout(() => {
@@ -174,53 +180,68 @@ function handleFileUpload(files) {
     }
 }
 
-// Profile Image Functionality
+// Profile Image Functionality - FIXED AND ACTIVE
 function initializeProfileImage() {
-    const editBtn = document.querySelector('.edit-profile-btn');
+    const editBtn = document.getElementById('edit-profile-btn');
+    const fileInput = document.getElementById('profile-image-input');
+    const profileImg = document.getElementById('profile-img');
     
-    if (editBtn) {
+    if (editBtn && fileInput && profileImg) {
+        // Click edit button to trigger file input
         editBtn.addEventListener('click', function() {
-            const fileInput = document.createElement('input');
-            fileInput.type = 'file';
-            fileInput.accept = 'image/*';
-            
-            fileInput.addEventListener('change', function(e) {
-                const file = e.target.files[0];
-                if (file) {
-                    handleProfileImageUpload(file);
-                }
-            });
-            
             fileInput.click();
+        });
+        
+        // Handle image selection
+        fileInput.addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file && file.type.startsWith('image/')) {
+                handleProfileImageUpload(file);
+            } else if (file) {
+                showNotification('يرجى اختيار ملف صورة صحيح', 'error');
+            }
         });
     }
 }
 
 function handleProfileImageUpload(file) {
-    const profileImg = document.querySelector('.profile-image img');
-    const editBtn = document.querySelector('.edit-profile-btn');
+    const profileImg = document.getElementById('profile-img');
+    const editBtn = document.getElementById('edit-profile-btn');
     
     // Show loading state
     editBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+    editBtn.disabled = true;
     
     // Create file reader
     const reader = new FileReader();
     reader.onload = function(e) {
-        // Update profile image
-        profileImg.src = e.target.result;
+        // Update profile image with smooth transition
+        profileImg.style.opacity = '0.5';
         
-        // Show success state
-        editBtn.innerHTML = '<i class="fas fa-check"></i>';
-        editBtn.style.backgroundColor = '#28a745';
-        
-        // Reset after 2 seconds
         setTimeout(() => {
-            editBtn.innerHTML = '<i class="fas fa-edit"></i>';
+            profileImg.src = e.target.result;
+            profileImg.style.opacity = '1';
+            
+            // Show success state
+            editBtn.innerHTML = '<i class="fas fa-check"></i>';
             editBtn.style.backgroundColor = '#28a745';
-        }, 2000);
-        
-        // Show notification
-        showNotification('تم تحديث الصورة الشخصية بنجاح', 'success');
+            
+            // Show notification
+            showNotification('تم تحديث الصورة الشخصية بنجاح', 'success');
+            
+            // Reset after 2 seconds
+            setTimeout(() => {
+                editBtn.innerHTML = '<i class="fas fa-edit"></i>';
+                editBtn.style.backgroundColor = '#28a745';
+                editBtn.disabled = false;
+            }, 2000);
+        }, 300);
+    };
+    
+    reader.onerror = function() {
+        showNotification('حدث خطأ أثناء تحميل الصورة', 'error');
+        editBtn.innerHTML = '<i class="fas fa-edit"></i>';
+        editBtn.disabled = false;
     };
     
     reader.readAsDataURL(file);
@@ -293,7 +314,7 @@ function initializeSidebar() {
     
     // Close sidebar when clicking outside on mobile
     document.addEventListener('click', function(e) {
-        if (window.innerWidth <= 992) {
+        if (window.innerWidth <= 992 && sidebar) {
             if (!sidebar.contains(e.target) && !e.target.closest('.sidebar-toggle')) {
                 sidebar.classList.remove('open');
             }
@@ -320,6 +341,8 @@ function initializeNotifications() {
 
 function showNotification(message, type = 'info') {
     const container = document.querySelector('.notification-container');
+    if (!container) return;
+    
     const notification = document.createElement('div');
     
     const colors = {
@@ -486,3 +509,282 @@ window.addEventListener('load', function() {
     logPerformance('account-settings-fully-loaded');
 });
 
+// ----------------------
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('Account Settings Script Loaded!');
+    
+    // Initialize all functionality
+    initializeTabs();
+    initializeProfileImage();
+    initializeFileUpload();
+    initializeNotifications();
+});
+
+// Tab Switching Functionality
+function initializeTabs() {
+    const tabItems = document.querySelectorAll('.tab-item');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    console.log('Tabs found:', tabItems.length);
+
+    tabItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const targetTab = this.getAttribute('data-tab');
+            console.log('Tab clicked:', targetTab);
+            
+            // Remove active class from all tabs and contents
+            tabItems.forEach(tab => tab.classList.remove('active'));
+            tabContents.forEach(content => content.classList.remove('active'));
+            
+            // Add active class to clicked tab and corresponding content
+            this.classList.add('active');
+            const targetContent = document.getElementById(targetTab);
+            if (targetContent) {
+                targetContent.classList.add('active');
+                
+                // Add animation effect
+                targetContent.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+                targetContent.style.opacity = '0';
+                targetContent.style.transform = 'translateY(20px)';
+                
+                setTimeout(() => {
+                    targetContent.style.opacity = '1';
+                    targetContent.style.transform = 'translateY(0)';
+                }, 100);
+            }
+        });
+    });
+}
+
+// Profile Image Functionality
+function initializeProfileImage() {
+    const editBtn = document.getElementById('edit-profile-btn');
+    const fileInput = document.getElementById('profile-image-input');
+    const profileImg = document.getElementById('profile-img');
+    
+    console.log('Profile elements:', {editBtn, fileInput, profileImg});
+    
+    if (editBtn && fileInput && profileImg) {
+        // Click edit button to trigger file input
+        editBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            console.log('Edit button clicked!');
+            fileInput.click();
+        });
+        
+        // Handle image selection
+        fileInput.addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            console.log('File selected:', file);
+            
+            if (file && file.type.startsWith('image/')) {
+                handleProfileImageUpload(file);
+            } else if (file) {
+                showNotification('يرجى اختيار ملف صورة صحيح', 'error');
+            }
+        });
+    } else {
+        console.error('Profile image elements not found!');
+    }
+}
+
+function handleProfileImageUpload(file) {
+    const profileImg = document.getElementById('profile-img');
+    const editBtn = document.getElementById('edit-profile-btn');
+    
+    console.log('Uploading profile image...');
+    
+    // Show loading state
+    editBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+    editBtn.disabled = true;
+    
+    // Create file reader
+    const reader = new FileReader();
+    reader.onload = function(e) {
+        // Update profile image with smooth transition
+        profileImg.style.opacity = '0.5';
+        
+        setTimeout(() => {
+            profileImg.src = e.target.result;
+            profileImg.style.opacity = '1';
+            
+            // Show success state
+            editBtn.innerHTML = '<i class="fas fa-check"></i>';
+            editBtn.style.backgroundColor = '#28a745';
+            
+            // Show notification
+            showNotification('تم تحديث الصورة الشخصية بنجاح', 'success');
+            
+            // Reset after 2 seconds
+            setTimeout(() => {
+                editBtn.innerHTML = '<i class="fas fa-edit"></i>';
+                editBtn.style.backgroundColor = '#28a745';
+                editBtn.disabled = false;
+            }, 2000);
+        }, 300);
+    };
+    
+    reader.onerror = function() {
+        showNotification('حدث خطأ أثناء تحميل الصورة', 'error');
+        editBtn.innerHTML = '<i class="fas fa-edit"></i>';
+        editBtn.disabled = false;
+    };
+    
+    reader.readAsDataURL(file);
+}
+
+// File Upload Functionality
+function initializeFileUpload() {
+    const uploadBtn = document.getElementById('btn-upload');
+    const fileInput = document.getElementById('file-upload-input');
+    
+    console.log('File upload elements:', {uploadBtn, fileInput});
+    
+    if (uploadBtn && fileInput) {
+        // Click upload button to trigger file input
+        uploadBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            console.log('Upload button clicked!');
+            fileInput.click();
+        });
+        
+        // Handle file selection
+        fileInput.addEventListener('change', function(e) {
+            const files = Array.from(e.target.files);
+            console.log('Files selected:', files.length);
+            
+            if (files.length > 0) {
+                handleFileUpload(files);
+            }
+        });
+    } else {
+        console.error('File upload elements not found!');
+    }
+}
+
+function handleFileUpload(files) {
+    const uploadBtn = document.getElementById('btn-upload');
+    const fileNote = document.getElementById('file-note');
+    
+    console.log('Uploading files...');
+    
+    if (files.length > 0) {
+        // Show loading state
+        uploadBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> جاري التحميل...';
+        uploadBtn.disabled = true;
+        
+        // Simulate upload process
+        setTimeout(() => {
+            uploadBtn.innerHTML = '<i class="fas fa-check"></i> تم التحميل';
+            uploadBtn.style.backgroundColor = '#28a745';
+            
+            // Update file note with uploaded file names
+            const fileNames = files.map(file => file.name).join(', ');
+            fileNote.textContent = `تم تحميل: ${fileNames}`;
+            fileNote.style.color = '#28a745';
+            fileNote.style.fontWeight = '600';
+            
+            // Show success notification
+            showNotification('تم تحميل الملفات بنجاح', 'success');
+            
+            // Reset after 3 seconds
+            setTimeout(() => {
+                uploadBtn.innerHTML = '<i class="fas fa-cloud-upload-alt"></i> تحميل';
+                uploadBtn.disabled = false;
+                uploadBtn.style.backgroundColor = '#28a745';
+            }, 3000);
+        }, 2000);
+    }
+}
+
+// Notification System
+function initializeNotifications() {
+    // Create notification container if it doesn't exist
+    if (!document.querySelector('.notification-container')) {
+        const container = document.createElement('div');
+        container.className = 'notification-container';
+        container.style.cssText = `
+            position: fixed;
+            top: 90px;
+            left: 20px;
+            z-index: 9999;
+            pointer-events: none;
+        `;
+        document.body.appendChild(container);
+    }
+}
+
+function showNotification(message, type = 'info') {
+    const container = document.querySelector('.notification-container');
+    if (!container) return;
+    
+    const notification = document.createElement('div');
+    
+    const colors = {
+        success: '#28a745',
+        error: '#dc3545',
+        warning: '#ffc107',
+        info: '#17a2b8'
+    };
+    
+    const icons = {
+        success: 'fas fa-check-circle',
+        error: 'fas fa-exclamation-circle',
+        warning: 'fas fa-exclamation-triangle',
+        info: 'fas fa-info-circle'
+    };
+    
+    notification.className = 'notification';
+    notification.style.cssText = `
+        background-color: ${colors[type]};
+        color: white;
+        padding: 12px 20px;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        transform: translateX(-100%);
+        transition: all 0.3s ease;
+        pointer-events: auto;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 14px;
+        max-width: 300px;
+    `;
+    
+    notification.innerHTML = `
+        <i class="${icons[type]}"></i>
+        <span>${message}</span>
+        <i class="fas fa-times" style="margin-right: auto; opacity: 0.7;"></i>
+    `;
+    
+    container.appendChild(notification);
+    
+    // Animate in
+    setTimeout(() => {
+        notification.style.transform = 'translateX(0)';
+    }, 100);
+    
+    // Auto remove after 5 seconds
+    const autoRemove = setTimeout(() => {
+        removeNotification(notification);
+    }, 5000);
+    
+    // Manual remove on click
+    notification.addEventListener('click', () => {
+        clearTimeout(autoRemove);
+        removeNotification(notification);
+    });
+}
+
+function removeNotification(notification) {
+    notification.style.transform = 'translateX(-100%)';
+    notification.style.opacity = '0';
+    
+    setTimeout(() => {
+        if (notification.parentNode) {
+            notification.parentNode.removeChild(notification);
+        }
+    }, 300);
+}

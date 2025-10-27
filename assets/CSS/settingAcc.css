@@ -957,3 +957,213 @@ select.form-control {
         border-radius: 0;
     }
 }
+/* Additional CSS for Enhanced Functionality */
+
+/* Profile Image Transition */
+.profile-image img {
+    transition: opacity 0.3s ease;
+}
+
+/* Status Dropdown Styling */
+#status {
+    cursor: pointer;
+    font-weight: 600;
+}
+
+#status option {
+    padding: 10px;
+    font-weight: 500;
+}
+
+/* Active status color coding */
+#status option[value="active"] {
+    color: #28a745;
+}
+
+#status option[value="inactive"] {
+    color: #dc3545;
+}
+
+#status option[value="pending"] {
+    color: #ffc107;
+}
+
+#status option[value="suspended"] {
+    color: #6c757d;
+}
+
+/* File Upload Button Active State */
+.btn-upload {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-upload:active {
+    transform: translateY(0);
+}
+
+.btn-upload:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* Enhanced Tab Content Transitions */
+.tab-content {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* File Note Enhanced Styling */
+.file-note {
+    transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+/* Edit Profile Button States */
+.edit-profile-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.edit-profile-btn:active:not(:disabled) {
+    transform: scale(0.95);
+}
+
+/* Hidden File Inputs */
+input[type="file"] {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Notification Container */
+.notification-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Enhanced Form Control for Select */
+select.form-control {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+select.form-control::-ms-expand {
+    display: none;
+}
+
+/* Hover effect for dropdown options */
+select.form-control:hover {
+    border-color: #28a745;
+}
+
+/* Focus state for status dropdown */
+#status:focus {
+    outline: none;
+    border-color: #28a745;
+    box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.1);
+}
+
+/* Tab Content Animation Enhancement */
+.tab-content.active {
+    animation: fadeInContent 0.4s ease-out;
+}
+
+@keyframes fadeInContent {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Upload Button Icon Animation */
+.btn-upload i {
+    transition: transform 0.3s ease;
+}
+
+.btn-upload:hover i {
+    transform: scale(1.1);
+}
+
+/* Profile Image Container Hover Effect */
+.profile-image-container:hover .profile-image {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Success State for File Upload */
+.file-upload-section.success .file-note {
+    color: #28a745;
+    font-weight: 600;
+}
+
+/* Loading Spinner Animation */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.fa-spinner {
+    animation: spin 1s linear infinite;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .notification-container {
+        left: 10px;
+        right: 10px;
+        top: 80px;
+    }
+    
+    .notification {
+        max-width: 100% !important;
+    }
+}
+
+/* Accessibility Improvements */
+.form-control:focus-visible,
+.btn-upload:focus-visible,
+.edit-profile-btn:focus-visible {
+    outline: 2px solid #28a745;
+    outline-offset: 2px;
+}
+
+/* Status Indicator Badge (Optional Enhancement) */
+.status-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 8px;
+}
+
+.status-badge.active {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.status-badge.inactive {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.status-badge.pending {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.status-badge.suspended {
+    background-color: #e2e3e5;
+    color: #383d41;
+}
+
